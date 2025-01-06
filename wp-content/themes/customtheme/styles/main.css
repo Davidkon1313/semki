@@ -5089,4 +5089,26 @@
   background: #FFBF00 !important;
 }
 
+.woocommerce.wp-block-group.alignwide {
+  background: linear-gradient(to bottom, #51924B, #17770E);
+  padding: 15px 15px 15px 15px;
+}
+
+.button.alt {
+  font-family: "Akrobat", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0;
+  color: #2B2B2B !important;
+  background: #FFF !important;
+  max-width: 40rem;
+  font-size: 3rem;
+  width: 100%;
+  font-weight: 900;
+  border-radius: 1rem;
+  padding: 0.8rem 4.8rem;
+}
+
 /*# sourceMappingURL=main.css.map */
