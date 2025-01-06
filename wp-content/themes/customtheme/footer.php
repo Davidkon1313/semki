@@ -1,5 +1,5 @@
 <div class="opt" id="opt">
-  <img src="<?php echo get_template_directory_uri(); ?>/images/opt.png">
+  <img src="<?php echo get_template_directory_uri(); ?>/images/opt.svg" id="btn-buy-opt">
 </div>
 <div class="cashTooltip" id="cashTooltip">
   <img src="<?php echo get_template_directory_uri(); ?>/images/cash.webp">
@@ -67,21 +67,23 @@
   <div class="banner" id="banner">
     <div class="banner__list">
       <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/1.webp">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/1.svg">
         <p>Купити в пачках</p>
       </div>
       <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.webp">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.svg">
         <p>Купити в коробках</p>
       </div>
       <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.webp">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.svg">
         <p>Купити на вагу</p>
       </div>
-      <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/4.webp">
-        <p>Контакти</p>
-      </div>
+      <a href="<?php echo get_home_url(); ?>/#contacts" style="color:black;">
+        <div class="banner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/4.svg">
+          <p>Контакти</p>
+        </div>
+      </a>
     </div>
   </div>
 </div>

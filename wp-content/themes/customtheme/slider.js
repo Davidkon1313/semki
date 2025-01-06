@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector(selector);
     if (container) {
       new ResponsiveSlider(selector, {
-        autoPlay: false,
+        autoPlay: true,
         autoPlayInterval: 5000
       });
     }

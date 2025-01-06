@@ -12,11 +12,11 @@
                 <div class="S1__left">
                     <h1>Епік Фудс – якість та смак для кожного дня</h1>
                     <div class="S1__list">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/switcher.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/switcher.svg" alt="">
                         <p><b>Найкращі снеки:</b> насіння, горіхи, арахіс (перелік можна зробити ротатором)</p>
                     </div>
                     <div class="S1__list">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/switcher.webp" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/switcher.svg" alt="">
                         <p>Мінімальне замовлення – <b>від 500 грн.</b></p>
                     </div>
                     <a href="<?php echo get_home_url(); ?>/#gold-niva">
@@ -25,7 +25,7 @@
                 </div>
                 <!-- <div class="S1__right"> -->
 
-                <div class="slider-container slider1">
+                <div class="slider-container slider1" id="first-banner">
                     <?php
                     // Get all PNG files from the /images directory
                     $image_files = glob(get_template_directory() . '/images/products/*.webp');
@@ -46,12 +46,12 @@
                     }
                     ?>
 
-                    <button class="prev-button">
+                    <!-- <button class="prev-button">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-left.webp" alt="Previous">
                     </button>
                     <button class="next-button">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-right.webp" alt="Next">
-                    </button>
+                    </button> -->
                 </div>
                 <a href="<?php echo get_home_url(); ?>/#gold-niva">
                     <button class="btn btn__yellow responsive">ОБИРАЙ свій смак!</button>
@@ -209,7 +209,7 @@
                         echo '<div class="section__listResponsive">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
-                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '<h2>' . esc_html($product_title) . '</h2>';
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
@@ -244,7 +244,7 @@
                         echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
-                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
@@ -279,7 +279,6 @@
                 <?php
                 // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
-
                     // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
@@ -406,7 +405,7 @@
                         echo '<div class="section__listResponsive">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
-                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '<h2>' . esc_html($product_title) . '</h2>';
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
@@ -441,7 +440,7 @@
                         echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
-                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
@@ -601,7 +600,7 @@
                         echo '<div class="section__listResponsive">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
-                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '<h2>' . esc_html($product_title) . '</h2>';
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
@@ -636,7 +635,7 @@
                         echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
-                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
@@ -799,7 +798,7 @@
                         echo '<div class="section__listResponsive">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
-                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '<h2>' . esc_html($product_title) . '</h2>';
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
@@ -834,7 +833,7 @@
                         echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
-                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.webp') . '">';
+                        echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
                         echo '</div>';
                         echo '</div>';
@@ -858,7 +857,7 @@
     </div>
     <div class="S6 parallax" id="section5">
         <div class="S6__title">
-            <h2>Акційні пропозиції</h2>
+            <h2>Спеціальні пропозиції</h2>
         </div>
         <div class="S6__wrapper desktop">
             <div class="S6__left">
@@ -1244,141 +1243,41 @@
     <div class="S9 parallax" id="blog">
         <div class="S9__title">Про нас пишуть</div>
         <div class="S9__list slider-container slider2 container">
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S8__1.webp">
-                    <p>1 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>2 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>3 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>4 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>5 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>6 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>7 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>8 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>9 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order' => 'DESC',
+            );
+            $blog_query = new WP_Query($args);
+
+            if ($blog_query->have_posts()) :
+                while ($blog_query->have_posts()) : $blog_query->the_post();
+                    $imageOfBlog = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                    $blogHeader = get_the_title();
+                    $blogText = wp_trim_words(get_the_excerpt(), 20, '...');
+                    $blogLink = get_permalink();
+            ?>
+
+                    <div class="slide">
+                        <div class="S9__item">
+                            <img src="<?php echo esc_url($imageOfBlog); ?>" alt="<?php echo esc_attr($blogHeader); ?>">
+                            <p><?php echo esc_html($blogHeader); ?></p>
+                            <span class="textContainer"><?php echo esc_html($blogText); ?></span>
+                            <button class="btn btn__yellow toggle-btn" id="toggleButton" onclick="window.location.href='<?php echo esc_url($blogLink); ?>';">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+            <?php
+                endwhile;
+                wp_reset_postdata(); // Reset the query data
+            else :
+                echo '<p>No posts found.</p>';
+            endif;
+            ?>
             <button class="prev-button"><img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-left.webp"></button>
             <button class="next-button"><img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-right.webp"></button>
         </div>

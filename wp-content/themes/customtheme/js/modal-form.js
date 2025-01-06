@@ -95,5 +95,9 @@ jQuery(document).ready(function ($) {
         orderInput.value = "Зберігання"; // Set text for first button
         openFormModal();
     });
+    $("#btn-buy-opt").click(function () {
+        orderInput.value = "Оптова закупка"; // Set text for first button
+        openFormModal();
+    });
     // orderInput.setAttribute("readonly", true); // Prevent typing in the input
 });
