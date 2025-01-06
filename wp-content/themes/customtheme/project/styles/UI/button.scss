@@ -1,0 +1,52 @@
+@import '../helpers/mixin.scss';
+
+.btn{
+    font-family: 'Akrobat', sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    padding: 0;
+    &__yellow{
+        background-color: #FFBF00;
+    }
+    &__green{
+        color: #FFFFFF;
+        background: #51924B;
+    }
+    &__white{
+        color: #2B2B2B;
+        background: #FFF;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    &__showMore{
+        padding: 1.7rem 6.7rem;
+        border-radius: 1rem;
+        background: #51924B;
+        color: #FFF;
+        font-size: 2.4rem;
+    }
+    &__switch{
+        @include flex(flex,center,center);
+        border: 1px solid #737373;
+        border-radius: .5rem;
+        background: #FFF;
+        min-width: 8rem;
+        overflow: hidden;
+        p{
+            padding: 0.8rem 1rem;
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        &__side{
+            transition: background-color 0.3s ease;
+            &.active{
+                background-color: #FFBF00;
+                p{
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

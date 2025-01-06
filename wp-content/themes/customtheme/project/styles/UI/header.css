@@ -1,0 +1,188 @@
+@charset "UTF-8";
+.header {
+  height: 8rem;
+  padding: 0.8rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media all and (max-width: 991px) {
+  .header__wrapper {
+    padding: 0 1.5rem;
+  }
+}
+@media all and (tablet) {
+  .header__wrapper {
+    padding: 0 1.5rem;
+  }
+}
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+@media all and (max-width: 1199px) {
+  .header nav {
+    gap: 1.8rem;
+  }
+}
+@media all and (desktop) {
+  .header nav {
+    gap: 1.8rem;
+  }
+}
+@media all and (max-width: 991px) {
+  .header nav {
+    display: none;
+  }
+}
+@media all and (tablet) {
+  .header nav {
+    display: none;
+  }
+}
+.header a, .header span {
+  color: #2B2B2B;
+  font-size: 2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+@media all and (max-width: 991px) {
+  .header a, .header span {
+    color: #FFF;
+  }
+}
+@media all and (tablet) {
+  .header a, .header span {
+    color: #FFF;
+  }
+}
+.header a .arrow, .header span .arrow {
+  padding-left: 1rem;
+}
+.header a::after, .header span::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* Располагаем подчеркивание под текстом */
+  left: 0;
+  width: 0;
+  height: 2px; /* Толщина линии */
+  background-color: #2B2B2B; /* Цвет подчеркивания */
+  transition: width 0.3s ease; /* Анимация ширины */
+}
+@media all and (max-width: 991px) {
+  .header a::after, .header span::after {
+    background-color: #FFF;
+  }
+}
+@media all and (tablet) {
+  .header a::after, .header span::after {
+    background-color: #FFF;
+  }
+}
+.header a:hover::after, .header span:hover::after {
+  width: 100%;
+}
+.header .menu {
+  position: relative;
+}
+.header .menu:hover .menu__content {
+  display: flex;
+}
+.header .menu__content {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 16rem;
+}
+.header .btn__cart {
+  padding: 0.7rem 0.8rem;
+}
+.header .btn__burger {
+  padding: 0.9rem;
+}
+@media all and (min-width: 992px) {
+  .header .btn__burger {
+    display: none;
+  }
+}
+@media all and (reverso-tablet) {
+  .header .btn__burger {
+    display: none;
+  }
+}
+.header .btn__close {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 2.1rem;
+  right: 3.5rem;
+}
+.header__responsive {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #FFF;
+  display: none;
+  transition: 1s linear ease;
+}
+.header__responsive .menu {
+  position: relative;
+}
+.header__responsive .menu:hover .menu__content {
+  display: flex;
+}
+.header__responsive .menu__content {
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  min-width: 16rem;
+}
+.header__responsive .menu__content a, .header__responsive .menu__content p {
+  color: #2B2B2B;
+}
+.header__responsiveList {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25rem;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.5rem;
+  background: #51924B;
+  padding: 6.5rem 3.2rem;
+}
+.header__fix {
+  height: 8rem;
+}/*# sourceMappingURL=header.css.map */

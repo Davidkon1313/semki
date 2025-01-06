@@ -1,0 +1,113 @@
+@import '../helpers/mixin.scss';
+
+.footer{
+    padding: 3.5rem 0 6.5rem;
+    background: #2B2B2B;
+    @include media(tablet){
+        padding: 3.5rem;
+        position: relative;
+    }
+    &__wrapper{
+        @include flex(flex,center,space-between);
+        @include media(tablet){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .fotterLogo{
+        @include media(desktop){
+            width: 24rem;
+        }
+        @include media(tablet){
+            margin-bottom: 3rem;
+        }
+        @include media(phone){
+            width: 17.6rem;
+        }
+    }
+    &__list{
+        max-width: 70rem;
+        @include flex(flex,center,flex-start);
+        flex-wrap: wrap;
+        row-gap: 2rem;
+        column-gap: 3.5rem;
+        @include media(tablet){
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @include media(phone){
+            row-gap: 2rem;
+        }
+        a,span{
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: #FFF;
+            position: relative;
+            display: inline-block;
+            padding-bottom: .5rem;
+            @include media(phone){
+                font-size: 2.4rem;
+            }
+            .arrow{
+                padding-left: 1rem;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0; /* Располагаем подчеркивание под текстом */
+                left: 0;
+                width: 0;
+                height: 2px; /* Толщина линии */
+                background-color: #FFF; /* Цвет подчеркивания */
+                transition: width 0.3s ease; /* Анимация ширины */
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        b{
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: #FFF;
+        }
+        .menu{
+            position: relative;
+            &:hover{
+                .menu__content{
+                    display: flex;
+                }
+            }
+            &__content{
+                display: none;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                padding: 1rem;
+                border-radius: 1rem;
+                position: absolute;
+                background-color: white;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+                min-width: 16rem;
+            }
+            a{
+                color: #2B2B2B;
+            }
+        }
+    }
+    .anchor{
+        border-radius: 1rem;
+        padding: 1rem;
+        border: 2px solid #FFF;
+        @include media(tablet){
+            position: absolute;
+            bottom: 3.5rem;
+            right: 3.5rem;
+        }
+        @include media(phone){
+            padding: 1.2rem 1rem;
+        }
+    }
+}

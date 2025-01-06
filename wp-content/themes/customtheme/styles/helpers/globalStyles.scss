@@ -1,0 +1,389 @@
+@import './mixin.scss';
+
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+  
+body {
+  font-family: 'Akrobat', sans-serif;
+  font-size: 1.6rem;
+}
+.container{
+  max-width: 148rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section{
+    &__wrapper{
+      max-width: 172rem;
+      margin: 0 auto;
+      padding: 0 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    &__head{
+      padding: 5rem 0 8rem;
+      padding-top: 5rem;
+      text-align: center;
+      @include media(phone){
+        padding-bottom: 2.5rem;
+      }
+      h2{
+        max-width: 1301px;
+        margin: 0 auto 2.5rem;
+        font-size: 4rem;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      b{
+        font-size: 5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+     p{
+        font-size: 2.4rem;
+        font-weight: 500;
+      }
+      @include media(phone){
+        h2{
+          font-size: 2.4rem;
+          margin-bottom: 2.5rem;
+          max-width: 32rem;
+        }
+        b{
+          font-size: 2.4rem;
+        }
+        p{
+          max-width: 29rem;
+          margin: 0 auto 2rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &__filters{
+      @include flex(flex,center,center);
+      gap: .4rem;
+      button{
+        width: 33%;
+        height: 4rem;
+        border: 1px solid #FFF;
+        border-radius: .5rem;
+        background-color: transparent;
+        font-size: 1.4rem;
+        font-weight: 700;
+        &.active{
+          font-weight: 800;
+        }
+      }
+      @include media(reverso-phone){
+        display: none;
+      }
+    }
+    &__list{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+      row-gap: 4rem;
+      column-gap: 4rem;
+      margin-bottom: 3.5rem;
+      @include media(tablet){
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+        column-gap: 3rem;
+      }
+      @include media(phone){
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        display: none;
+      }
+    }
+    &__listResponsive{
+      border: 1px solid #FFF;
+      border-radius: .5rem;
+      margin-bottom: 1.5rem;
+      @include media(reverso-phone){
+        display: none;
+      }
+    }
+    &__itemResponsiveWrapper{
+      @include flex(flex,center,center);
+      flex-direction: column;
+      padding: 1.6rem 1.8rem 2.5rem;
+      position: relative;
+      .switcher{
+        margin: 0;
+        position: absolute;
+        top: 1.8rem;
+        right: 1.8rem;
+        transform: rotate(180deg);
+        width: 1.8rem;
+        height: 1.4rem;
+        cursor: pointer;
+        object-fit: contain;
+      }
+    }
+    &__itemResponsive{
+      &.listed{
+        .section__itemResponsiveWrapper{
+          display: none;
+        }
+        .section__itemResponsiveListed{
+          display: flex;
+        }
+      }
+      h2{
+        max-width: 20rem;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        font-weight: 800;
+      }
+      img{
+        margin: 1.5rem 0;
+        max-width: 15.8rem;
+        max-height: 20rem;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .line{
+        width: 100%;
+        max-width: 20rem;
+        margin: 0 auto;
+        border: 1px solid #FFF;
+        border-radius: .5rem;
+      }
+      p{
+        padding: 1rem 0;
+        max-width: 26rem;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+      }
+      span{
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 1.5rem 0;
+      }
+      button{
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.4rem;
+        font-weight: 900;
+      }
+    }
+    &__itemResponsiveListed{
+      padding: .4rem 2rem;
+      @include flex(flex,center,space-between);
+      display: none;
+      p{
+        min-width: 12.5rem;
+        max-width: 12.5rem;
+        margin-right: 3rem;
+        margin-bottom: 0;
+        font-size: 1.4rem;
+        font-weight: 800;
+        text-align: left;
+        @include media(p-phone){
+          margin-right: 1rem;
+        }
+      }
+      img{
+        margin-left: 1.3rem;
+        width: 1,8rem;
+        height: 1.4rem;
+        cursor: pointer;
+        object-fit: contain;
+      }
+    }
+    &__itemResponsiveListedPrice{
+      @include flex(flex,center,center);
+      flex-direction: column;
+      padding: 0 .8rem;
+      border-left: 2px solid #FFF;
+      border-right: 2px solid #FFF;
+      span{
+        padding-top: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding-bottom: .8rem;
+      }
+      button{
+        width: 8.6rem;
+        height: 3rem;
+        border-radius: .5rem;
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+    }
+    &__item{
+      @include flex(flex,center,space-between);
+      flex-direction: column;
+      img{
+          padding-bottom: 2rem;
+          transition: transform 0.3s ease-in-out;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          &:hover{
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease-in-out;
+          }
+      }
+      p{
+          max-width: 25.8rem;
+          margin: 0 auto 2rem;
+          text-align: center;
+          font-size: 2.4rem;
+          font-weight: 700;
+          color: #FFF;
+      }
+      span{
+          max-width: 29.4rem;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 1.7rem;
+          color: #FFF;
+          padding-bottom: 1rem;
+          &.desc{
+              font-size: 1.6rem;
+              padding-bottom: 2rem;
+              font-weight: 200;
+          }
+      }
+      b{
+          padding-bottom: 1.5rem;
+          font-size: 2rem;
+          font-weight: 600;
+          color: #FFF;
+      }
+      button{
+          padding: 0.8rem 4.8rem;
+          width: 100%;
+          max-width: 30rem;
+          border-radius: 1rem;
+      }
+      select{
+          width: 17rem;
+          padding: .2rem;
+          border-radius: .5rem;
+          background: #FFF;
+          border: none;
+          margin-bottom: 3.5rem;
+          span{
+              font-size: 1rem;
+              color: #000;
+              padding-right: 1rem;
+              b{
+                  font-size: 1.2rem;
+                  font-weight: bold;
+              }
+          }
+      }
+  }
+  &__button{
+    @include media(phone){
+      display: none;
+    }
+  }
+}
+.comment{
+  &__item{
+    @include flex(flex,flex-start,center);
+    flex-direction: column;
+    gap: 2.5rem;
+    background: #F4F4F4;
+    border-radius: 1rem;
+    padding: 1.3rem 3rem;
+    border:  1px solid #6A6A6A;
+    @include media(phone){
+      gap: 1.5rem;
+      padding: 1rem 3.5rem;
+    }
+  }
+  &__top{
+    @include flex(flex,center,flex-start);
+    gap: 1rem;
+    img{
+      width: 1.5rem;
+    }
+    span{
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: #2B2B2B;
+    }
+    @include media(phone){
+      gap: .5rem;
+      img{
+        width: .9rem;
+        height: 1.2rem;
+        object-fit: contain;
+      }
+      span{
+        font-size: 1.2rem;
+      }
+    }
+  }
+  &__body{
+    @include flex(flex,flex-start,center);
+    flex-direction: column;
+    p{
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #2B2B2B;
+    }
+    span{
+      text-align: left;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #2B2B2B;
+      padding-bottom: 1.5rem;
+    }
+    @include media(phone){
+      p{
+        font-size: 1.6rem;
+        margin-bottom: .6rem;
+      }
+      span{
+        font-size: 1rem;
+        max-width: 27rem;
+      }
+      img{
+        width: 7.6rem;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.seed{
+  position: absolute;
+  object-fit: contain;
+  z-index: 0;
+  transition: transform 1s ease-out;
+  @include media(desktop){
+    display: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;  /* ширина вертикальной полосы */
+  height: 8px; /* высота горизонтальной полосы */
+}
+
+/* Стиль для ползунка (бегунка) */
+::-webkit-scrollbar-thumb {
+  background-color: #C2C2C2; /* цвет ползунка */
+  border-radius: 10px;    /* закругление краев */
+  border: 1px solid #FFF; /* отступ от края */
+}
+
+/* Стиль для фона скроллбара */
+::-webkit-scrollbar-track {
+  background: #fff;  /* цвет фона */
+  border-radius: 10px;
+}

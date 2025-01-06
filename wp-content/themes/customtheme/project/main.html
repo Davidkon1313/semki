@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Epic Foods</title>
+    <link rel="stylesheet" href="./styles/helpers/reset.css">
+    <link rel="stylesheet" href="./styles/helpers/globalStyles.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/UI/button.css">
+    <link rel="stylesheet" href="./styles/UI/input.css">
+    <link rel="stylesheet" href="./styles/UI/header.css">
+    <link rel="stylesheet" href="./styles/UI/fotter.css">
+    <link rel="stylesheet" href="./fonts/akrobat.css">
+    <link rel="stylesheet" href="./styles/UI/modal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__left">
+                    <img src="./images/logo.png" alt="Epic Foods">
+                </div>
+                <div class="header__right">
+                    <nav class="header__rightList">
+                        <a href="/">Про нас</a>
+                        <a href="/">Послуги</a>
+                        <a href="/">Співпраця</a>
+                        <div class="menu">
+                            <span href="/">Продукція <img class="arrow" src="./images/ui/arrow-down.png"></span>
+                            <div class="menu__content">
+                                <a href="/">Золота Нива</a>
+                                <a href="/">Ягуар</a>
+                                <a href="/">Гулі</a>
+                                <a href="/">Смаколик</a>
+                            </div>
+                        </div>
+                        <a href="/">Купити онлайн</a>
+                        <a href="/">Блог</a>
+                        <a href="/">Контакти</a>
+                        <button class="btn btn__switch">
+                            <div class="btn__switch__side active">
+                                <p>UA</p>
+                            </div>
+                            <div class="btn__switch__side">
+                                <p>EN</p>
+                            </div>
+                        </button>
+                        <button class="btn btn__yellow btn__cart" id="openBtn"><img src="./images/ui/cart.png" alt="cart"></button>
+                    </nav>
+                    <button class="btn btn__yellow btn__burger" id="burger"><img src="./images/ui/burger.png" alt="cart"></button>
+                </div>
+                <div class="header__responsive">
+                    <div class="header__responsiveList">
+                        <a href="/">Про нас</a>
+                        <a href="/">Послуги</a>
+                        <a href="/">Співпраця</a>
+                        <div class="menu">
+                            <span id="responsiveDrop">Продукція <img class="arrow" src="./images/ui/herederResp.png"></span>
+                            <div class="menu__content" id="responsiveDropMenu">
+                                <a href="/">Золота Нива</a>
+                                <a href="/">Ягуар</a>
+                                <a href="/">Гулі</a>
+                                <a href="/">Смаколик</a>
+                            </div>
+                        </div>
+                        <a href="/">Купити онлайн</a>
+                        <a href="/">Блог</a>
+                        <a href="/">Контакти</a>
+                        <button class="btn btn__yellow btn__cart" id="openBtn"><img src="./images/ui/cart.png" alt="cart"></button>
+                        <button class="btn btn__switch">
+                            <div class="btn__switch__side active">
+                                <p>UA</p>
+                            </div>
+                            <div class="btn__switch__side">
+                                <p>EN</p>
+                            </div>
+                        </button>
+                        <button class="btn btn__yellow btn__close" id="burgerClose"><img src="./images/ui/close.png"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header__fix"></div>
+    <main>
+        <div class="action">
+            <div class="marquee">
+                <p>Заробляйте до 60% з нашою продукцією у вашому магазині. Дистриб'ютори можуть отримувати до 35% прибутку з оптових закупівель</p>
+            </div>
+        </div>
+        <div class="S1 parallax">
+            <div class="container">
+                <div class="S1__wrapper">
+                    <div class="S1__left">
+                        <h1>Епік Фудс – якість та смак для кожного дня</h1>
+                        <div class="S1__list">
+                            <img src="./images/switcher.png" alt="">
+                            <p><b>Найкращі снеки:</b> насіння, горіхи, арахіс (перелік можна зробити ротатором)</p>
+                        </div>
+                        <div class="S1__list">
+                            <img src="./images/switcher.png" alt="">
+                            <p>Мінімальне замовлення – <b>від 500 грн.</b></p>
+                        </div>
+                        <button class="btn btn__yellow desktop">ОБИРАЙ свій смак!</button>
+                    </div>
+                    <div class="slider-container slider1">
+                        <div class="slide"><img src="./images/S1_slider.png"></div>
+                        <div class="slide"><img src="./images/S1_slider.png"></div>
+                        <div class="slide"><img src="./images/S1_slider.png"></div>
+                        <button class="prev-button"><img src="./images/ui/arrow-left.png"></button>
+                        <button class="next-button"><img src="./images/ui/arrow-right.png"></button>
+                    </div>
+                    <button class="btn btn__yellow responsive">ОБИРАЙ свій смак!</button>
+                    <img class="seed seed1 responsiveseed" src="./images/S1/seed1.png">
+                    <img class="seed seed2 responsiveseed" src="./images/S1/seed2.png">
+                </div>
+            </div>
+        </div>
+        <div class="action action2">
+            <div class="marquee">
+                <p>Заробляйте до 60% з нашою продукцією у вашому магазині. Дистриб'ютори можуть отримувати до 35% прибутку з оптових закупівель</p>
+            </div>
+        </div>
+        <div class="S2 parallax" id="section1">
+            <div class="section__wrapper">
+                <div class="section__head">
+                    <h2><b>Золота Нива</b> – Найкращі снеки для щоденного перекусу</h2>
+                    <p> Продукція високої якості для перекусів: насіння соняшника, гарбузове насіння, арахіс.</p>
+                    <div class="section__filters">
+                        <button class="btn active">Насіння</button>
+                        <button class="btn">Снеки</button>
+                        <button class="btn">Арахіс</button>
+                    </div>
+                </div>
+                <div class="section__list">
+                    <div class="section__item">
+                        <img src="./images/S2_1.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/test.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S2_1.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S2_1.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn__showMore section__button">Показати ще</button>
+            </div>
+            <img class="seed seed1" src="./images/S2/S2__1.png">
+            <img class="seed seed2" src="./images/S2/S2__2.png">
+            <img class="seed seed3" src="./images/S2/S2__3.png">
+            <img class="seed seed4" src="./images/S2/S2__4.png">
+        </div>
+        <div class="S3 parallax" id="section2">
+            <div class="section__wrapper">
+                <div class="section__head">
+                    <h2><b> Гулі-Гулі</b> – Смаколики для справжніх поціновувачів</h2>
+                    <p>Виготовлене з натуральної сировини. Насіння соняшника та гарбузове насіння в найкращих варіаціях.</p>
+                    <div class="section__filters">
+                        <button class="btn active">Насіння</button>
+                        <button class="btn">Снеки</button>
+                        <button class="btn">Арахіс</button>
+                    </div>
+                </div>
+                <div class="section__list">
+                    <div class="section__item">
+                        <img src="./images/S3_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S3_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/test.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/S3/S3__1.png">
+            <img class="seed seed2" src="./images/S3/S3__2.png">
+            <img class="seed seed3" src="./images/S3/S3__3.png">
+            <img class="seed seed4" src="./images/S3/S3__4.png">
+            <img class="seed seed5" src="./images/S3/S3__5.png">
+        </div>
+        <div class="S4 parallax" id="section3">
+            <div class="section__wrapper">
+                <div class="section__head">
+                    <h2><b>Сонячний Ягуар</b> – Ідеальні снеки для перекус</h2>
+                    <p>Лінійка продуктів для активних людей, які люблять смачні та корисні снеки</p>
+                    <div class="section__filters">
+                        <button class="btn active">Насіння</button>
+                        <button class="btn">Снеки</button>
+                        <button class="btn">Арахіс</button>
+                    </div>
+                </div>
+                <div class="section__list">
+                    <div class="section__item">
+                        <img src="./images/S4_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S4_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/test.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/S4/S4__1.png">
+            <img class="seed seed2" src="./images/S4/S4__2.png">
+            <img class="seed seed3" src="./images/S4/S4__3.png">
+            <img class="seed seed4" src="./images/S4/S4__4.png">
+            <img class="seed seed5" src="./images/S4/S4__5.png">
+            <img class="seed seed6" src="./images/S4/S4__6.png">
+            <img class="seed seed7" src="./images/S4/S4__7.png">
+        </div>
+        <div class="S5 parallax" id="section4">
+            <div class="section__wrapper">
+                <div class="section__head">
+                    <h2><b>Смаколик</b> – Смаколики для справжніх поціновувачів</h2>
+                    <p> Виготовлене з натуральної сировини. Насіння соняшника та гарбузове насіння в найкращих варіаціях.</p>
+                    <div class="section__filters">
+                        <button class="btn active">Насіння</button>
+                        <button class="btn">Снеки</button>
+                        <button class="btn">Арахіс</button>
+                    </div>
+                </div>
+                <div class="section__list">
+                    <div class="section__item">
+                        <img src="./images/test.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S5_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S5_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                    <div class="section__item">
+                        <img src="./images/S5_item.png" alt="">
+                        <p>Насіння соняшника смажене</p>
+                        <span>SKU: U194729901</span>
+                        <span class="desc">Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</span>
+                        <b>Ціна: 35 грн </b>
+                        <select name="" id="">
+                            <option value="">
+                                <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                            </option>
+                        </select>
+                        <button class="btn btn__white">Купити зараз!</button>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="section__listResponsive">
+                    <div class="section__itemResponsive listed">
+                        <div class="section__itemResponsiveWrapper">
+                            <img id="switcher" class="switcher" src="./images/ui/section-dropdown.png">
+                            <h2>Насіння соняшника смажене</h2>
+                            <div class="line"></div>
+                            <img src="./images/sectionResponsive.png" alt="">
+                            <div class="line"></div>
+                            <p>Смачне та поживне насіння соняшника, обсмажене до ідеального стану. Легке для перекусу в будь-який момент.</p>
+                            <select name="" id="">
+                                <option value="">
+                                    <span>Розмір упаковки:</span><b>MEGA PACK</b>
+                                </option>
+                            </select>
+                            <span>Ціна: 35 грн </span>
+                            <button class="btn btn__yellow">Купити зараз!</button>
+                        </div>
+                        <div class="section__itemResponsiveListed">
+                            <p>Насіння соняшника смажене солоне</p>
+                            <div class="section__itemResponsiveListedPrice">
+                                <span>Ціна: 35 грн </span>
+                                <button class="btn btn__yellow">Купити</button>
+                            </div>
+                            <img id="switcher2" src="./images/ui/section-dropdown.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/S5/S5__1.png">
+            <img class="seed seed2" src="./images/S5/S5__2.png">
+            <img class="seed seed3" src="./images/S5/S5__3.png">
+            <img class="seed seed4" src="./images/S5/S5__4.png">
+            <img class="seed seed5" src="./images/S5/S5__5.png">
+        </div>
+        <div class="S6 parallax" id="section5">
+            <div class="S6__title">
+                <h2>Акційні пропозиції</h2>
+            </div>
+            <div class="S6__wrapper desktop">
+                <div class="S6__left">
+                    <div class="S6__list slider-container slider5">
+                        <div class="slide">
+                            <div class="S6__item">
+                                <div class="S6__item__img">
+                                    <img class="item" src="./images/S6/S6_item.png" alt="">
+                                    <img class="sale" src="./images//S6/S6_saleLeft.png" alt="">
+                                </div>
+                                <p>Мікс "Класичний" (15 шт)</p>
+                                <span><span class="size">80г</span> SKU: U194729901</span>
+                                <span class="desc">Набір для справжніх поціновувачів класичних смаків насіння та арахісу</span>
+                                <b>Ціна: 35 грн </b>
+                                <button class="btn btn__white">Купити зараз!</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="S6__item">
+                                <div class="S6__item__img">
+                                    <img class="item" src="./images/S6/S6_item.png" alt="">
+                                    <img class="sale" src="./images//S6/S6_saleLeft.png" alt="">
+                                </div>
+                                <p>Мікс "Класичний" (15 шт)</p>
+                                <span><span class="size">80г</span> SKU: U194729901</span>
+                                <span class="desc">Набір для справжніх поціновувачів класичних смаків насіння та арахісу</span>
+                                <b>Ціна: 35 грн </b>
+                                <button class="btn btn__white">Купити зараз!</button>
+                            </div>
+                        </div>
+                        <button class="prev-button"><img src="./images/ui/arrow-left.png"></button>
+                        <button class="next-button"><img src="./images/ui/arrow-right.png"></button>
+                    </div>
+                    <img class="seed seed1" src="./images/S6/seed1.png">
+                    <img class="seed seed2" src="./images/S6/seed2.png">
+                </div>
+                <div class="S6__right">
+                    <div class="S6__list slider-container slider6">
+                        <div class="slide">
+                            <div class="S6__item">
+                                <div class="S6__item__img">
+                                    <img class="item" src="./images/S6/S6_item.png" alt="">
+                                    <img class="sale" src="./images//S6/S6_saleRight.png" alt="">
+                                </div>
+                                <p>Мікс "Класичний" (15 шт)</p>
+                                <span><span class="size">80г</span> SKU: U194729901</span>
+                                <span class="desc">Набір для справжніх поціновувачів класичних смаків насіння та арахісу</span>
+                                <b>Ціна: 35 грн </b>
+                                <button class="btn btn__white">Купити зараз!</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="S6__item">
+                                <div class="S6__item__img">
+                                    <img class="item" src="./images/S6/S6_item.png" alt="">
+                                    <img class="sale" src="./images//S6/S6_saleRight.png" alt="">
+                                </div>
+                                <p>Мікс "Класичний" (15 шт)</p>
+                                <span><span class="size">80г</span> SKU: U194729901</span>
+                                <span class="desc">Набір для справжніх поціновувачів класичних смаків насіння та арахісу</span>
+                                <b>Ціна: 35 грн </b>
+                                <button class="btn btn__white">Купити зараз!</button>
+                            </div>
+                        </div>
+                        <button class="prev-button"><img src="./images/ui/arrow-left.png"></button>
+                        <button class="next-button"><img src="./images/ui/arrow-right.png"></button>
+                    </div>
+                    <img class="seed seed3" src="./images/S6/seed3.png">
+                    <img class="seed seed4" src="./images/S6/seed4.png">
+                </div>
+            </div>
+            <div class="S6__wrapper responsive">
+                <div class="S6__list">
+                    <div class="S6__item left">
+                        <div class="S6__item__img">
+                            <img class="item" src="./images/S6/S6_item.png" alt="">
+                            <img class="sale" src="./images//S6/S6_saleLeft.png" alt="">
+                        </div>
+                        <p>Мікс "Класичний" (15 шт)</p>
+                        <span><span class="size">80г</span> SKU: U194729901</span>
+                        <span class="desc">Набір для справжніх поціновувачів класичних смаків насіння та арахісу</span>
+                        <b>Ціна: 35 грн </b>
+                        <button class="btn btn__white">Купити зараз!</button>
+                        <img class="seed seed5 responsiveseed" src="./images/S6/seed5.png">
+                    </div>
+                    <div class="S6__item right">
+                        <div class="S6__item__img">
+                            <img class="item" src="./images/S6/S6_item.png" alt="">
+                            <img class="sale" src="./images//S6/S6_saleLeft.png" alt="">
+                        </div>
+                        <p>Мікс "Класичний" (15 шт)</p>
+                        <span><span class="size">80г</span> SKU: U194729901</span>
+                        <span class="desc">Набір для справжніх поціновувачів класичних смаків насіння та арахісу</span>
+                        <b>Ціна: 35 грн </b>
+                        <button class="btn btn__white">Купити зараз!</button>
+                        <img class="seed seed5 responsiveseed" src="./images/S6/seed5.png">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn__green showMore">Показати більше</button>
+        </div>
+        <div class="S7 section__wrapper">
+            <div class="container S7__wrapper">
+                <div class="S7__left">
+                    <p>Як ми створюємо ваші улюблені снеки!</p>
+                    <div class="line"></div>
+                    <span>Дізнайтесь більше про процес виробництва нашої продукції та переконайтесь у її якості.</span>
+                </div>
+                <div class="S7__right">
+                    <div class="S7__rightWrapper">
+                        <img class="video" src="./images/video.jpg" alt="">
+                        <div class="videoButton">
+                            <img src="./images/ui/play.png" alt="">
+                            <span>Дивитись відео</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="S8_1">
+            <div class="S8_1__wrapper">
+                <h2>Продукція "Епік Фудс"- смачні й корисні перекуси для активного та здорового способу життя!</h2>
+                <div class="swiper" id="swiper1">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide">
+                        <div class="slider7__item">
+                            <img src="./images/S8_1.png" alt="">
+                            <p>Насіння соняшника:</p>
+                            <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="slider7__item">
+                            <img src="./images/S8_2.png" alt="">
+                            <p>Арахіс:</p>
+                            <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="slider7__item">
+                            <img src="./images/S8_1.png" alt="">
+                            <p>Насіння соняшника:</p>
+                            <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="slider7__item">
+                            <img src="./images/S8_2.png" alt="">
+                            <p>Арахіс:</p>
+                            <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                  </div>
+                <!-- <div class="slider7">
+                    <div class="slider7__wrapper">
+                        <div class="slider7__slide">
+                            <button class="slider7prev"><img src="./images/ui/arrow-left.png" alt="prev"></button>
+                            <div class="slider7__item">
+                                <img src="./images/S8_1.png" alt="">
+                                <p>Насіння соняшника:</p>
+                                <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                            </div>
+                            <button class="slider7next"><img src="./images/ui/arrow-right.png"></button>
+                        </div>
+                        <div class="slider7__slide">
+                            <button class="slider7prev"><img src="./images/ui/arrow-left.png" alt="prev"></button>
+                            <div class="slider7__item">
+                                <img src="./images/S8_2.png" alt="">
+                                <p>Арахіс:</p>
+                                <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                            </div>
+                            <button class="slider7next"><img src="./images/ui/arrow-right.png"></button>
+                        </div>
+                        <div class="slider7__slide">
+                            <button class="slider7prev"><img src="./images/ui/arrow-left.png" alt="prev"></button>
+                            <div class="slider7__item">
+                                <img src="./images/S8_1.png" alt="">
+                                <p>Насіння соняшника:</p>
+                                <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                            </div>
+                            <button class="slider7next"><img src="./images/ui/arrow-right.png"></button>
+                        </div>
+                        <div class="slider7__slide">
+                            <button class="slider7prev"><img src="./images/ui/arrow-left.png" alt="prev"></button>
+                            <div class="slider7__item">
+                                <img src="./images/S8_2.png" alt="">
+                                <p>Арахіс:</p>
+                                <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                            </div>
+                            <button class="slider7next"><img src="./images/ui/arrow-right.png"></button>
+                        </div>
+                        <div class="slider7__slide">
+                            <button class="slider7prev"><img src="./images/ui/arrow-left.png" alt="prev"></button>
+                            <div class="slider7__item">
+                                <img src="./images/S8_1.png" alt="">
+                                <p>Арахіс:</p>
+                                <span>Джерело вітаміну Е, антиоксидантів і корисних жирів, підтримує здоров'я шкіри.</span>
+                            </div>
+                            <button class="slider7next"><img src="./images/ui/arrow-right.png"></button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="S8_2">
+            <h2>Що говорять наші клієнти та чому вони обирають нас</h2>
+            <p class="desc">Дізнайтесь більше про процес виробництва нашої продукції та переконайтесь у її якості.</p>
+            <div class="swiper" id="swiper2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="comment">
+                        <div class="comment__item">
+                            <div class="comment__top">
+                                <img src="./images/ui/comment-mark.png" alt="">
+                                <span>Житомир</span>
+                            </div>
+                            <div class="comment__body">
+                                <p>Антоненко Антон Антонович 1</p>
+                                <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                <img src="./images/ui/rate.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="comment">
+                        <div class="comment__item">
+                            <div class="comment__top">
+                                <img src="./images/ui/comment-mark.png" alt="">
+                                <span>Житомир</span>
+                            </div>
+                            <div class="comment__body">
+                                <p>Антоненко Антон Антонович 2</p>
+                                <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                <img src="./images/ui/rate.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="comment">
+                        <div class="comment__item">
+                            <div class="comment__top">
+                                <img src="./images/ui/comment-mark.png" alt="">
+                                <span>Житомир</span>
+                            </div>
+                            <div class="comment__body">
+                                <p>Антоненко Антон Антонович 3</p>
+                                <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                <img src="./images/ui/rate.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="comment">
+                        <div class="comment__item">
+                            <div class="comment__top">
+                                <img src="./images/ui/comment-mark.png" alt="">
+                                <span>Житомир</span>
+                            </div>
+                            <div class="comment__body">
+                                <p>Антоненко Антон Антонович 4</p>
+                                <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                <img src="./images/ui/rate.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            <button class="btn btn__yellow">Додати відгук</button>
+        </div>
+        <div class="salary">
+            <div class="section__wrapper">
+                <p>Заробляйте до 60% з нашою продукцією у вашому магазині.</p>
+            </div>
+        </div>
+        <div class="S8">
+            <div class="container">
+                <h2 class="S8__title">Дистриб'ютори можуть отримувати до 35% прибутку з оптових закупівель</h2>
+            <div class="S8__wrapper">
+                <div class="S8__left">
+                    <p>Приєднуйтесь до команди "Епік Фудс" і отримайте вигідні умови співпраці</p>
+                    <input type="text" placeholder="Ваше імʼя">
+                    <input type="text" placeholder="Номер телефону">
+                    <button class="btn btn__green">Хочу співпрацювати</button>
+                </div>
+                <div class="S8__right">
+                    <img src="./images/S8__1.png" alt="">
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="S9 parallax" id="section5">
+            <div class="S9__title">Про нас пишуть</div>
+            <div class="S9__list slider-container slider2 container">
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S8__1.png">
+                        <p>1 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>2 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>3 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>4 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>5 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>6 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>7 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>8 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="S9__item">
+                        <img src="./images/S9_item.png">
+                        <p>9 Назва статі блогу Назва статі блогу Назва статі блогу</p>
+                        <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                        <button class="btn btn__yellow toggle-btn" id="toggleButton">
+                            <img src="./images/ui/arrow-list-down.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <button class="prev-button"><img src="./images/ui/arrow-left.png"></button>
+                <button class="next-button"><img src="./images/ui/arrow-right.png"></button>
+            </div>
+            <img class="seed seed1" src="./images/S9/S9__1.png">
+            <img class="seed seed2" src="./images/S9/S9__2.png">
+            <img class="seed seed3" src="./images/S9/S9__3.png">
+            <img class="seed seed4" src="./images/S9/S9__4.png">
+        </div>
+        <div class="S10">
+            <div class="section__wrapper">
+                <h2>“Епік Фудс" – Смак та якість у кожному продукті</h2>
+                <p>ОБИРАЙ свій смак!</p>
+                <button class="btn btn__green">Купити</button>
+            </div>
+            <img class="S10__responsive" src="./images/S10_responsive.png" alt="">
+        </div>
+        <div class="S11 container">
+            <h2 class="S11__title">Контакти</h2>
+            <div class="map">
+                <img src="./images/S11.png" alt="">
+            </div>
+            <div class="S11__address">
+                <img src="./images/ui/mapMark.png" alt="">
+                <p><span>Адреса:</span> вул. Параджанова 80, Житомир, Україна</p>
+            </div>
+            <div class="S11__list">
+                <div class="S11__list__item">
+                    <h2>Генеральний директор</h2>
+                    <b></b>
+                    <span>Дмитро Епік</span>
+                    <p>+38 (063) 88 66 777</p>
+                    <small></small>
+                </div>
+                <div class="S11__list__item">
+                    <h2>Торговий відділ</h2>
+                    <b>Керівник торгового відділу</b>
+                    <span>Дмитро</span>
+                    <p>+38 (096) 684 67 56</p>
+                    <small></small>
+                </div>
+                <div class="S11__list__item">
+                    <h2></h2>
+                    <b>Територіальний менеджер</b>
+                    <span>Дмитро</span>
+                    <p>+38 (096) 684 67 56</p>
+                    <small>Регіони: Житомирський, Рівненський.</small>
+                </div>
+                <div class="S11__list__item">
+                    <h2></h2>
+                    <b>Регіональний менеджер</b>
+                    <span>Ольга</span>
+                    <p>+38 (096) 684 67 56</p>
+                    <small>Регіони: Тернопільський, Івано-Франківський, Львівський, Волинський.</small>
+                </div>
+                <div class="S11__list__item">
+                    <h2>Фінансовий відділ</h2>
+                    <b>Бухгалтер</b>
+                    <span>Марина Осолінська</span>
+                    <p>+38 (096) 381 33 30</p>
+                    <small></small>
+                </div>
+                <div class="S11__list__item">
+                    <h2>Відділ маркетингу</h2>
+                    <b>Маркетолог</b>
+                    <span>Юлія Романенко</span>
+                    <p>+38 (068) 549 54 99</p>
+                    <small></small>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+              <span class="close-btn" id="closeBtn"><img src="./images/ui/close.png" alt=""></span>
+              <div class="cash">
+                <div class="cash__head">
+                    <p>Ваша корзина</p>
+                </div>
+                <div class="cash__list">
+                    <div class="cash__item">
+                        <img class="close" src="./images/ui/close.png" alt="">
+                        <div class="cash__itemWrapp">
+                            <div class="cash__img">
+                                <img src="./images/cashImg.png" alt="">
+                            </div>
+                            <div class="cash__text">
+                                <p>Насіння соняшника смажене</p>
+                                <span>80 г</span>
+                                <span>SKU: U194729901</span>
+                            </div>
+                            <div class="cash__number">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                            <div class="cash__sum">
+                                <span>35</span> <span>грн</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cash__item">
+                        <img class="close" src="./images/ui/close.png" alt="">
+                        <div class="cash__itemWrapp">
+                            <div class="cash__img">
+                                <img src="./images/cashImg.png" alt="">
+                            </div>
+                            <div class="cash__text">
+                                <p>Насіння соняшника смажене</p>
+                                <span>80 г</span>
+                                <span>SKU: U194729901</span>
+                            </div>
+                            <div class="cash__number">
+                                <button>-</button>
+                                <span>1</span>
+                                <button>+</button>
+                            </div>
+                            <div class="cash__sum">
+                                <span>35</span> <span>грн</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cash__total">
+                    <span>Сума замовлення: 70 грн</span>
+                </div>
+                <div class="cash__info">
+                    <p>Особисті дані для оформлення</p>
+                    <input type="text" placeholder="Ваше імʼя">
+                    <input type="text" placeholder="Номер телефону">
+                    <button class="btn btn__yellow">Замовити</button>
+                </div>
+               </div>
+            </div>
+          </div>          
+    </main>
+    <div class="opt" id="opt">
+        <img src="./images/opt.png">
+    </div>
+    <div class="cashTooltip" id="cashTooltip">
+        <img src="./images/cash.png">
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer__wrapper container">
+            <img class="fotterLogo" src="./images/footer.png" alt="">
+            <div class="footer__list">
+                <!-- <div class="footer__list__item"> -->
+                    <a href="">Про нас</a>
+                    <a href="">Послуги</a>
+                    <a href="">Співпраця</a>
+                    <div class="menu">
+                        <span href="/">Продукція <img class="arrow" src="./images/ui/herederResp.png"></span>
+                        <div class="menu__content">
+                            <a href="/">Золота Нива</a>
+                            <a href="/">Ягуар</a>
+                            <a href="/">Гулі</a>
+                            <a href="/">Смаколик</a>
+                        </div>
+                    </div>
+                    <a href="">Купити онлайн</a>
+                    <a href="">Блог</a>
+                    <a href=""><b>Купити в пачках</b></a>
+                    <a href=""><b>Купити в коробках</b></a>
+                    <a href=""><b>Купити на вагу</b></a>
+                <!-- </div> -->
+            </div>
+            <a class="anchor" href="/"><img src="./images/ui/Arrow-top.png" alt=""></a>
+        </div>
+    </footer>
+    <div class="banner__wrapper">
+        <div class="banner" id="banner">
+            <div class="banner__list">
+                <div class="banner__item">
+                    <img src="./images/banner/1.png">
+                    <p>Купити в пачках</p>
+                </div>
+                <div class="banner__item">
+                    <img src="./images/banner/2.png">
+                    <p>Купити в коробках</p>
+                </div>
+                <div class="banner__item">
+                    <img src="./images/banner/3.png">
+                    <p>Купити на вагу</p>
+                </div>
+                <div class="banner__item">
+                    <img src="./images/banner/4.png">
+                    <p>Контакти</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="slider.js"></script>
+    <script src="customSlider1.js"></script>
+    <!-- <script src="superCustomSlider.js"></script> -->
+    <script src="main.js"></script>
+    <!-- <script type="module" src="Swiper.js"></script> -->
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.mjs';
+      
+        const swiper = new Swiper('#swiper2', {
+          direction: 'horizontal',
+          loop: true,
+        //   slidesPerView: 2,
+        //   slidesPerGroup: 1,
+            spaceBetween: 20,
+          breakpoints: {
+            // when window width is >= 320px
+            1200: {
+                slidesPerView: 2,
+                slidesPerGroup: 2,
+            }
+            },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+
+        const swiper1 = new Swiper('#swiper1', {
+          direction: 'horizontal',
+          loop: true,
+          slidesPerView: 1.4,
+          slidesPerGroup: 1,
+          centeredSlides: true,
+          breakpoints: {
+            992: {
+                slidesPerView: 1.2,
+                slidesPerGroup: 1,
+            },
+            1201: {
+                slidesPerView: 1.7,
+                slidesPerGroup: 1,
+            }
+            },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      </script>
+
+</body>
+</html>

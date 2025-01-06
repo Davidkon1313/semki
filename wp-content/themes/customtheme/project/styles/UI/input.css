@@ -1,0 +1,16 @@
+input {
+  padding: 1.7rem 2rem 1.7rem 1.5rem;
+  border: 1px solid #6A6A6A;
+  background: #F4F4F4;
+  color: #2B2B2B;
+  font-size: 2rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+input ::-moz-placeholder {
+  color: #2B2B2B;
+}
+input ::placeholder {
+  color: #2B2B2B;
+}/*# sourceMappingURL=input.css.map */

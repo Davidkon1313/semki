@@ -1,0 +1,52 @@
+.btn {
+  font-family: "Akrobat", sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+.btn__yellow {
+  background-color: #FFBF00;
+}
+.btn__green {
+  color: #FFFFFF;
+  background: #51924B;
+}
+.btn__white {
+  color: #2B2B2B;
+  background: #FFF;
+  font-size: 3rem;
+  font-weight: 900;
+}
+.btn__showMore {
+  padding: 1.7rem 6.7rem;
+  border-radius: 1rem;
+  background: #51924B;
+  color: #FFF;
+  font-size: 2.4rem;
+}
+.btn__switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #737373;
+  border-radius: 0.5rem;
+  background: #FFF;
+  min-width: 8rem;
+  overflow: hidden;
+}
+.btn__switch p {
+  padding: 0.8rem 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.btn__switch__side {
+  transition: background-color 0.3s ease;
+}
+.btn__switch__side.active {
+  background-color: #FFBF00;
+}
+.btn__switch__side.active p {
+  font-weight: 700;
+}/*# sourceMappingURL=button.css.map */

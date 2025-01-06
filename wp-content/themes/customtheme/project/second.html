@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Epic Foods</title>
+    <link rel="stylesheet" href="./styles/helpers/reset.css">
+    <link rel="stylesheet" href="./styles/helpers/globalStyles.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/UI/button.css">
+    <link rel="stylesheet" href="./styles/UI/input.css">
+    <link rel="stylesheet" href="./styles/UI/header.css">
+    <link rel="stylesheet" href="./styles/UI/fotter.css">
+    <link rel="stylesheet" href="./fonts/akrobat.css">
+    <link rel="stylesheet" href="./styles/UI/modal.css">
+</head>
+<body class="product">
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__left">
+                    <img src="./images/logo.png" alt="Epic Foods">
+                </div>
+                <div class="header__right">
+                    <nav class="header__rightList">
+                        <a href="/">Про нас</a>
+                        <a href="/">Послуги</a>
+                        <a href="/">Співпраця</a>
+                        <div class="menu">
+                            <span href="/">Продукція <img class="arrow" src="./images/ui/arrow-down.png"></span>
+                            <div class="menu__content">
+                                <a href="/">Золота Нива</a>
+                                <a href="/">Ягуар</a>
+                                <a href="/">Гулі</a>
+                                <a href="/">Смаколик</a>
+                            </div>
+                        </div>
+                        <a href="/">Купити онлайн</a>
+                        <a href="/">Блог</a>
+                        <a href="/">Контакти</a>
+                        <button class="btn btn__switch">
+                            <div class="btn__switch__side active">
+                                <p>UA</p>
+                            </div>
+                            <div class="btn__switch__side">
+                                <p>EN</p>
+                            </div>
+                        </button>
+                        <button class="btn btn__yellow btn__cart" id="openBtn"><img src="./images/ui/cart.png" alt="cart"></button>
+                    </nav>
+                    <button class="btn btn__yellow btn__burger" id="burger"><img src="./images/ui/burger.png" alt="cart"></button>
+                </div>
+                <div class="header__responsive">
+                    <div class="header__responsiveList">
+                        <a href="/">Про нас</a>
+                        <a href="/">Послуги</a>
+                        <a href="/">Співпраця</a>
+                        <div class="menu">
+                            <span id="responsiveDrop">Продукція <img class="arrow" src="./images/ui/herederResp.png"></span>
+                            <div class="menu__content" id="responsiveDropMenu">
+                                <a href="/">Золота Нива</a>
+                                <a href="/">Ягуар</a>
+                                <a href="/">Гулі</a>
+                                <a href="/">Смаколик</a>
+                            </div>
+                        </div>
+                        <a href="/">Купити онлайн</a>
+                        <a href="/">Блог</a>
+                        <a href="/">Контакти</a>
+                        <button class="btn btn__yellow btn__cart" id="openBtn"><img src="./images/ui/cart.png" alt="cart"></button>
+                        <button class="btn btn__switch">
+                            <div class="btn__switch__side active">
+                                <p>UA</p>
+                            </div>
+                            <div class="btn__switch__side">
+                                <p>EN</p>
+                            </div>
+                        </button>
+                        <button class="btn btn__yellow btn__close" id="burgerClose"><img src="./images/ui/close.png"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="header__fix"></div>
+    <main>
+        <div class="action">
+            <div class="marquee">
+                <p>Заробляйте до 60% з нашою продукцією у вашому магазині. Дистриб'ютори можуть отримувати до 35% прибутку з оптових закупівель</p>
+            </div>
+        </div>
+        <div class="product__S1 parallax">
+            <div class="container">
+                <div class="product__S1__list">
+                    <div class="product__S1__left">
+                        <h2>Професійне калібрування та очищення агропродукції</h2>
+                        <span>Оптимізуйте якість вашої продукції з Епік фуд — швидко, ефективно, надійно!</span>
+                        <button class="btn btn__yellow desktop">Дізнатись більше</button>
+                    </div>
+                    <div class="product__S1__right">
+                        <img src="./images/product/S1.png" alt="">
+                        <button class="btn btn__yellow mobile">Дізнатись більше</button>
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/product/S1/seed1.png">
+            <img class="seed seed2" src="./images/product/S1/seed2.png">
+            <img class="seed seed3" src="./images/product/S1/seed3.png">
+        </div>
+        <div class="product__S2 container">
+            <h2>Чому обирають нас?</h2>
+            <div class="product__S2__list">
+                <div class="product__S2__item">
+                    <img src="./images/product/S2_1.png" alt="">
+                    <p>Якість</p>
+                    <span>Сучасне обладнання забезпечує високі стандарти очищення.</span>
+                </div>
+                <div class="product__S2__item">
+                    <img src="./images/product/S2_2.png" alt="">
+                    <p>Швидкість</p>
+                    <span>Ефективні технології для оперативної обробки</span>
+                </div>
+                <div class="product__S2__item">
+                    <img src="./images/product/S2_3.png" alt="">
+                    <p>Економія</p>
+                    <span>Знижуйте витрати на переробку з нашими рішеннями</span>
+                </div>
+                <div class="product__S2__item">
+                    <img src="./images/product/S2_3.png" alt="">
+                    <p>Індивідуальний підхід</p>
+                    <span>Підбираємо рішення, які максимально відповідають вашим потребам.</span>
+                </div>
+            </div>
+        </div>
+        <div class="product__S3 parallax">
+            <div class="container">
+                <h2>Наші послуги</h2>
+                <div class="product__S3__list">
+                    <div class="product__S3__item">
+                        <img src="./images/product/S3_1.png" alt="">
+                        <b>Калібрування</b>
+                        <span>Забезпечте однорідність вашої продукції для підвищення її ринкової вартості. Наші калібрувальні системи швидко і точно відсортують продукцію за розміром та якістю.</span>
+                        <p>Поліпшена якість товару = більше задоволених клієнтів!</p>
+                        <button class="btn btn__yellow">Купити зараз!</button>
+                    </div>
+                    <div class="product__S3__item">
+                        <img src="./images/product/S3_2.png" alt="">
+                        <b>Аспірація</b>
+                        <span>Ефективно видаляйте небажані домішки, покращуючи свіжість і якість продукції. Наша аспіраційна система відрізняється високою продуктивністю.</span>
+                        <p>Чистіша продукція = вищі ціни на ринку!</p>
+                        <button class="btn btn__yellow">Купити зараз!</button>
+                    </div>
+                    <div class="product__S3__item">
+                        <img src="./images/product/S3_3.png" alt="">
+                        <b>Пневмо стіл</b>
+                        <span>Використовуйте передову технологію для відокремлення легких частинок від важких, що забезпечує ідеальне очищення</span>
+                        <p>Зменшує втрати та підвищує ефективність обробки!</p>
+                        <button class="btn btn__yellow">Купити зараз!</button>
+                    </div>
+                    <div class="product__S3__item">
+                        <img src="./images/product/S3_4.png" alt="">
+                        <b>Фото сортування</b>
+                        <span>Забезпечте однорідність вашої продукції для підвищення її ринкової вартості. Наші калібрувальні системи швидко і точно відсортують продукцію за розміром та якістю.</span>
+                        <p>Якісна продукція = задоволені споживачі!</p>
+                        <button class="btn btn__yellow">Купити зараз!</button>
+                    </div>
+                    <div class="product__S3__item">
+                        <img src="./images/product/S3_5.png" alt="">
+                        <b>Обезпилення</b>
+                        <span>Підтримуйте чистоту на всіх етапах обробки з нашими системами обезпилення.</span>
+                        <p>Підвищена безпека на виробництві!</p>
+                        <button class="btn btn__yellow">Купити зараз!</button>
+                    </div>
+                    <div class="product__S3__item">
+                        <img src="./images/product/S3_6.png" alt="">
+                        <b>Зберігання агропродукції</b>
+                        <span>Надійне зберігання з контролем температури та вологості для збереження свіжості вашої продукції</span>
+                        <p>Максимальна безпека = мінімальні втрати!</p>
+                        <button class="btn btn__yellow">Купити зараз!</button>
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/product/S2/seed1.png">
+            <img class="seed seed2" src="./images/product/S2/seed2.png">
+            <img class="seed seed3" src="./images/product/S2/seed3.png">
+            <img class="seed seed4" src="./images/product/S2/seed4.png">
+            <img class="seed seed5" src="./images/product/S2/seed5.png">
+            <img class="seed seed6" src="./images/product/S2/seed6.png">
+            <img class="seed seed7" src="./images/product/S2/seed7.png">
+            <img class="seed seed8 responsive" src="./images/product/S2/seed8.png">
+            <img class="seed seed9 responsive" src="./images/product/S2/seed9.png">
+            <img class="seed seed10 responsive" src="./images/product/S2/seed10.png">
+            <img class="seed seed11 responsive" src="./images/product/S2/seed11.png">
+            <img class="seed seed12 responsive" src="./images/product/S2/seed12.png">
+        </div>
+        <div class="S8_2">
+            <h2>Що говорять наші клієнти та чому вони обирають нас</h2>
+            <p class="desc">Дізнайтесь більше про процес виробництва нашої продукції та переконайтесь у її якості.</p>
+            <div class="slider3">
+                <!-- <button class="prev"><img src="./images/ui/arrow-left.png"></button> -->
+                <div class="slider3__wrapper">
+                    <div class="slider3__slide">
+                        <button class="prev"><img src="./images/ui/arrow-left.png" alt="prev"></button>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 1</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 2</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="next"><img src="./images/ui/arrow-right.png" alt="next"></button>
+                    </div>
+                    <div class="slider3__slide">
+                        <button class="prev"><img src="./images/ui/arrow-left.png"></button>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 3</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 4</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="next"><img src="./images/ui/arrow-right.png" alt="next"></button>
+                    </div>
+                    <div class="slider3__slide">
+                        <button class="prev"><img src="./images/ui/arrow-left.png"></button>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 5</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 6</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="next"><img src="./images/ui/arrow-right.png"></button>
+                    </div>
+                    <div class="slider3__slide">
+                        <button class="prev"><img src="./images/ui/arrow-left.png"></button>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 7</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <div class="comment__item">
+                                <div class="comment__top">
+                                    <img src="./images/ui/comment-mark.png" alt="">
+                                    <span>Житомир</span>
+                                </div>
+                                <div class="comment__body">
+                                    <p>Антоненко Антон Антонович 8</p>
+                                    <span>Сам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав користувачСам відгук, який написав...</span>
+                                    <img src="./images/ui/rate.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="next"><img src="./images/ui/arrow-right.png"></button>
+                    </div>
+                </div>
+                <!-- <button class="next"><img src="./images/ui/arrow-right.png"></button> -->
+            </div>
+            <button class="btn btn__yellow">Додати відгук</button>
+        </div>
+        <div class="S11 parallax">
+            <div class="container">
+                <h2 class="S11__title">Контакти</h2>
+                <img class="map" src="./images/S11.png" alt="">
+                <div class="S11__address">
+                    <img src="./images/ui/mapMark.png" alt="">
+                    <p><span>Адреса:</span> вул. Параджанова 80, Житомир, Україна</p>
+                </div>
+                <div class="S11__list">
+                    <div class="S11__list__item">
+                        <h2>Генеральний директор</h2>
+                        <b></b>
+                        <span>Дмитро Епік</span>
+                        <p>+38 (063) 88 66 777</p>
+                        <small></small>
+                    </div>
+                    <div class="S11__list__item">
+                        <h2>Торговий відділ</h2>
+                        <b>Керівник торгового відділу</b>
+                        <span>Дмитро</span>
+                        <p>+38 (096) 684 67 56</p>
+                        <small></small>
+                    </div>
+                    <div class="S11__list__item">
+                        <h2></h2>
+                        <b>Територіальний менеджер</b>
+                        <span>Дмитро</span>
+                        <p>+38 (096) 684 67 56</p>
+                        <small>Регіони: Житомирський, Рівненський.</small>
+                    </div>
+                    <div class="S11__list__item">
+                        <h2></h2>
+                        <b>Регіональний менеджер</b>
+                        <span>Ольга</span>
+                        <p>+38 (096) 684 67 56</p>
+                        <small>Регіони: Тернопільський, Івано-Франківський, Львівський, Волинський.</small>
+                    </div>
+                    <div class="S11__list__item">
+                        <h2>Фінансовий відділ</h2>
+                        <b>Бухгалтер</b>
+                        <span>Марина Осолінська</span>
+                        <p>+38 (096) 381 33 30</p>
+                        <small></small>
+                    </div>
+                    <div class="S11__list__item">
+                        <h2>Відділ маркетингу</h2>
+                        <b>Маркетолог</b>
+                        <span>Юлія Романенко</span>
+                        <p>+38 (068) 549 54 99</p>
+                        <small></small>
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/product/S4/seed1.png">
+            <img class="seed seed2" src="./images/product/S4/seed2.png">
+            <img class="seed seed3" src="./images/product/S4/seed3.png">
+            <img class="seed seed4" src="./images/product/S4/seed4.png">
+        </div>
+        <div class="product__S8 parallax">
+            <div class="container">
+                <div class="product__S8__title">
+                    <h2>Готові підвищити якість вашої агропродукції?</h2>
+                    <p>Зателефонуйте нам або заповніть форму для безкоштовної консультації!</p>
+                </div>
+                <div class="product__S8__wrapper">
+                    <div class="product__S8__left">
+                        <h3 class="desktop">Покращте свій бізнес з Епік фуд!</h3>
+                        <p>Зателефонуйте нам або заповніть форму для безкоштовної консультації!</p>
+                        <input type="text" placeholder="Ваше імʼя">
+                        <input type="text" placeholder="Номер телефону">
+                        <button class="btn btn__green">Хочу співпрацювати</button>
+                    </div>
+                    <div class="product__S8__right">
+                        <img src="./images/S8__1.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <img class="seed seed1" src="./images/product/S4/seed5.png">
+        </div>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+              <span class="close-btn" id="closeBtn"><img src="./images/ui/close.png" alt=""></span>
+              <div class="cash">
+                <div class="cash__head">
+                    <p>Ваша корзина</p>
+                </div>
+                <div class="cash__item">
+                    <img class="close" src="./images/ui/close.png" alt="">
+                    <div class="cash__itemWrapp">
+                        <div class="cash__img">
+                            <img src="./images/cashImg.png" alt="">
+                        </div>
+                        <div class="cash__text">
+                            <p>Насіння соняшника смажене</p>
+                            <span>80 г</span>
+                            <span>SKU: U194729901</span>
+                        </div>
+                        <div class="cash__number">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                        <div class="cash__sum">
+                            <span>35</span> <span>грн</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cash__item">
+                    <img class="close" src="./images/ui/close.png" alt="">
+                    <div class="cash__itemWrapp">
+                        <div class="cash__img">
+                            <img src="./images/cashImg.png" alt="">
+                        </div>
+                        <div class="cash__text">
+                            <p>Насіння соняшника смажене</p>
+                            <span>80 г</span>
+                            <span>SKU: U194729901</span>
+                        </div>
+                        <div class="cash__number">
+                            <button>-</button>
+                            <span>1</span>
+                            <button>+</button>
+                        </div>
+                        <div class="cash__sum">
+                            <span>35</span> <span>грн</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cash__total">
+                    <span>Сума замовлення: 70 грн</span>
+                </div>
+                <div class="cash__info">
+                    <p>Особисті дані для оформлення</p>
+                    <input type="text" placeholder="Ваше імʼя">
+                    <input type="text" placeholder="Номер телефону">
+                    <button class="btn btn__yellow">Замовити</button>
+                </div>
+               </div>
+            </div>
+          </div>
+    </main>
+    <div class="opt" id="opt">
+        <img src="./images/opt.png">
+    </div>
+    <div class="cashTooltip" id="cashTooltip">
+        <img src="./images/cash.png">
+    </div>
+    <footer class="footer" id="footer">
+        <div class="footer__wrapper container">
+            <img class="fotterLogo" src="./images/footer.png" alt="">
+            <div class="footer__list">
+                <!-- <div class="footer__list__item"> -->
+                    <a href="">Про нас</a>
+                    <a href="">Послуги</a>
+                    <a href="">Співпраця</a>
+                    <div class="menu">
+                        <span href="/">Продукція <img class="arrow" src="./images/ui/herederResp.png"></span>
+                        <div class="menu__content">
+                            <a href="/">Золота Нива</a>
+                            <a href="/">Ягуар</a>
+                            <a href="/">Гулі</a>
+                            <a href="/">Смаколик</a>
+                        </div>
+                    </div>
+                    <a href="">Купити онлайн</a>
+                    <a href="">Блог</a>
+                    <a href=""><b>Купити в пачках</b></a>
+                    <a href=""><b>Купити в коробках</b></a>
+                    <a href=""><b>Купити на вагу</b></a>
+                <!-- </div> -->
+            </div>
+            <a class="anchor" href="/"><img src="./images/ui/Arrow-top.png" alt=""></a>
+        </div>
+    </footer>
+    <div class="banner__wrapper">
+        <div class="banner" id="banner">
+            <div class="banner__list">
+                <div class="banner__item">
+                    <img src="./images/banner/1.png">
+                    <p>Купити в пачках</p>
+                </div>
+                <div class="banner__item">
+                    <img src="./images/banner/2.png">
+                    <p>Купити в коробках</p>
+                </div>
+                <div class="banner__item">
+                    <img src="./images/banner/3.png">
+                    <p>Купити на вагу</p>
+                </div>
+                <div class="banner__item">
+                    <img src="./images/banner/4.png">
+                    <p>Контакти</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="slider.js" defer></script>
+    <script src="customSlider1.js"></script>
+    <script src="superCustomSlider.js"></script>
+</body>
+</html>

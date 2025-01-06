@@ -1,0 +1,148 @@
+@import '../helpers/mixin.scss';
+
+.header{
+    height: 8rem;
+    padding: .8rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 10;
+    &__wrapper{
+        @include flex(flex,center,space-between);
+        @include media(tablet){
+            padding: 0 1.5rem;
+        }
+    }
+    nav{
+        @include flex(flex,center,center);
+        gap: 3.5rem;
+        @include media(desktop){
+            gap: 1.8rem;   
+        }
+        @include media(tablet){
+            display: none;
+        }
+    }
+    a,span{
+        color: #2B2B2B;
+        font-size: 2rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+        display: inline-block;
+        padding-bottom: .5rem;
+        @include media(tablet){
+            color: #FFF;
+        }
+        .arrow{
+            padding-left: 1rem;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0; /* Располагаем подчеркивание под текстом */
+            left: 0;
+            width: 0;
+            height: 2px; /* Толщина линии */
+            background-color: #2B2B2B; /* Цвет подчеркивания */
+            transition: width 0.3s ease; /* Анимация ширины */
+            @include media(tablet){
+                background-color: #FFF;
+            }
+        }
+        &:hover{
+            &::after{
+                width: 100%;
+            }
+        }
+
+    }
+    .menu{
+        position: relative;
+        &:hover{
+            .menu__content{
+                display: flex;
+            }
+        }
+        &__content{
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem;
+            border-radius: 1rem;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            min-width: 16rem;
+        }
+    }
+    .btn__cart{
+        padding: .7rem .8rem;
+    }
+    .btn__burger{
+        padding: .9rem;
+        @include media(reverso-tablet){
+            display: none;
+        }
+    }
+    .btn__close{
+        width: 4rem;
+        height: 4rem;
+        position: absolute;
+        top: 2.1rem;
+        right: 3.5rem;
+    }
+    &__responsive{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #FFF;
+        display: none;
+        transition: 1s linear ease;
+        .menu{
+            position: relative;
+            &:hover{
+                .menu__content{
+                    display: flex;
+                }
+            }
+            &__content{
+                display: none;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                padding: 1rem;
+                border-radius: 1rem;
+                position: absolute;
+                background-color: white;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+                min-width: 16rem;
+                a,p{
+                    color: #2B2B2B;
+                }
+            }
+        }
+    }
+    &__responsiveList{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25rem;
+        height: 100vh;
+        @include flex(flex,flex-start,flex-start);
+        flex-direction: column;
+        gap: 2.5rem;
+        background: #51924B;
+        padding: 6.5rem 3.2rem;
+    }
+    &__fix{
+        height: 8rem;
+    }
+}

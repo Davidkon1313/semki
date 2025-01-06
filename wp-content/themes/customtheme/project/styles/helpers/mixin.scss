@@ -1,0 +1,122 @@
+@mixin text__ellipsis($ellipsisRows:false) {
+    @if ($ellipsisRows) {
+      display: -webkit-box;
+      -webkit-line-clamp: $ellipsisRows;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    } @else {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+}
+
+@mixin flex($flex_type:flex, $flex_align:false, $flex_justify:false) {
+display: $flex_type;
+@if $flex_align {
+    align-items: $flex_align;
+}
+@if $flex_justify {
+    justify-content: $flex_justify;
+}
+}
+
+@mixin media($point) {
+
+  @if $point == fullHD {
+    @media all and (max-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $point == reverso-xl-desktop {
+    @media all and (min-width: 1401px) { 
+      @content; 
+    }
+  }
+
+  @if $point == xl-desktop {
+    @media all and (max-width: 1400px) {
+      @content; 
+    }
+  }
+
+  @if $point == reverso-desktop {
+    @media all and (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @if $point == desktop {
+    @media all and (max-width: 1199px) {
+      @content; 
+    }
+  }
+  @if $point == tablet {
+    @media all and (max-width: 991px) {
+      @content;
+    }
+  }
+  @if $point == reverso-tablet {
+    @media all and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $point == p-tablet {
+    @media all and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $point == reverso-p-tablet {
+    @media all and (min-width: 768px) {
+      @content; 
+    }
+  }
+  @if $point == ptablet-desktop {
+    @media all and (min-width: 768px) and (max-width: 1199px) {
+      @content;
+    }
+  }
+  @if $point == phone-ptablet {
+    @media all and (min-width: 481px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $point == phone-tablet {
+    @media all and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+
+  @if $point == phone-p-tablet {
+    @media all and (min-width: 641px) and (max-width: 767px) {
+      @content;
+    }
+  }
+  @if $point == reverso-phone {
+    @media all and (min-width: 641px) {
+      @content;
+    }
+  }
+  @if $point == phone {
+    @media all and (max-width: 640px) {
+      @content;
+    }
+  }
+  @if $point == p-phone {
+    @media all and (max-width: 480px) {
+      @content;
+    }
+  }
+  @if $point == reverso-p-phone {
+    @media all and (min-width: 481px) {
+      @content;
+    }
+  }
+  @else {
+    @media all and ($point) {
+      @content;
+    }
+  }
+}
