@@ -22,54 +22,46 @@
 }
 
 .action.action2 .marquee {
-  animation: slide-reverse 30s linear infinite;
+  animation: slide-reverse 20s linear infinite;
 }
 
 @keyframes slide {
   0% {
-    transform: translateX(100%);
-  }
-
-  50% {
-    transform: translateX(-100%);
+    transform: translateX(170%);
   }
 
   100% {
-    transform: translateX(100%);
+    transform: translateX(-110%);
   }
 }
 
 @keyframes slide-reverse {
   0% {
-    transform: translateX(-100%);
-  }
-
-  50% {
-    transform: translateX(100%);
+    transform: translateX(-110%);
   }
 
   100% {
-    transform: translateX(-100%);
+    transform: translateX(170%);
   }
 }
 
 @media all and (max-width: 991px) {
   .action .marquee {
-    animation: slide 25s linear infinite;
+    animation: slide 20s linear infinite;
   }
 
   .action.action2 .marquee {
-    animation: slide-reverse 25s linear infinite;
+    animation: slide-reverse 20s linear infinite;
   }
 }
 
 @media all and (tablet) {
   .action .marquee {
-    animation: slide 25s linear infinite;
+    animation: slide 20s linear infinite;
   }
 
   .action.action2 .marquee {
-    animation: slide-reverse 25s linear infinite;
+    animation: slide-reverse 20s linear infinite;
   }
 }
 
@@ -1125,6 +1117,30 @@
 @media all and (tablet) {
   .S6 {
     padding: 2.5rem 0 5rem;
+  }
+}
+
+.S6__title p {
+  margin: 0 auto 3.5rem;
+  text-align: center;
+  max-width: 66.5rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+@media all and (max-width: 640px) {
+  .S6__title p {
+    font-size: 1.6rem;
+    max-width: 32rem;
+    margin: 0 auto 2rem;
+  }
+}
+
+@media all and (phone) {
+  .S6__title p {
+    font-size: 1.6rem;
+    max-width: 32rem;
+    margin: 0 auto 2rem;
   }
 }
 

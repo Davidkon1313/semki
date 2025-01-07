@@ -858,6 +858,7 @@
     <div class="S6 parallax" id="section5">
         <div class="S6__title">
             <h2>Спеціальні пропозиції</h2>
+            <p>Ви просили, і ми це зробили!</p>
         </div>
         <div class="S6__wrapper desktop">
             <div class="S6__left">
