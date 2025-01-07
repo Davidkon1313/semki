@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
                     </div>
                     <div class="cash__number">
                         <button class="decrease">-</button>
-                        <span>${item.quantity}</span>
+                        <input type="number" value="${item.quantity}" class="quantity-input" data-item-key="${item.key}">
                         <button class="increase">+</button>
                     </div>
                     <div class="cash__sum">
@@ -156,6 +156,22 @@ jQuery(document).ready(function ($) {
         const itemKey = $(this).data('remove-item');
         updateCartItemQuantity(itemKey, 0, true); // Removing item
     });
+
+    $(document).on('change', '.quantity-input', function () {
+        const itemKey = $(this).data('item-key'); // Get the item key
+        const newValue = parseInt($(this).val(), 10); // Get the new value from input
+        if (!isNaN(newValue)) {
+            let setNewValue = 0;
+            localCart.forEach(item => {
+                if (item.key == itemKey) {
+                    setNewValue = newValue - item.quantity;
+                }
+            });
+            updateCartItemQuantity(itemKey, setNewValue, false);
+        }
+    });
+
+
 
     async function updateCartItemQuantity(itemKey, quantityChange, isRemove = false) {
         if (isRemove) {

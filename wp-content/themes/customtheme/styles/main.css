@@ -661,6 +661,25 @@
   font-size: 1.6rem;
 }
 
+.cash__number input {
+  max-width: 9rem;
+  padding: 0.9rem 2rem 0.9rem 1.5rem;
+}
+
+@media all and (max-width: 640px) {
+  .cash__number input {
+    max-width: 7rem;
+    padding: 0.6rem 1rem 0.6rem;
+  }
+}
+
+@media all and (phone) {
+  .cash__number input {
+    max-width: 7rem;
+    padding: 0.6rem 1rem 0.6rem;
+  }
+}
+
 .cash__sum {
   margin-left: 2rem;
   display: flex;
