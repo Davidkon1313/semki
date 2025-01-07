@@ -73,6 +73,11 @@
             <div class="section__head">
                 <h2><b>Золота Нива</b> – Найкращі снеки для щоденного перекусу</h2>
                 <p> Продукція високої якості для перекусів: насіння соняшника, гарбузове насіння, арахіс.</p>
+                <div class="section__filters">
+                    <button class="btn active">Насіння</button>
+                    <button class="btn">Снеки</button>
+                    <button class="btn">Арахіс</button>
+                </div>
             </div>
             <div class="section__list" id="product-block-1">
                 <?php
@@ -204,9 +209,16 @@
                         $product_price = $product->get_price();
                         $product_desc  = wp_trim_words($product->get_description(), 20, '...');
                         $variations = $product->get_type() === 'variable' ? $product->get_available_variations() : null;
+                        $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                        $tags = array();
+                        foreach ($product_tags as $tag) {
+                            $tags[] = $tag->name;  // Collecting the tag names
+                        }
+                        $product_tags_names = implode(', ', $tags);  // Converting array of tags to a comma-separated string
+
 
                         // Render the product in the desired layout
-                        echo '<div class="section__listResponsive">';
+                        echo '<div class="section__listResponsive" product-type="' . $product_tags_names . '">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
                         echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -273,6 +285,11 @@
             <div class="section__head">
                 <h2><b> Гулі-Гулі</b> – Смаколики для справжніх поціновувачів</h2>
                 <p>Виготовлене з натуральної сировини. Насіння соняшника та гарбузове насіння в найкращих варіаціях.
+                <div class="section__filters">
+                    <button class="btn active">Насіння</button>
+                    <button class="btn">Снеки</button>
+                    <button class="btn">Арахіс</button>
+                </div>
                 </p>
             </div>
             <div class="section__list" id="product-block-2">
@@ -400,9 +417,16 @@
                         $product_price = $product->get_price();
                         $product_desc  = wp_trim_words($product->get_description(), 20, '...');
                         $variations = $product->get_type() === 'variable' ? $product->get_available_variations() : null;
+                        $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                        $tags = array();
+                        foreach ($product_tags as $tag) {
+                            $tags[] = $tag->name;  // Collecting the tag names
+                        }
+                        $product_tags_names = implode(', ', $tags);  // Converting array of tags to a comma-separated string
+
 
                         // Render the product in the desired layout
-                        echo '<div class="section__listResponsive">';
+                        echo '<div class="section__listResponsive" product-type="' . $product_tags_names . '">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
                         echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -468,6 +492,11 @@
             <div class="section__head">
                 <h2><b>Сонячний Ягуар</b> – Ідеальні снеки для перекус</h2>
                 <p>Лінійка продуктів для активних людей, які люблять смачні та корисні снеки</p>
+                <div class="section__filters">
+                    <button class="btn active">Насіння</button>
+                    <button class="btn">Снеки</button>
+                    <button class="btn">Арахіс</button>
+                </div>
             </div>
             <div class="section__list" id="product-block-3">
                 <?php
@@ -595,9 +624,16 @@
                         $product_price = $product->get_price();
                         $product_desc  = wp_trim_words($product->get_description(), 20, '...');
                         $variations = $product->get_type() === 'variable' ? $product->get_available_variations() : null;
+                        $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                        $tags = array();
+                        foreach ($product_tags as $tag) {
+                            $tags[] = $tag->name;  // Collecting the tag names
+                        }
+                        $product_tags_names = implode(', ', $tags);  // Converting array of tags to a comma-separated string
+
 
                         // Render the product in the desired layout
-                        echo '<div class="section__listResponsive">';
+                        echo '<div class="section__listResponsive" product-type="' . $product_tags_names . '">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
                         echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -666,6 +702,11 @@
                 <h2><b>Смаколик</b> – Смаколики для справжніх поціновувачів</h2>
                 <p> Виготовлене з натуральної сировини. Насіння соняшника та гарбузове насіння в найкращих
                     варіаціях.</p>
+                <div class="section__filters">
+                    <button class="btn active">Насіння</button>
+                    <button class="btn">Снеки</button>
+                    <button class="btn">Арахіс</button>
+                </div>
             </div>
             <div class="section__list" id="product-block-4">
                 <?php
@@ -793,9 +834,16 @@
                         $product_price = $product->get_price();
                         $product_desc  = wp_trim_words($product->get_description(), 20, '...');
                         $variations = $product->get_type() === 'variable' ? $product->get_available_variations() : null;
+                        $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                        $tags = array();
+                        foreach ($product_tags as $tag) {
+                            $tags[] = $tag->name;  // Collecting the tag names
+                        }
+                        $product_tags_names = implode(', ', $tags);  // Converting array of tags to a comma-separated string
+
 
                         // Render the product in the desired layout
-                        echo '<div class="section__listResponsive">';
+                        echo '<div class="section__listResponsive" product-type="' . $product_tags_names . '">';
                         echo '<div class="section__itemResponsive listed">';
                         echo '<div class="section__itemResponsiveWrapper">';
                         echo '<img id="switcher" class="switcher" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';

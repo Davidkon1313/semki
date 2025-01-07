@@ -293,6 +293,38 @@
   })();
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('.parallax');
+
+    sections.forEach(section => {
+      const buttons = section.querySelectorAll('.section__filters .btn');
+      const productItems = section.querySelectorAll('.section__listResponsive');
+      const handleButtonClick = (button) => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const selectedType = button.textContent.trim();
+        productItems.forEach(item => {
+          const itemType = item.getAttribute('product-type');
+          if (itemType === selectedType) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      };
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          handleButtonClick(button);
+        });
+      });
+      if (buttons.length > 0) {
+        handleButtonClick(buttons[0]);
+      }
+    });
+  });
+</script>
+
 </body>
 
 </html>
