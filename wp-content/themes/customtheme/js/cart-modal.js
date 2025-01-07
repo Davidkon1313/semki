@@ -91,6 +91,8 @@ jQuery(document).ready(function ($) {
             modalContent.append('<div class="cash__item">Корзина пуста</div>');
             cashTooltip.removeClass("active");
             return;
+        } else {
+            cashTooltip.find('.count').text(localCart.length);
         }
 
         localCart.forEach(item => {

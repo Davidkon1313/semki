@@ -244,10 +244,29 @@ jQuery(function ($) {
 });
 
 // activating cash button
-function toggleCashTooltipActive() {
-    var cashTooltip = document.getElementById('cashTooltip');
-    if (!cashTooltip.classList.contains("active")) {
-        cashTooltip.classList.toggle('active');
+async function toggleCashTooltipActive() {
+    var cashTooltip = $('#cashTooltip');
+    if (!cashTooltip.hasClass("active")) {
+        cashTooltip.toggleClass('active');
+    }
+    try {
+        const response = await $.ajax({
+            url: wc_cart_params.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'get_cart_items'
+            },
+        });
+
+        if (response.success) {
+            const localCart = response.data.items;
+            console.log("Cart items loaded:", localCart);
+            cashTooltip.find('.count').text(localCart.length);
+        } else {
+            console.error("Failed to load cart items:", response.message);
+        }
+    } catch (error) {
+        console.error('Error fetching cart items:', error);
     }
 }
 

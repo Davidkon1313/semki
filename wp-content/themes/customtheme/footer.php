@@ -3,6 +3,7 @@
 </div>
 <div class="cashTooltip" id="cashTooltip">
   <img src="<?php echo get_template_directory_uri(); ?>/images/cash.webp">
+  <span class="count">1</span>
 </div>
 <div class="modal orderModal" id="orderModal">
   <div class="modal-content">

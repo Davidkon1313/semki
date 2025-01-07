@@ -3518,6 +3518,34 @@
   visibility: hidden;
 }
 
+.cashTooltip .count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.7rem 1.3rem;
+  border-radius: 50%;
+  background: red;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #FFF;
+  vertical-align: middle;
+}
+
+@media all and (max-width: 991px) {
+  .cashTooltip .count {
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+@media all and (tablet) {
+  .cashTooltip .count {
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+  }
+}
+
+
 .cashTooltip img {
   border: red;
   border-style: solid;
