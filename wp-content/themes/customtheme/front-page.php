@@ -83,11 +83,16 @@
                 <?php
                 // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
+                    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
+                    $posts_per_page = 4;
+                    if ($screen_width > 960 && $screen_width < 1600) {
+                        $posts_per_page = 3;
+                    }
 
                     // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => 4,
+                        'posts_per_page' => $posts_per_page,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -166,7 +171,7 @@
             </div>
             <?php
             // Show the "Show More" button only if there are more products
-            if ($query->found_posts > 4) {
+            if ($query->found_posts > $posts_per_page) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-1" data-offset="4" data-category="category-gold-niva">Показати ще</button>';
             }
             ?>
@@ -294,12 +299,17 @@
             </div>
             <div class="section__list" id="product-block-2">
                 <?php
+                $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
+                $posts_per_page = 4;
+                if ($screen_width > 960 && $screen_width < 1600) {
+                    $posts_per_page = 3;
+                }
                 // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
                     // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => 4,
+                        'posts_per_page' => $posts_per_page,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -378,7 +388,7 @@
 
             <?php
             // Show the "Show More" button only if there are more products
-            if ($query->found_posts > 4) {
+            if ($query->found_posts > $posts_per_page) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-2" data-offset="4" data-category="category-guli-guli">Показати ще</button>';
             }
             ?>
@@ -502,11 +512,15 @@
                 <?php
                 // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
-
+                    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
+                    $posts_per_page = 4;
+                    if ($screen_width > 960 && $screen_width < 1600) {
+                        $posts_per_page = 3;
+                    }
                     // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => 4,
+                        'posts_per_page' => $posts_per_page,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -585,7 +599,7 @@
 
             <?php
             // Show the "Show More" button only if there are more products
-            if ($query->found_posts > 4) {
+            if ($query->found_posts > $posts_per_page) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-3" data-offset="4" data-category="category-jaguar">Показати ще</button>';
             }
             ?>
@@ -712,11 +726,15 @@
                 <?php
                 // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
-
+                    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
+                    $posts_per_page = 4;
+                    if ($screen_width > 960 && $screen_width < 1600) {
+                        $posts_per_page = 3;
+                    }
                     // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => 4,
+                        'posts_per_page' => $posts_per_page,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -795,7 +813,7 @@
 
             <?php
             // Show the "Show More" button only if there are more products
-            if ($query->found_posts > 4) {
+            if ($query->found_posts > $posts_per_page) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-4" data-offset="4" data-category="category-smakolik">Показати ще</button>';
             }
             ?>

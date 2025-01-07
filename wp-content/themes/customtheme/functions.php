@@ -81,10 +81,15 @@ function load_more_products()
     $offset = isset($_GET['offset']) ? (int) $_GET['offset'] : 0;
     $category = isset($_GET['category']) ? sanitize_text_field($_GET['category']) : '';
 
+    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
+    $posts_per_page = 4;
+    if ($screen_width > 960 && $screen_width < 1600) {
+        $posts_per_page = 3;
+    }
     // Query for more products
     $args = array(
         'post_type'      => 'product',
-        'posts_per_page' => 4,
+        'posts_per_page' => $posts_per_page,
         'offset'         => $offset,
         'status'         => 'publish',
         'tax_query'      => array(
@@ -298,3 +303,23 @@ function update_cart_items()
 }
 add_action('wp_ajax_update_cart_items', 'update_cart_items');
 add_action('wp_ajax_nopriv_update_cart_items', 'update_cart_items');
+
+function get_screen_size()
+{
+    if (isset($_COOKIE['screen_width'])) {
+        return intval($_COOKIE['screen_width']);
+    }
+    return 0; // Default if not set
+}
+
+// Add screen width to cookies via JavaScript
+add_action('wp_head', function () {
+    echo '<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const screenWidth = window.innerWidth;
+            if (document.cookie.indexOf("screen_width") === -1 || document.cookie.indexOf("screen_width=" + screenWidth) === -1) {
+                document.cookie = "screen_width=" + screenWidth + "; path=/";
+            }
+        });
+    </script>';
+});
