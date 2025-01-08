@@ -3648,7 +3648,6 @@
   left: 0;
   bottom: 0;
   padding: 1.5rem;
-  box-shadow: 0 0 8px 0 #51924b;
   background: #FFF;
   z-index: 10;
 }
@@ -3691,6 +3690,22 @@
   align-items: center;
   justify-content: center;
   gap: 10rem;
+  box-shadow: 0 0 8px 0 #51924b;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+
+@media all and (max-width: 1199px) {
+  .banner__list {
+    gap: 2.6rem;
+  }
+}
+
+@media all and (desktop) {
+  .banner__list {
+    gap: 2.6rem;
+  }
 }
 
 @media all and (max-width: 991px) {
@@ -3707,13 +3722,15 @@
 
 @media all and (max-width: 480px) {
   .banner__list {
-    gap: 0.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 
 @media all and (p-phone) {
   .banner__list {
-    gap: 0.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
 }
 

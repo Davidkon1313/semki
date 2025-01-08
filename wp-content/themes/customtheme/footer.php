@@ -37,6 +37,38 @@
     </div>
   </div>
 </div>
+<div class="banner__wrapper">
+  <div class="banner" id="banner">
+    <div class="banner__list">
+      <a href="https://www.instagram.com/epic.foods_?igsh=cXlkcGlkcTAwcnc3" style="color: black;">
+        <div class="banner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/1.svg">
+          <p>Ми в Instagram</p>
+        </div>
+      </a>
+      <div class="banner__item">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.svg">
+        <p>Ми в Telegram</p>
+      </div>
+      <div class="banner__item">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.svg">
+        <p>Ми в Viber</p>
+      </div>
+      <a href="https://www.facebook.com/share/15YuJiyXpD/?mibextid=wwXIfr" style="color: black;">
+        <div class="banner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/4.svg">
+          <p>Ми в Facebook</p>
+        </div>
+      </a>
+      <a href="<?php echo get_home_url(); ?>/#contacts" style="color: black;">
+        <div class=" banner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/5.svg">
+          <p>Зателефонуйте нам</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
 <footer class="footer" id="footer">
   <div class="footer__wrapper container">
     <img class="fotterLogo" src="<?php echo get_template_directory_uri(); ?>/images/footer.webp" alt="">
@@ -64,30 +96,6 @@
     <a class="anchor" href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/ui/Arrow-top.webp" alt=""></a>
   </div>
 </footer>
-<div class="banner__wrapper">
-  <div class="banner" id="banner">
-    <div class="banner__list">
-      <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/1.svg">
-        <p>Купити в пачках</p>
-      </div>
-      <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.svg">
-        <p>Купити в коробках</p>
-      </div>
-      <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.svg">
-        <p>Купити на вагу</p>
-      </div>
-      <a href="<?php echo get_home_url(); ?>/#contacts" style="color:black;">
-        <div class="banner__item">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/4.svg">
-          <p>Контакти</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
 <?php wp_footer(); ?>
 <script type="text/javascript">
   var wc_cart_params = <?php echo json_encode(array('ajax_url' => admin_url('admin-ajax.php'))); ?>;
@@ -274,7 +282,7 @@
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
+                    referrerpolicy="strict-origin-when-cross-origin"
                     allowfullscreen>
             </iframe>
         `;
