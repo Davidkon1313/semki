@@ -23,24 +23,28 @@ jQuery(document).ready(function ($) {
         }, 10); // Небольшая задержка для активации анимации
     };
 
-    // Закрытие модального окна
     orderSendCloseBtn.onclick = () => {
-        document.body.style.overflow = 'auto';
-        orderModal.classList.remove("open"); // Убираем анимацию
-        orderModal.classList.add("close"); // Начинаем анимацию исчезновения
-        setTimeout(() => {
-            orderModal.style.display = "none"; // Скрываем окно после завершения анимации
-            orderModal.classList.remove("close"); // Убираем класс для следующего открытия
-        }, 300); // Время, равное длительности анимации
+        const firstName = $('#input_name_form').val();
+        const phoneNumber = $('#input_name_tel_form').val();
+        if (firstName.trim() !== "" && phoneNumber.trim() !== "") {
+            closeModalForm();
+            alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
+        } else {
+            alert("Будь-ласка заповніть форму.");
+        }
     };
-    orderCloseBtn.onclick = () => {
+
+
+    orderCloseBtn.onclick = () => closeModalForm();
+
+    function closeModalForm() {
         document.body.style.overflow = 'auto';
-        orderModal.classList.remove("open"); // Убираем анимацию
-        orderModal.classList.add("close"); // Начинаем анимацию исчезновения
+        orderModal.classList.remove("open");
+        orderModal.classList.add("close");
         setTimeout(() => {
-            orderModal.style.display = "none"; // Скрываем окно после завершения анимации
-            orderModal.classList.remove("close"); // Убираем класс для следующего открытия
-        }, 300); // Время, равное длительности анимации
+            orderModal.style.display = "none";
+            orderModal.classList.remove("close");
+        }, 300);
     };
 
     // Обработка кликов по кнопкам

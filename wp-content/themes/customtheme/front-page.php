@@ -1308,7 +1308,7 @@
         </div>
     </div>
     <div class="S9 parallax" id="blog">
-        <div class="S9__title">Про нас пишуть</div>
+        <div class="S9__title">Останні цікавинки</div>
         <div class="S9__list slider-container slider2 container">
             <?php
             $args = array(
@@ -1353,163 +1353,6 @@
         <img class="seed seed3" src="<?php echo get_template_directory_uri(); ?>/images/S9/S9__3.webp">
         <img class="seed seed4" src="<?php echo get_template_directory_uri(); ?>/images/S9/S9__4.webp">
     </div>
-    <!-- <div class="S9" id="blog">
-        <div class="S9__title">Про нас пишуть</div>
-        <div class="S9__list slider-container slider2 container">
-            <div class="slide">
-                <?php
-                $args = array(
-                    'post_type' => 'post',
-                    'posts_per_page' => 8,
-                );
-
-                $query = new WP_Query($args);
-
-                if ($query->have_posts()) :
-                    while ($query->have_posts()) : $query->the_post();
-                ?>
-                        <div class="S9__item">
-                            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="<?php the_title(); ?>">
-                            <p><?php the_title(); ?></p>
-                            <span class="textContainer"><?php the_content(); ?></span>
-                            <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="Toggle">
-                            </button>
-                        </div>
-                <?php
-                    endwhile;
-                else :
-                    echo '<p>No posts found.</p>';
-                endif;
-                wp_reset_postdata();
-                ?>
-
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>1 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>2 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>3 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>4 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>5 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>6 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>7 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>8 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-                <div class="S9__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/S9_item.webp">
-                    <p>9 Назва статі блогу Назва статі блогу Назва статі блогу</p>
-                    <span class="textContainer">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.</span>
-                    <button class="btn btn__yellow toggle-btn" id="toggleButton">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-list-down.webp" alt="">
-                    </button>
-                </div>
-            </div>
-            <button class="prev-button"><img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-left.webp"></button>
-            <button class="next-button"><img src="<?php echo get_template_directory_uri(); ?>/images/ui/arrow-right.webp"></button>
-        </div>
-    </div> -->
     <div class="S10">
         <div class="section__wrapper">
             <h2>“Епік Фудс" – Смак та якість у кожному продукті</h2>
@@ -1534,42 +1377,54 @@
                 <h2>Генеральний директор</h2>
                 <b></b>
                 <span>Дмитро Епік</span>
-                <p>+38 (063) 88 66 777</p>
+                <a href="tel:+380638866777">
+                    <p>+38 (063) 88 66 777</p>
+                </a>
                 <small></small>
             </div>
             <div class="S11__list__item">
                 <h2>Торговий відділ</h2>
                 <b>Керівник торгового відділу</b>
                 <span>Дмитро</span>
-                <p>+38 (096) 684 67 56</p>
+                <a href="tel:+380966846756">
+                    <p>+38 (096) 684 67 56</p>
+                </a>
                 <small></small>
             </div>
             <div class="S11__list__item">
                 <h2></h2>
                 <b>Територіальний менеджер</b>
                 <span>Дмитро</span>
-                <p>+38 (096) 684 67 56</p>
+                <a href="tel:+380966846756">
+                    <p>+38 (096) 684 67 56</p>
+                </a>
                 <small>Регіони: Житомирський, Рівненський.</small>
             </div>
             <div class="S11__list__item">
                 <h2></h2>
                 <b>Регіональний менеджер</b>
                 <span>Ольга</span>
-                <p>+38 (096) 684 67 56</p>
+                <a href="tel:+380966846756">
+                    <p>+38 (096) 684 67 56</p>
+                </a>
                 <small>Регіони: Тернопільський, Івано-Франківський, Львівський, Волинський.</small>
             </div>
             <div class="S11__list__item">
                 <h2>Фінансовий відділ</h2>
                 <b>Бухгалтер</b>
                 <span>Марина Осолінська</span>
-                <p>+38 (096) 381 33 30</p>
+                <a href="tel:+380963813330">
+                    <p>+38 (096) 381 33 30</p>
+                </a>
                 <small></small>
             </div>
             <div class="S11__list__item">
                 <h2>Відділ маркетингу</h2>
                 <b>Маркетолог</b>
                 <span>Юлія Романенко</span>
-                <p>+38 (068) 549 54 99</p>
+                <a href="tel:+380685495499">
+                    <p>+38 (068) 549 54 99</p>
+                </a>
                 <small></small>
             </div>
         </div>

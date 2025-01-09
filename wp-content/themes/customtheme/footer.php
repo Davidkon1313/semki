@@ -15,8 +15,8 @@
       <div class="order__list">
         <input type="text" placeholder="Калібрування" id="order-form-posluga-header" readonly=true>
         <p>Залиште ваші данні та ми звʼяжемось з вами найближчим часом</p>
-        <input type="text" placeholder="Ваше імʼя">
-        <input type="number" placeholder="Номер телефону">
+        <input id="input_name_form" type="text" placeholder="Ваше імʼя">
+        <input id="input_name_tel_form" type="number" placeholder="Номер телефону">
         <button class="btn btn__yellow" id="order-send-close-btn">Замовити</button>
         <span>Всі данні захищено</span>
       </div>

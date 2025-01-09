@@ -3690,10 +3690,6 @@
   align-items: center;
   justify-content: center;
   gap: 10rem;
-  box-shadow: 0 0 8px 0 #51924b;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 15px;
 }
 
 @media all and (max-width: 1199px) {
@@ -3710,13 +3706,25 @@
 
 @media all and (max-width: 991px) {
   .banner__list {
-    gap: 2.6rem;
+    gap: 7rem;
   }
 }
 
 @media all and (tablet) {
   .banner__list {
-    gap: 2.6rem;
+    gap: 7rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .banner__list {
+    gap: 4rem;
+  }
+}
+
+@media all and (p-tablet) {
+  .banner__list {
+    gap: 4rem;
   }
 }
 
@@ -3754,6 +3762,20 @@
   }
 }
 
+@media all and (max-width: 640px) {
+  .banner__item {
+    max-width: 4rem;
+    text-align: center;
+  }
+}
+
+@media all and (phone) {
+  .banner__item {
+    max-width: 4rem;
+    text-align: center;
+  }
+}
+
 @media all and (max-width: 991px) {
   .banner img {
     width: 2rem;
@@ -3786,6 +3808,18 @@
 @media all and (tablet) {
   .banner p {
     font-size: 1.2rem;
+  }
+}
+
+@media all and (max-width: 640px) {
+  .banner p {
+    line-height: normal;
+  }
+}
+
+@media all and (phone) {
+  .banner p {
+    line-height: normal;
   }
 }
 
