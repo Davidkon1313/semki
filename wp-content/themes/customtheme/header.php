@@ -53,7 +53,7 @@
                         <a href="<?php echo get_home_url(); ?>#smakolik">Смаколик</a>
                      </div>
                   </div>
-                  <a href="<?php echo get_home_url(); ?>/checkout">Купити онлайн</a>
+                  <!-- <a href="<?php echo get_home_url(); ?>/checkout">Купити онлайн</a> -->
                   <a href="<?php echo get_home_url(); ?>/#blog">Блог</a>
                   <a href="<?php echo get_home_url(); ?>/#contacts">Контакти</a>
                   <!-- Button for switching languages -->

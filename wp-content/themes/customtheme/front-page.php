@@ -17,7 +17,7 @@
                     </div>
                     <div class="S1__list">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/switcher.svg" alt="">
-                        <p>Мінімальне замовлення – <b>від 500 грн.</b></p>
+                        <p>Мінімальне замовлення – <b>від 5000 грн.</b></p>
                     </div>
                     <a href="<?php echo get_home_url(); ?>/#gold-niva">
                         <button class="btn btn__yellow desktop">ОБИРАЙ свій смак!</button>

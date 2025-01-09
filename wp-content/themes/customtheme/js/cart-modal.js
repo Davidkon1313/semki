@@ -95,12 +95,15 @@ jQuery(document).ready(function ($) {
             cashTooltip.find('.count').text(localCart.length);
         }
 
+        // modalContent.append('<div class="cash__items">');
+
         localCart.forEach(item => {
             totalAmount += item.subtotal;
             modalContent.append(createCartItem(item));
         });
 
         modalContent.append(createTotalSection(totalAmount));
+        // modalContent.append('</div>');
 
         setAutomaticData();
     }

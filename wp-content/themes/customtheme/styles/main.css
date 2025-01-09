@@ -452,6 +452,11 @@
   background: linear-gradient(to bottom, #51924B, #17770E);
 }
 
+.cash__items {
+  max-height: 35vh;
+  overflow-y: auto;
+}
+
 @media all and (max-width: 640px) {
   .cash {
     padding: 2rem 1.5rem 3rem;
@@ -5227,6 +5232,7 @@
   font-weight: 900;
   border-radius: 1rem;
   padding: 0.8rem 4.8rem;
+  margin-top: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */

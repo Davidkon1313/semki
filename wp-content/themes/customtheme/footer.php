@@ -40,7 +40,7 @@
 <div class="banner__wrapper">
   <div class="banner" id="banner">
     <div class="banner__list">
-      <a href="https://www.instagram.com/epic.foods_?igsh=cXlkcGlkcTAwcnc3" style="color: black;">
+      <a href="https://www.instagram.com/epic.foods_?igsh=cXlkcGlkcTAwcnc3" style="color: black;" target="_blank">
         <div class="banner__item">
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner/1.svg">
           <p>Ми в Instagram</p>
@@ -50,11 +50,13 @@
         <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.svg">
         <p>Ми в Telegram</p>
       </div>
-      <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.svg">
-        <p>Ми в Viber</p>
-      </div>
-      <a href="https://www.facebook.com/share/15YuJiyXpD/?mibextid=wwXIfr" style="color: black;">
+      <a href="viber://add?number=%2B380974536840" style="color: black;">
+        <div class="banner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.svg">
+          <p>Ми в Viber</p>
+        </div>
+      </a>
+      <a href="https://www.facebook.com/share/15YuJiyXpD/?mibextid=wwXIfr" style="color: black;" target="_blank">
         <div class="banner__item">
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner/4.svg">
           <p>Ми в Facebook</p>
@@ -86,7 +88,7 @@
           <a href="<?php echo get_home_url(); ?>#smakolik">Смаколик</a>
         </div>
       </div>
-      <a href="<?php echo get_home_url(); ?>/checkout">Купити онлайн</a>
+      <!-- <a href="<?php echo get_home_url(); ?>/checkout">Купити онлайн</a> -->
       <a href="<?php echo get_home_url(); ?>/#blog">Блог</a>
       <a href="#"><b>Купити в пачках</b></a>
       <a href="#"><b>Купити в коробках</b></a>
@@ -273,12 +275,12 @@
   document.addEventListener("DOMContentLoaded", function() {
     const videoButton = document.querySelector(".videoButton");
     const rightWrapper = document.querySelector(".S7__rightWrapper");
-
     videoButton.addEventListener("click", function() {
       // Hide existing elements
       rightWrapper.innerHTML = `
             <iframe class="ytvideo" 
-                    src="https://www.youtube.com/embed/aAkMkVFwAoo?si=j0eSFlqwtfuscii0" 
+                    
+                    src="https://www.youtube.com/embed/S9KJzPnM4Bk" 
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
