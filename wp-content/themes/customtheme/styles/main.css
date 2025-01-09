@@ -3690,6 +3690,10 @@
   align-items: center;
   justify-content: center;
   gap: 10rem;
+  box-shadow: 0 0 8px 0 #51924b;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
 }
 
 @media all and (max-width: 1199px) {
