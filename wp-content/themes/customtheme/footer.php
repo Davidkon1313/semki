@@ -46,10 +46,12 @@
           <p>Ми в Instagram</p>
         </div>
       </a>
-      <div class="banner__item">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.svg">
-        <p>Ми в Telegram</p>
-      </div>
+      <a href="https://t.me/Epicfoods_sales" style="color: black;" target="_blank">
+        <div class="banner__item">
+          <img src="<?php echo get_template_directory_uri(); ?>/images/banner/2.svg">
+          <p>Ми в Telegram</p>
+        </div>
+      </a>
       <a href="viber://add?number=%2B380974536840" style="color: black;">
         <div class="banner__item">
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner/3.svg">

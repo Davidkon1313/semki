@@ -267,15 +267,12 @@ async function toggleCashTooltipActive() {
         }
     } catch (error) {
         console.error('Error fetching cart items:', error);
-        setTimeout(() => {
-            toggleCashTooltipActive();
-        }, 500);
-
     }
 }
 
-toggleCashTooltipActive();
-
+document.addEventListener('DOMContentLoaded', function () {
+    toggleCashTooltipActive();
+});
 
 
 //add to cart from all mobile blocks

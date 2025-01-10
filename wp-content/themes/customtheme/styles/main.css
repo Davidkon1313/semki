@@ -11,7 +11,7 @@
 .action .marquee {
   flex-shrink: 0;
   display: inline-block;
-  animation: slide 30s linear infinite;
+  animation: slide-reverse 45s linear infinite;
 }
 
 .action .marquee p {
@@ -22,7 +22,7 @@
 }
 
 .action.action2 .marquee {
-  animation: slide-reverse 20s linear infinite;
+  animation: slide-reverse 45s linear infinite;
 }
 
 @keyframes slide {
