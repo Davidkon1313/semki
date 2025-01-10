@@ -246,9 +246,6 @@ jQuery(function ($) {
 // activating cash button
 async function toggleCashTooltipActive() {
     var cashTooltip = $('#cashTooltip');
-    if (!cashTooltip.hasClass("active")) {
-        cashTooltip.toggleClass('active');
-    }
     try {
         const response = await $.ajax({
             url: wc_cart_params.ajax_url,
@@ -262,13 +259,22 @@ async function toggleCashTooltipActive() {
             const localCart = response.data.items;
             console.log("Cart items loaded:", localCart);
             cashTooltip.find('.count').text(localCart.length);
+            if (!cashTooltip.hasClass("active") && localCart.length != 0) {
+                cashTooltip.toggleClass('active');
+            }
         } else {
             console.error("Failed to load cart items:", response.message);
         }
     } catch (error) {
         console.error('Error fetching cart items:', error);
+        setTimeout(() => {
+            toggleCashTooltipActive();
+        }, 500);
+
     }
 }
+
+toggleCashTooltipActive();
 
 
 

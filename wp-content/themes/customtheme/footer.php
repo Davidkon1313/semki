@@ -62,7 +62,7 @@
           <p>Ми в Facebook</p>
         </div>
       </a>
-      <a href="<?php echo get_home_url(); ?>/#contacts" style="color: black;">
+      <a href="tel:+380974536840" style="color: black;">
         <div class=" banner__item">
           <img src="<?php echo get_template_directory_uri(); ?>/images/banner/5.svg">
           <p>Зателефонуйте нам</p>
