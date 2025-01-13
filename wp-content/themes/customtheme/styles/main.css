@@ -672,7 +672,7 @@
 
 @media all and (phone) {
   .cash__number input {
-    max-width: 7rem;
+    max-width: 5rem;
     padding: 0.6rem 1rem 0.6rem;
   }
 }

@@ -333,7 +333,7 @@ function handle_send_service()
     $phone_number = sanitize_text_field($_POST['phone_number']);
     $service = sanitize_text_field($_POST['service']);
 
-    $to = 'd.vit.kondratev@gmail.com';
+    $to = 'epicfoods2oo4@gmail.com';
     $subject = "Послуга - $service";
     $message = "First Name: $first_name\nPhone Number: $phone_number";
     $headers = ['Content-Type: text/plain; charset=UTF-8'];
@@ -378,7 +378,7 @@ function handle_send_feedback()
     $fname = sanitize_text_field($_POST['fname']);
     $ftext = sanitize_text_field($_POST['ftext']);
 
-    $to = 'd.vit.kondratev@gmail.com';
+    $to = 'epicfoods2oo4@gmail.com';
     $subject = "Відгук";
     $message = "First Name: $fname\nFeedback Text: $ftext";
     $headers = ['Content-Type: text/plain; charset=UTF-8'];
@@ -471,3 +471,40 @@ function enqueue_checkout_save_script()
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_checkout_save_script');
+
+function send_order_details_email($order_id)
+{
+    if (!$order_id) {
+        return;
+    }
+
+    // Get the order object
+    $order = wc_get_order($order_id);
+
+    // Define the email content
+    $to = 'epicfoods2oo4@gmail.com'; // Replace with your email address
+    $subject = 'New Order Placed: #' . $order->get_order_number();
+    $headers = ['Content-Type: text/html; charset=UTF-8'];
+
+    // Prepare email body
+    $body = '<h1>New Order Details</h1>';
+    $body .= '<p><strong>Order ID:</strong> ' . $order->get_order_number() . '</p>';
+    $body .= '<p><strong>Date:</strong> ' . wc_format_datetime($order->get_date_created()) . '</p>';
+    $body .= '<p><strong>Customer Name:</strong> ' . $order->get_billing_first_name() . ' ' . $order->get_billing_last_name() . '</p>';
+    $body .= '<p><strong>Email:</strong> ' . $order->get_billing_email() . '</p>';
+    $body .= '<p><strong>Phone:</strong> ' . $order->get_billing_phone() . '</p>';
+    $body .= '<h2>Items:</h2>';
+    $body .= '<ul>';
+
+    foreach ($order->get_items() as $item_id => $item) {
+        $product = $item->get_product();
+        $body .= '<li>' . $item->get_name() . ' x ' . $item->get_quantity() . ' - ' . wc_price($item->get_total()) . '</li>';
+    }
+
+    $body .= '</ul>';
+    $body .= '<p><strong>Total:</strong> ' . $order->get_formatted_order_total() . '</p>';
+
+    // Send the email
+    wp_mail($to, $subject, $body, $headers);
+}
+add_action('woocommerce_thankyou', 'send_order_details_email');
