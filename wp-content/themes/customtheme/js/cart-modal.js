@@ -191,6 +191,16 @@ jQuery(document).ready(function ($) {
     }
 
     function setAutomaticData() {
+        var firstName = sessionStorage.getItem('first_name');
+        var phoneNumber = sessionStorage.getItem('phone_number');
+
+        if (firstName) {
+            $('#first_name').val(firstName);
+        }
+        if (phoneNumber) {
+            $('#phone_number').val(phoneNumber);
+        }
+
         $('#submit_data').on('click', async function (event) {
             event.preventDefault();
 

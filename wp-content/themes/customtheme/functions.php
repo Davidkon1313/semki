@@ -324,36 +324,48 @@ add_action('wp_head', function () {
     </script>';
 });
 
-function wcsuccess_set_minimum_order_amount()
+add_action('wp_ajax_send_email', 'handle_send_email');
+add_action('wp_ajax_nopriv_send_email', 'handle_send_email');
+
+function handle_send_email()
 {
-    // Set the minimum order amount
-    $minimum = 50;
+    $first_name = sanitize_text_field($_POST['first_name']);
+    $phone_number = sanitize_text_field($_POST['phone_number']);
+    $service = sanitize_text_field($_POST['service']);
 
-    // Total we are going to be checking against
-    $cart_total = WC()->cart->total;
+    $to = 'd.vit.kondratev@gmail.com';
+    $subject = "Послуга - $service";
+    $message = "First Name: $first_name\nPhone Number: $phone_number";
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
 
-    // Compare cart total to minimum order amount
-    if ($cart_total < $minimum) {
-        if (is_cart()) {
-            wc_print_notice(
-                sprintf(
-                    'Your current order total is %s — you must have an order with a minimum of %s to place your order.',
-                    wc_price($cart_total),
-                    wc_price($minimum)
-                ),
-                'error'
-            );
-        } else {
-            wc_add_notice(
-                sprintf(
-                    'Your current order total is %s — you must have an order with a minimum of %s to place your order.',
-                    wc_price($cart_total),
-                    wc_price($minimum)
-                ),
-                'error'
-            );
-        }
+    if (wp_mail($to, $subject, $message, $headers)) {
+        wp_send_json_success('Email sent successfully.');
+    } else {
+        wp_send_json_error('Failed to send email.');
     }
+
+    wp_die();
 }
-add_action('woocommerce_checkout_process', 'wcsuccess_set_minimum_order_amount');
-add_action('woocommerce_before_cart', 'wcsuccess_set_minimum_order_amount');
+
+
+function enqueue_my_script()
+{
+    wp_enqueue_script('handle_send_email', get_template_directory_uri() . '/js/modal-form.js', ['jquery'], null, true);
+    wp_localize_script('handle_send_email', 'my_ajax_object', [
+        'ajax_url' => admin_url('admin-ajax.php')
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_my_script');
+
+function custom_wp_mail_from($email)
+{
+    return 'admin@dev.epic-foods.com.ua'; // Replace with your desired "From" email address
+}
+
+function custom_wp_mail_from_name($name)
+{
+    return 'Epic Foods'; // Replace with your desired "From" name
+}
+
+add_filter('wp_mail_from', 'custom_wp_mail_from');
+add_filter('wp_mail_from_name', 'custom_wp_mail_from_name');

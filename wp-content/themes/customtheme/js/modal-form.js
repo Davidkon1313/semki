@@ -6,15 +6,6 @@ jQuery(document).ready(function ($) {
     const orderSendCloseBtn = document.getElementById("order-send-close-btn");
     const orderInput = document.getElementById("order-form-posluga-header"); // Input field
 
-    // Открытие модального окна
-    // orderOpenBtn.onclick = () => {
-    //     document.body.style.overflow = 'hidden';
-    //     orderModal.style.display = "flex"; // Показываем модальное окно
-    //     setTimeout(() => {
-    //         orderModal.classList.add("open"); // Добавляем класс для анимации
-    //     }, 10); // Небольшая задержка для активации анимации
-    // };
-
     function openFormModal() {
         document.body.style.overflow = 'hidden';
         orderModal.style.display = "flex"; // Показываем модальное окно
@@ -26,9 +17,29 @@ jQuery(document).ready(function ($) {
     orderSendCloseBtn.onclick = () => {
         const firstName = $('#input_name_form').val();
         const phoneNumber = $('#input_name_tel_form').val();
+        const service = $('#order-form-posluga-header').val();
+        const submitButton = $('#order-send-close-btn');
         if (firstName.trim() !== "" && phoneNumber.trim() !== "") {
-            closeModalForm();
-            alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
+            submitButton.text('Зачекайте...').prop('disabled', true);
+
+            $.ajax({
+                url: my_ajax_object.ajax_url,
+                method: 'POST',
+                data: {
+                    action: 'send_email',
+                    first_name: firstName,
+                    phone_number: phoneNumber,
+                    service: service
+                },
+                success: function (response) {
+                    submitButton.text('Замовити').prop('disabled', false);
+                    alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
+                    closeModalForm();
+                },
+                error: function () {
+                    alert('Failed to send email.');
+                }
+            });
         } else {
             alert("Будь-ласка заповніть форму.");
         }
