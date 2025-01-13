@@ -400,3 +400,41 @@ function enqueue_my_handle_send_feedback_script()
     ]);
 }
 add_action('wp_enqueue_scripts', 'enqueue_my_handle_send_feedback_script');
+
+function custom_cart_total_alert()
+{
+    // Get the cart total amount
+    $cart_total = WC()->cart->get_total('edit');
+    $cart_total_float = floatval(WC()->cart->get_cart_contents_total());
+    if ($cart_total_float < 5000) {
+        echo '<div style="color: red; font-weight: bold;">Мінімальна сумма замовлення 5000 грн</div>';
+    }
+}
+add_action('woocommerce_before_cart', 'custom_cart_total_alert');
+add_action('woocommerce_before_checkout_form', 'custom_cart_total_alert');
+
+// Save checkout fields to session
+function save_checkout_fields_to_session($post_data)
+{
+    // Parse the posted data into an array
+    parse_str($post_data, $checkout_data);
+
+    // Save the fields you want into WooCommerce session
+    foreach ($checkout_data as $key => $value) {
+        if (strpos($key, 'billing_') === 0 || strpos($key, 'shipping_') === 0) {
+            WC()->session->set($key, $value);
+        }
+    }
+}
+add_action('woocommerce_checkout_update_order_review', 'save_checkout_fields_to_session');
+
+// Repopulate checkout fields from session
+function repopulate_checkout_fields_from_session($input, $key)
+{
+    $saved_value = WC()->session->get($key);
+    if (!empty($saved_value)) {
+        $input = $saved_value;
+    }
+    return $input;
+}
+add_filter('woocommerce_checkout_get_value', 'repopulate_checkout_fields_from_session', 10, 2);
