@@ -428,6 +428,28 @@ function save_checkout_fields_to_session($post_data)
 }
 add_action('woocommerce_checkout_update_order_review', 'save_checkout_fields_to_session');
 
+// AJAX handler to save checkout fields
+function save_checkout_data_via_ajax()
+{
+    // Check if data is posted
+    if (isset($_POST['checkout_data'])) {
+        $checkout_data = wc_clean($_POST['checkout_data']);
+
+        // Save the fields to WooCommerce session
+        foreach ($checkout_data as $key => $value) {
+            WC()->session->set($key, $value);
+        }
+
+        wp_send_json_success(['message' => 'Data saved successfully']);
+    } else {
+        wp_send_json_error(['message' => 'No data to save']);
+    }
+
+    wp_die();
+}
+add_action('wp_ajax_save_checkout_data', 'save_checkout_data_via_ajax');
+add_action('wp_ajax_nopriv_save_checkout_data', 'save_checkout_data_via_ajax');
+
 // Repopulate checkout fields from session
 function repopulate_checkout_fields_from_session($input, $key)
 {
@@ -438,3 +460,14 @@ function repopulate_checkout_fields_from_session($input, $key)
     return $input;
 }
 add_filter('woocommerce_checkout_get_value', 'repopulate_checkout_fields_from_session', 10, 2);
+
+function enqueue_checkout_save_script()
+{
+    if (is_checkout()) {
+        wp_enqueue_script('custom-checkout-save', get_template_directory_uri() . '/js/custom-checkout-save.js', ['jquery'], null, true);
+        wp_localize_script('custom-checkout-save', 'ajax_object', [
+            'ajax_url' => admin_url('admin-ajax.php'),
+        ]);
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_checkout_save_script');
