@@ -323,3 +323,37 @@ add_action('wp_head', function () {
         });
     </script>';
 });
+
+function wcsuccess_set_minimum_order_amount()
+{
+    // Set the minimum order amount
+    $minimum = 50;
+
+    // Total we are going to be checking against
+    $cart_total = WC()->cart->total;
+
+    // Compare cart total to minimum order amount
+    if ($cart_total < $minimum) {
+        if (is_cart()) {
+            wc_print_notice(
+                sprintf(
+                    'Your current order total is %s — you must have an order with a minimum of %s to place your order.',
+                    wc_price($cart_total),
+                    wc_price($minimum)
+                ),
+                'error'
+            );
+        } else {
+            wc_add_notice(
+                sprintf(
+                    'Your current order total is %s — you must have an order with a minimum of %s to place your order.',
+                    wc_price($cart_total),
+                    wc_price($minimum)
+                ),
+                'error'
+            );
+        }
+    }
+}
+add_action('woocommerce_checkout_process', 'wcsuccess_set_minimum_order_amount');
+add_action('woocommerce_before_cart', 'wcsuccess_set_minimum_order_amount');

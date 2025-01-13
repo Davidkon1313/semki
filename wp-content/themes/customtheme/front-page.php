@@ -74,8 +74,8 @@
                 <h2><b>Золота Нива</b> – Найкращі снеки для щоденного перекусу</h2>
                 <p> Продукція високої якості для перекусів: насіння соняшника, гарбузове насіння, арахіс.</p>
                 <div class="section__filters">
-                    <button class="btn active">Насіння</button>
-                    <button class="btn">Снеки</button>
+                    <button class="btn active">Соняшник</button>
+                    <button class="btn">Гарбуз</button>
                     <button class="btn">Арахіс</button>
                 </div>
             </div>
@@ -291,8 +291,8 @@
                 <h2><b> Гулі-Гулі</b> – Смаколики для справжніх поціновувачів</h2>
                 <p>Виготовлене з натуральної сировини. Насіння соняшника та гарбузове насіння в найкращих варіаціях.
                 <div class="section__filters">
-                    <button class="btn active">Насіння</button>
-                    <button class="btn">Снеки</button>
+                    <button class="btn active">Соняшник</button>
+                    <button class="btn">Гарбуз</button>
                     <button class="btn">Арахіс</button>
                 </div>
                 </p>
@@ -503,8 +503,8 @@
                 <h2><b>Сонячний Ягуар</b> – Ідеальні снеки для перекус</h2>
                 <p>Лінійка продуктів для активних людей, які люблять смачні та корисні снеки</p>
                 <div class="section__filters">
-                    <button class="btn active">Насіння</button>
-                    <button class="btn">Снеки</button>
+                    <button class="btn active">Соняшник</button>
+                    <button class="btn">Гарбуз</button>
                     <button class="btn">Арахіс</button>
                 </div>
             </div>
@@ -717,8 +717,8 @@
                 <p> Виготовлене з натуральної сировини. Насіння соняшника та гарбузове насіння в найкращих
                     варіаціях.</p>
                 <div class="section__filters">
-                    <button class="btn active">Насіння</button>
-                    <button class="btn">Снеки</button>
+                    <button class="btn active">Соняшник</button>
+                    <button class="btn">Гарбуз</button>
                     <button class="btn">Арахіс</button>
                 </div>
             </div>
