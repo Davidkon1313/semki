@@ -30,8 +30,8 @@
     <div class="order">
       <div class="order__list">
         <p><b>Залиште ваш відгук</b></p>
-        <input type="text" placeholder="Ваше імʼя">
-        <input type="text" placeholder="Ваш відгук">
+        <input id="feedback_name" type="text" placeholder="Ваше імʼя">
+        <input id="feedback_text" type="text" placeholder="Ваш відгук">
         <button class="btn btn__yellow" id="btn-send-feedback">Залишити відгук</button>
       </div>
     </div>

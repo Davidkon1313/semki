@@ -13,24 +13,46 @@ jQuery(document).ready(function ($) {
     };
 
     sendFeedbackBtn.onclick = () => {
+        const fname = $('#feedback_name').val();
+        const ftext = $('#feedback_text').val();
+        const submitButton = $('#btn-send-feedback');
+        if (fname.trim() !== "" && ftext.trim() !== "") {
+            submitButton.text('Зачекайте...').prop('disabled', true);
+            $.ajax({
+                url: my_ajax_object.ajax_url,
+                method: 'POST',
+                data: {
+                    action: 'send_feedback',
+                    fname: fname,
+                    ftext: ftext
+                },
+                success: function (response) {
+                    submitButton.text('Замовити').prop('disabled', false);
+                    alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
+                    closeForm();
+                },
+                error: function () {
+                    alert('Failed to send email.');
+                }
+            });
+        } else {
+            alert("Будь-ласка заповніть форму.");
+        }
+    };
+
+    function closeForm() {
         document.body.style.overflow = 'auto';
-        orderModal.classList.remove("open"); // Убираем анимацию
-        orderModal.classList.add("close"); // Начинаем анимацию исчезновения
+        orderModal.classList.remove("open");
+        orderModal.classList.add("close");
         setTimeout(() => {
-            orderModal.style.display = "none"; // Скрываем окно после завершения анимации
-            orderModal.classList.remove("close"); // Убираем класс для следующего открытия
-        }, 300); // Время, равное длительности анимации
+            orderModal.style.display = "none";
+            orderModal.classList.remove("close");
+        }, 300);
     };
 
     // Закрытие модального окна
     orderCloseBtn.onclick = () => {
-        document.body.style.overflow = 'auto';
-        orderModal.classList.remove("open"); // Убираем анимацию
-        orderModal.classList.add("close"); // Начинаем анимацию исчезновения
-        setTimeout(() => {
-            orderModal.style.display = "none"; // Скрываем окно после завершения анимации
-            orderModal.classList.remove("close"); // Убираем класс для следующего открытия
-        }, 300); // Время, равное длительности анимации
+        closeForm();
     };
 
     $("#btn-add-feedback").click(function () {

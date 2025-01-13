@@ -324,10 +324,10 @@ add_action('wp_head', function () {
     </script>';
 });
 
-add_action('wp_ajax_send_email', 'handle_send_email');
-add_action('wp_ajax_nopriv_send_email', 'handle_send_email');
+add_action('wp_ajax_send_email', 'handle_send_service');
+add_action('wp_ajax_nopriv_send_email', 'handle_send_service');
 
-function handle_send_email()
+function handle_send_service()
 {
     $first_name = sanitize_text_field($_POST['first_name']);
     $phone_number = sanitize_text_field($_POST['phone_number']);
@@ -350,8 +350,8 @@ function handle_send_email()
 
 function enqueue_my_script()
 {
-    wp_enqueue_script('handle_send_email', get_template_directory_uri() . '/js/modal-form.js', ['jquery'], null, true);
-    wp_localize_script('handle_send_email', 'my_ajax_object', [
+    wp_enqueue_script('handle_send_service', get_template_directory_uri() . '/js/modal-form.js', ['jquery'], null, true);
+    wp_localize_script('handle_send_service', 'my_ajax_object', [
         'ajax_url' => admin_url('admin-ajax.php')
     ]);
 }
@@ -369,3 +369,34 @@ function custom_wp_mail_from_name($name)
 
 add_filter('wp_mail_from', 'custom_wp_mail_from');
 add_filter('wp_mail_from_name', 'custom_wp_mail_from_name');
+
+add_action('wp_ajax_send_feedback', 'handle_send_feedback');
+add_action('wp_ajax_nopriv_send_feedback', 'handle_send_feedback');
+
+function handle_send_feedback()
+{
+    $fname = sanitize_text_field($_POST['fname']);
+    $ftext = sanitize_text_field($_POST['ftext']);
+
+    $to = 'd.vit.kondratev@gmail.com';
+    $subject = "Відгук";
+    $message = "First Name: $fname\nFeedback Text: $ftext";
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+    if (wp_mail($to, $subject, $message, $headers)) {
+        wp_send_json_success('Email sent successfully.');
+    } else {
+        wp_send_json_error('Failed to send email.');
+    }
+
+    wp_die();
+}
+
+function enqueue_my_handle_send_feedback_script()
+{
+    wp_enqueue_script('handle_send_feedback', get_template_directory_uri() . '/js/feedback-form.js', ['jquery'], null, true);
+    wp_localize_script('handle_send_feedback', 'my_ajax_object', [
+        'ajax_url' => admin_url('admin-ajax.php')
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_my_handle_send_feedback_script');
