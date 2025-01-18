@@ -104,6 +104,46 @@ jQuery(document).ready(function ($) {
         modalContent.append(cashItemsDiv);
         modalContent.append(createTotalSection(totalAmount));
         setAutomaticData();
+        const cashinputField = document.getElementById("phone_number");
+
+        cashinputField.addEventListener("input", (e) => {
+            let input = e.target.value.replace(/\D/g, ""); // Keep only digits
+            const startValue = "+38";
+
+            // Prevent accidental deletion of the prefix
+            if (!input.startsWith("38")) {
+                input = "38" + input;
+            }
+
+            // Format the input
+            let formatted = "+38";
+            if (input.length > 2) formatted += `(${input.substring(2, 5)}`;
+            if (input.length > 5) formatted += `) ${input.substring(5, 8)}`;
+            if (input.length > 8) formatted += ` ${input.substring(8, 10)}`;
+            if (input.length > 10) formatted += ` ${input.substring(10, 12)}`;
+
+            // Set the formatted value
+            e.target.value = formatted;
+
+            // Handle cursor positioning
+            const cursorPosition = e.target.selectionStart;
+            setTimeout(() => e.target.setSelectionRange(cursorPosition, cursorPosition), 0);
+        });
+
+        // Optional: Prevent invalid keys (non-numeric except for deletion)
+        cashinputField.addEventListener("keydown", (e) => {
+            if (
+                !(
+                    e.key === "Backspace" ||
+                    e.key === "Delete" ||
+                    e.key === "ArrowLeft" ||
+                    e.key === "ArrowRight" ||
+                    /^[0-9]$/.test(e.key)
+                )
+            ) {
+                e.preventDefault();
+            }
+        });
     }
 
     function createCartItem(item) {
@@ -140,7 +180,11 @@ jQuery(document).ready(function ($) {
             <div class="cash__info">
                 <p>Особисті дані для оформлення</p>
                 <input type="text" id="first_name" placeholder="Ваше імʼя">
-                <input type="text" id="phone_number" placeholder="Номер телефону">
+                <input
+          id="phone_number"
+          type="text"
+          placeholder="+38(___) ___ __ __"
+          maxlength="19" />
                 <button class="btn btn__yellow" id="submit_data">Замовити</button>
             </div>
         `;
@@ -205,12 +249,24 @@ jQuery(document).ready(function ($) {
             event.preventDefault();
 
             const firstName = $('#first_name').val();
-            const phoneNumber = $('#phone_number').val();
+            let phoneNumber = $('#phone_number').val();
+            let input = phoneNumber.replace(/\D/g, "");
+
+            if (!input.startsWith("380")) {
+                input = "380" + input;
+            }
+
+            if (input.length > 12) {
+                input = input.substring(0, 12);
+            }
+
+            let finalPhoneNumber = "+" + input;
+
             const submitButton = $('#submit_data'); // Зберігаємо посилання на кнопку
 
             if (firstName && phoneNumber) {
                 sessionStorage.setItem('first_name', firstName);
-                sessionStorage.setItem('phone_number', phoneNumber);
+                sessionStorage.setItem('phone_number', finalPhoneNumber);
 
                 // Змінюємо текст кнопки та вимикаємо її
                 submitButton.text('Перенаправляємо...').prop('disabled', true);
@@ -230,6 +286,35 @@ jQuery(document).ready(function ($) {
             }
         });
     }
+
+    const inputField = document.getElementById("billing_phone");
+
+    inputField.addEventListener("input", (e) => {
+        let input = e.target.value.replace(/\D/g, "");
+        if (!input.startsWith("380")) {
+            input = "380" + input;
+        }
+        if (input.length > 12) {
+            input = input.substring(0, 12);
+        }
+        e.target.value = "+" + input;
+    });
+
+    // Optional: Prevent invalid keys (non-numeric except for deletion)
+    inputField.addEventListener("keydown", (e) => {
+        if (
+            !(
+                e.key === "Backspace" ||
+                e.key === "Delete" ||
+                e.key === "ArrowLeft" ||
+                e.key === "ArrowRight" ||
+                /^[0-9]$/.test(e.key)
+            )
+        ) {
+            e.preventDefault();
+        }
+    });
+
 
 
 });
