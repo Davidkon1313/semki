@@ -42,6 +42,12 @@
     </div>
   </div>
 </div>
+<div id="customAlertBox" class="custom-alert">
+  <div class="custom-alert-content">
+    <span class="close-alert">&times;</span>
+    <p id="alertMessage"></p>
+  </div>
+</div>
 <div class="banner__wrapper">
   <div class="banner" id="banner">
     <div class="banner__list">

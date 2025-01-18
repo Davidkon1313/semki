@@ -19,6 +19,16 @@ jQuery(document).ready(function ($) {
         const phoneNumber = $('#input_name_tel_form').val();
         const service = $('#order-form-posluga-header').val();
         const submitButton = $('#order-send-close-btn');
+        let alertBox =
+            document.getElementById("customAlertBox");
+        let alert_Message_container =
+            document.getElementById("alertMessage");
+        let close_img =
+            document.querySelector(".close-alert");
+
+        close_img.addEventListener('click', function () {
+            alertBox.style.display = "none";
+        });
         if (firstName.trim() !== "" && phoneNumber.trim() !== "") {
             submitButton.text('Зачекайте...').prop('disabled', true);
 
@@ -33,18 +43,26 @@ jQuery(document).ready(function ($) {
                 },
                 success: function (response) {
                     submitButton.text('Замовити').prop('disabled', false);
-                    alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
+                    // alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
+                    alert_Message_container.innerHTML =
+                        "Дякую, очікуйте на дзвінок від нашого менеджера.";
+                    alertBox.style.display = "block";
                     closeModalForm();
                 },
                 error: function () {
-                    alert('Failed to send email.');
+                    // alert('Failed to send email.');
+                    alert_Message_container.innerHTML =
+                        "Помилка запиту. Будь ласка спробуйте ще раз.";
+                    alertBox.style.display = "block";
                 }
             });
         } else {
-            alert("Будь-ласка заповніть форму.");
+            // alert("Будь-ласка заповніть форму.");
+            alert_Message_container.innerHTML =
+                "Будь-ласка заповніть форму.";
+            alertBox.style.display = "block";
         }
     };
-
 
     orderCloseBtn.onclick = () => closeModalForm();
 
@@ -156,4 +174,5 @@ jQuery(document).ready(function ($) {
             e.preventDefault();
         }
     });
+
 });
