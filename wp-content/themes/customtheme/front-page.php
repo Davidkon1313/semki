@@ -1420,7 +1420,7 @@
         </div>
         <div class="S11__address">
             <img src="<?php echo get_template_directory_uri(); ?>/images/ui/mapMark.webp" alt="">
-            <p><span>Адреса:</span> вул. Параджанова 80, Житомир, Україна</p>
+            <p><span>Адреса:</span> вул. Параджанова 88-Б, Житомир, Україна</p>
         </div>
         <div class="S11__list">
             <div class="S11__list__item">
