@@ -200,8 +200,17 @@ function get_variation_select($product)
             $pack_size_slug = esc_html($variation['attributes']['attribute_pa_pack-size']);
             $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
             $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
+            $weight = get_post_meta($id, '_weight', true);
 
-            $html .= '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
+            if ($weight) {
+                $weight_in_grams = $weight * 1000;
+            } else {
+                $weight_in_grams = 'N/A';
+            }
+
+            $html .= '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+
+            // $html .= '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
         }
         $html .= '</select>';
     } else {

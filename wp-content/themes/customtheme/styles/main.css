@@ -47,21 +47,21 @@
 
 @media all and (max-width: 991px) {
   .action .marquee {
-    animation: slide 20s linear infinite;
+    animation: slide 45s linear infinite;
   }
 
   .action.action2 .marquee {
-    animation: slide-reverse 20s linear infinite;
+    animation: slide 45s linear infinite;
   }
 }
 
 @media all and (tablet) {
   .action .marquee {
-    animation: slide 20s linear infinite;
+    animation: slide 45s linear infinite;
   }
 
   .action.action2 .marquee {
-    animation: slide-reverse 20s linear infinite;
+    animation: slide 45s linear infinite;
   }
 }
 
@@ -665,7 +665,7 @@
 
 @media all and (max-width: 640px) {
   .cash__number input {
-    max-width: 7rem;
+    max-width: 5rem;
     padding: 0.6rem 1rem 0.6rem;
   }
 }
