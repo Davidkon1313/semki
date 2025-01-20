@@ -81,18 +81,10 @@
             </div>
             <div class="section__list" id="product-block-1">
                 <?php
-                // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
-                    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
-                    $posts_per_page = 4;
-                    if ($screen_width > 960 && $screen_width < 1600) {
-                        $posts_per_page = 3;
-                    }
-
-                    // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => $posts_per_page,
+                        'posts_per_page' => -1,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -120,9 +112,14 @@
                             $product_sku   = $product->get_sku() ?: 'N/A';
                             $product_price = $product->get_price();
                             $product_desc  = wp_trim_words($product->get_description(), 20, '...');
+                            $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                            $tags = array();
+                            foreach ($product_tags as $tag) {
+                                $tags[] = $tag->name;
+                            }
+                            $product_tags_names = implode(', ', $tags);
 
-                            // Use a unique class for each product item (by using the product ID)
-                            echo '<div class="section__item product-' . $product->get_id() . '">';
+                            echo '<div class="section__item product-' . $product->get_id() . '" product-type="' . $product_tags_names . '">';
                             echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
@@ -175,11 +172,9 @@
                     echo '<p>WooCommerce не активний. Будь ласка, активуйте плагін.</p>';
                 }
                 ?>
-
             </div>
             <?php
-            // Show the "Show More" button only if there are more products
-            if ($query->found_posts > $posts_per_page) {
+            if ($query->found_posts > 4) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-1" data-offset="4" data-category="category-gold-niva">Показати ще</button>';
             }
             ?>
@@ -315,17 +310,11 @@
             </div>
             <div class="section__list" id="product-block-2">
                 <?php
-                $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
-                $posts_per_page = 4;
-                if ($screen_width > 960 && $screen_width < 1600) {
-                    $posts_per_page = 3;
-                }
-                // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
                     // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => $posts_per_page,
+                        'posts_per_page' => -1,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -353,9 +342,14 @@
                             $product_sku   = $product->get_sku() ?: 'N/A';
                             $product_price = $product->get_price();
                             $product_desc  = wp_trim_words($product->get_description(), 20, '...');
+                            $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                            $tags = array();
+                            foreach ($product_tags as $tag) {
+                                $tags[] = $tag->name;
+                            }
+                            $product_tags_names = implode(', ', $tags);
 
-                            // Use a unique class for each product item (by using the product ID)
-                            echo '<div class="section__item product-' . $product->get_id() . '">';
+                            echo '<div class="section__item product-' . $product->get_id() . '" product-type="' . $product_tags_names . '">';
                             echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
@@ -410,10 +404,8 @@
                 }
                 ?>
             </div>
-
             <?php
-            // Show the "Show More" button only if there are more products
-            if ($query->found_posts > $posts_per_page) {
+            if ($query->found_posts > 4) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-2" data-offset="4" data-category="category-guli-guli">Показати ще</button>';
             }
             ?>
@@ -544,17 +536,10 @@
             </div>
             <div class="section__list" id="product-block-3">
                 <?php
-                // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
-                    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
-                    $posts_per_page = 4;
-                    if ($screen_width > 960 && $screen_width < 1600) {
-                        $posts_per_page = 3;
-                    }
-                    // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => $posts_per_page,
+                        'posts_per_page' => -1,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -582,9 +567,14 @@
                             $product_sku   = $product->get_sku() ?: 'N/A';
                             $product_price = $product->get_price();
                             $product_desc  = wp_trim_words($product->get_description(), 20, '...');
+                            $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                            $tags = array();
+                            foreach ($product_tags as $tag) {
+                                $tags[] = $tag->name;
+                            }
+                            $product_tags_names = implode(', ', $tags);
 
-                            // Use a unique class for each product item (by using the product ID)
-                            echo '<div class="section__item product-' . $product->get_id() . '">';
+                            echo '<div class="section__item product-' . $product->get_id() . '" product-type="' . $product_tags_names . '">';
                             echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
@@ -638,10 +628,8 @@
                 }
                 ?>
             </div>
-
             <?php
-            // Show the "Show More" button only if there are more products
-            if ($query->found_posts > $posts_per_page) {
+            if ($query->found_posts > 4) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-3" data-offset="4" data-category="category-jaguar">Показати ще</button>';
             }
             ?>
@@ -766,17 +754,10 @@
             </div>
             <div class="section__list" id="product-block-4">
                 <?php
-                // Ensure WooCommerce functions are available
                 if (class_exists('WooCommerce')) {
-                    $screen_width = isset($_COOKIE['screen_width']) ? intval($_COOKIE['screen_width']) : 0;
-                    $posts_per_page = 4;
-                    if ($screen_width > 960 && $screen_width < 1600) {
-                        $posts_per_page = 3;
-                    }
-                    // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
-                        'posts_per_page' => $posts_per_page,
+                        'posts_per_page' => -1,
                         'status' => 'publish',
                         'tax_query' => array(
                             array(
@@ -804,9 +785,14 @@
                             $product_sku   = $product->get_sku() ?: 'N/A';
                             $product_price = $product->get_price();
                             $product_desc  = wp_trim_words($product->get_description(), 20, '...');
+                            $product_tags = wp_get_post_terms($product->get_id(), 'product_tag');
+                            $tags = array();
+                            foreach ($product_tags as $tag) {
+                                $tags[] = $tag->name;
+                            }
+                            $product_tags_names = implode(', ', $tags);
 
-                            // Use a unique class for each product item (by using the product ID)
-                            echo '<div class="section__item product-' . $product->get_id() . '">';
+                            echo '<div class="section__item product-' . $product->get_id() . '" product-type="' . $product_tags_names . '">';
                             echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
@@ -860,10 +846,8 @@
                 }
                 ?>
             </div>
-
             <?php
-            // Show the "Show More" button only if there are more products
-            if ($query->found_posts > $posts_per_page) {
+            if ($query->found_posts > 4) {
                 echo '<button class="btn btn__showMore section__button" id="load-more-products-4" data-offset="4" data-category="category-smakolik">Показати ще</button>';
             }
             ?>
@@ -1207,7 +1191,7 @@
         </div>
 
         <!-- Show More Button -->
-        <button class="btn btn__green showMore">Показати більше</button>
+        <!-- <button class="btn btn__green showMore">Показати більше</button> -->
 
     </div>
     <div class="S7 section__wrapper" id="about-us">

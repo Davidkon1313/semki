@@ -157,91 +157,80 @@ function initializeAddToCartFromSlideScript() {
 
 initializeAddToCartFromSlideScript();
 
-// show more items for all block
-jQuery(function ($) {
-    // On click of any "Show More" button
-    $('[id^=load-more-products-]').on('click', function () {
-        var button = $(this);
-        var offset = button.data('offset'); // Get current offset
-        var category = button.data('category'); // Get category slug
-        var blockId = button.attr('id').replace('load-more-products-', ''); // Extract block ID (e.g. 1, 2, 3, etc.)
+document.addEventListener("DOMContentLoaded", () => {
+    // sorting items by type
+    const sortItemsByProductType = (containerId) => {
+        const container = document.querySelector(`#${containerId}`);
+        const items = Array.from(container.querySelectorAll(".section__item"));
 
-        // Send AJAX request to WordPress
-        $.ajax({
-            url: ajax_params.ajax_url,
-            method: 'GET',
-            data: {
-                action: 'load_more_products', // The action hook that handles AJAX in PHP
-                offset: offset, // Current offset (for pagination)
-                category: category, // Category slug (for the category filter)
-                block_id: blockId // Block identifier (to target the correct product block)
-            },
-            beforeSend: function () {
-                button.text('Завантаження...'); // Change button text while loading
-            },
-            success: function (response) {
-                if (response) {
-                    // Append new products to the correct product block
-                    $('#product-block-' + blockId).append(response);
-                    button.data('offset', offset + 4); // Update the offset for the next request
+        // Define the custom order for sorting
+        const sortOrder = ["Соняшник", "Гарбуз", "Арахіс"];
 
-                    // If there are no more products, hide the "Show More" button
-                    if (response.trim() === '') {
-                        button.hide();
-                    } else {
-                        button.text('Показати ще'); // Reset the button text
-                    }
-                    initializeAddToCartScript();
-                    autoSelectFirstVariation();
-                } else {
-                    button.hide();
-                }
+        // Sort the items based on the custom order
+        items.sort((a, b) => {
+            const typeA = a.getAttribute("product-type");
+            const typeB = b.getAttribute("product-type");
+            return sortOrder.indexOf(typeA) - sortOrder.indexOf(typeB);
+        });
+
+        // Append the sorted items back to the container
+        items.forEach((item) => container.appendChild(item));
+    };
+
+    // Sort all product blocks on page load
+    document.querySelectorAll(".section__list").forEach((list) => {
+        sortItemsByProductType(list.id);
+    });
+
+    // Function to show a limited number of items
+    const showInitialItems = (containerId, limit) => {
+        const container = document.querySelector(`#${containerId}`);
+        const items = container.querySelectorAll(".section__item");
+
+        items.forEach((item, index) => {
+            item.style.display = index < limit ? "flex" : "none";
+        });
+    };
+
+    // Function to handle the 'Show More' button click
+    const handleShowMore = (button) => {
+        const containerId = button.id.replace("load-more-products", "product-block");
+        const container = document.querySelector(`#${containerId}`);
+        const items = container.querySelectorAll(".section__item");
+
+        const offset = parseInt(button.dataset.offset, 10);
+        const currentlyVisible = Array.from(items).filter(
+            (item) => item.style.display !== "none"
+        ).length;
+
+        const nextVisibleCount = currentlyVisible + offset;
+
+        // Show more items
+        items.forEach((item, index) => {
+            if (index < nextVisibleCount) {
+                item.style.display = "flex";
             }
         });
+
+        // If all items are visible, hide the button
+        if (nextVisibleCount >= items.length) {
+            button.style.display = "none";
+        }
+    };
+
+    // Initialize all blocks
+    document.querySelectorAll(".btn__showMore").forEach((button) => {
+        const initialOffset = parseInt(button.dataset.offset, 10);
+        const containerId = button.id.replace("load-more-products", "product-block");
+
+        // Show initial items
+        showInitialItems(containerId, initialOffset);
+
+        // Add event listener to the button
+        button.addEventListener("click", () => handleShowMore(button));
     });
 });
 
-
-//load more items for mobile sale block
-jQuery(function ($) {
-    // On click of the "Show More" button
-    $('.showMore').on('click', function () {
-        var button = $(this);
-        var offset = $('.S6__list .S6__item').length; // Current number of displayed items
-        var category = 'category-sale'; // Static category slug
-        var blockId = '1'; // Static block ID, or modify as needed
-
-        // Send AJAX request to WordPress
-        $.ajax({
-            url: ajax_params.ajax_url, // Ensure this is defined in your theme's localized JS
-            method: 'GET',
-            data: {
-                action: 'load_more_products_mobile', // The action hook that handles AJAX in PHP
-                offset: offset, // Current offset (for pagination)
-                category: category, // Category slug (for the category filter)
-                block_id: blockId // Block identifier (to target the correct product block)
-            },
-            beforeSend: function () {
-                button.text('Завантаження...'); // Change button text while loading
-            },
-            success: function (response) {
-                if (response) {
-                    // Append new products to the correct product block
-                    $('.S6__list').append(response);
-                    button.text('Показати більше'); // Reset button text
-                }
-
-                // If there are no more products, hide the "Show More" button
-                if (response.trim() === '') {
-                    button.hide();
-                }
-            },
-            error: function () {
-                alert('Error loading products');
-            }
-        });
-    });
-});
 
 // activating cash button
 async function toggleCashTooltipActive() {
