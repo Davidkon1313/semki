@@ -173,22 +173,33 @@ jQuery(document).ready(function ($) {
     }
 
     function createTotalSection(totalAmount) {
-        return `
-            <div class="cash__total">
-                <span>Сума замовлення: ${totalAmount} грн</span>
-            </div>
+        const needAmount = 5000 - totalAmount;
+        const orderInfo = `
             <div class="cash__info">
                 <p>Особисті дані для оформлення</p>
                 <input type="text" id="first_name" placeholder="Ваше імʼя">
                 <input
-          id="phone_number"
-          type="text"
-          placeholder="+38(___) ___ __ __"
-          maxlength="19" />
+                    id="phone_number"
+                    type="text"
+                    placeholder="+38(___) ___ __ __"
+                    maxlength="19" />
                 <button class="btn btn__yellow" id="submit_data">Замовити</button>
             </div>
         `;
+
+        const totalText = totalAmount > 5000 ?
+            `<span>Сума замовлення: ${totalAmount} грн</span>` :
+            `<span>Сума замовлення: ${totalAmount} грн</span>
+               <span>До мінімальної суми замовлення зі знижкою залишилось ${needAmount} грн</span>`;
+
+        return `
+            <div class="cash__total">
+                ${totalText}
+            </div>
+            ${orderInfo}
+        `;
     }
+
 
     $(document).on('click', '.increase, .decrease', function () {
         const parentItem = $(this).closest('.cash__item');
