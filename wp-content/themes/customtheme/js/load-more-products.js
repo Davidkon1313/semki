@@ -158,6 +158,10 @@ function initializeAddToCartFromSlideScript() {
 initializeAddToCartFromSlideScript();
 
 document.addEventListener("DOMContentLoaded", () => {
+    const screenWidth = window.innerWidth;
+    console.log("Current stored screen width: ", screenWidth);
+    const offset = screenWidth > 960 && screenWidth < 1600 ? 3 : 4;
+    console.log("Current offset: ", offset);
     // sorting items by type
     const sortItemsByProductType = (containerId) => {
         const container = document.querySelector(`#${containerId}`);
@@ -186,6 +190,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const showInitialItems = (containerId, limit) => {
         const container = document.querySelector(`#${containerId}`);
         const items = container.querySelectorAll(".section__item");
+        limit = offset;
 
         items.forEach((item, index) => {
             item.style.display = index < limit ? "flex" : "none";
@@ -197,8 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const containerId = button.id.replace("load-more-products", "product-block");
         const container = document.querySelector(`#${containerId}`);
         const items = container.querySelectorAll(".section__item");
-
-        const offset = parseInt(button.dataset.offset, 10);
         const currentlyVisible = Array.from(items).filter(
             (item) => item.style.display !== "none"
         ).length;
@@ -220,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize all blocks
     document.querySelectorAll(".btn__showMore").forEach((button) => {
-        const initialOffset = parseInt(button.dataset.offset, 10);
+        const initialOffset = offset;
         const containerId = button.id.replace("load-more-products", "product-block");
 
         // Show initial items
