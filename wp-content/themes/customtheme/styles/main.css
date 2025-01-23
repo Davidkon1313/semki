@@ -5204,6 +5204,20 @@
   color: #000;
 }
 
+.order textarea {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  padding: 1.3rem 2rem 1.3rem 1.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #000;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  resize: none;
+  overflow: hidden;
+  height: auto;
+}
+
 .order button {
   width: 33rem;
   height: 5rem;

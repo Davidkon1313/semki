@@ -1,24 +1,24 @@
 jQuery(document).ready(function ($) {
     // Получаем элементы
-    const orderModal = document.getElementById("orderModal");
+    const optModal = document.getElementById("optModal");
     // const orderOpenBtn = document.getElementById("orderOpenBt    n");
-    const orderCloseBtn = document.getElementById("order-close-btn");
-    const orderSendCloseBtn = document.getElementById("order-send-close-btn");
+    const orderCloseBtn = document.getElementById("opt-close-btn");
+    const orderSendCloseBtn = document.getElementById("opt-send-close-btn");
     const orderInput = document.getElementById("order-form-posluga-header"); // Input field
 
     function openFormModal() {
         document.body.style.overflow = 'hidden';
-        orderModal.style.display = "flex"; // Показываем модальное окно
+        optModal.style.display = "flex"; // Показываем модальное окно
         setTimeout(() => {
-            orderModal.classList.add("open"); // Добавляем класс для анимации
+            optModal.classList.add("open"); // Добавляем класс для анимации
         }, 10); // Небольшая задержка для активации анимации
     };
 
     orderSendCloseBtn.onclick = () => {
-        const firstName = $('#input_name_form').val();
-        const phoneNumber = $('#input_name_tel_form').val();
-        const service = $('#order-form-posluga-header').val();
-        const submitButton = $('#order-send-close-btn');
+        const firstName = $('#opt_input_name_form').val();
+        const phoneNumber = $('#opt_input_name_tel_form').val();
+        const service = $('#order-form-opt').val();
+        const submitButton = $('#opt-send-close-btn');
         let alertBox =
             document.getElementById("customAlertBox");
         let alert_Message_container =
@@ -68,11 +68,11 @@ jQuery(document).ready(function ($) {
 
     function closeModalForm() {
         document.body.style.overflow = 'auto';
-        orderModal.classList.remove("open");
-        orderModal.classList.add("close");
+        optModal.classList.remove("open");
+        optModal.classList.add("close");
         setTimeout(() => {
-            orderModal.style.display = "none";
-            orderModal.classList.remove("close");
+            optModal.style.display = "none";
+            optModal.classList.remove("close");
         }, 300);
     };
 
@@ -85,52 +85,21 @@ jQuery(document).ready(function ($) {
         openFormModal();
 
         // Get the values from the form inputs
-        const firstName = $('#input_name_form').val(); // Get the first name value
-        const phoneNumber = $('#input_name_tel_form').val(); // Get the phone number value
+        const firstName = $('#opt_input_name_form').val(); // Get the first name value
+        const phoneNumber = $('#opt_input_name_tel_form').val(); // Get the phone number value
 
         // Set these values into the corresponding input fields in the modal
-        $('#orderModal input[placeholder="Ваше імʼя"]').val(firstName); // Set the first name in modal input
-        $('#orderModal input[placeholder="Номер телефону"]').val(phoneNumber); // Set the phone number in modal input
+        $('#optModal input[placeholder="Ваше імʼя"]').val(firstName); // Set the first name in modal input
+        $('#optModal input[placeholder="Номер телефону"]').val(phoneNumber); // Set the phone number in modal input
     });
 
-
-    $("#calib-ta-cleaning").click(function () {
-        orderInput.value = "Співпрацювання"; // Set text for first button
-        openFormModal();
-    });
-    $("#calib-ta-cleaning-mob").click(function () {
-        orderInput.value = "Співпрацювання"; // Set text for first button
-        openFormModal();
-    });
-
-    $("#btn-calib").click(function () {
-        orderInput.value = "Калібрування"; // Set text for first button
-        openFormModal();
-    });
-
-    $("#btn-aspiratoin").click(function () {
-        orderInput.value = "Аспірація"; // Set text for first button
-        openFormModal();
-    });
-    $("#btn-pnevmo-stil").click(function () {
-        orderInput.value = "Пневмо стіл"; // Set text for first button
-        openFormModal();
-    });
-    $("#btn-photo-sort").click(function () {
-        orderInput.value = "Фото сторування"; // Set text for first button
-        openFormModal();
-    });
-    $("#btn-obezpil").click(function () {
-        orderInput.value = "Обезпилення"; // Set text for first button
-        openFormModal();
-    });
-    $("#btn-save-agro").click(function () {
-        orderInput.value = "Зберігання"; // Set text for first button
+    $("#btn-buy-opt").click(function () {
+        orderInput.value = "оптове замовлення індивідуально через менеджера"; // Set text for first button
         openFormModal();
     });
     // orderInput.setAttribute("readonly", true); // Prevent typing in the input
 
-    const inputField = document.getElementById("input_name_tel_form");
+    const inputField = document.getElementById("opt_input_name_tel_form");
 
     inputField.addEventListener("input", (e) => {
         let input = e.target.value.replace(/\D/g, ""); // Keep only digits

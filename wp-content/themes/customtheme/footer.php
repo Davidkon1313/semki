@@ -28,6 +28,28 @@
     </div>
   </div>
 </div>
+<div class="modal orderModal" id="optModal">
+  <div class="modal-content">
+    <span class="close-btn" id="opt-close-btn"><img src="<?php echo get_template_directory_uri(); ?>/images/ui/close.png" alt=""></span>
+    <div class="order">
+      <div class="order__list">
+        <textarea placeholder="Калібрування" id="order-form-opt" readonly>
+Оптове замовлення індивідуально через менеджера
+</textarea>
+
+        <p>Залиште ваші данні та ми звʼяжемось з вами найближчим часом</p>
+        <input id="opt_input_name_form" type="text" placeholder="Ваше імʼя">
+        <!-- <input id="input_name_tel_form" type="number" placeholder="Номер телефону"> -->
+        <input
+          id="opt_input_name_tel_form"
+          type="text"
+          placeholder="+38(___) ___ __ __"
+          maxlength="19" />
+        <button class="btn btn__yellow" id="opt-send-close-btn">Замовити</button>
+        <span>Всі данні захищено</span>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="modal orderModal" id="feedbackModal">
   <div class="modal-content">
@@ -121,6 +143,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/slider-reviews.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/slider-production.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/modal-form.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/opt-modal-form.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/feedback-form.js"></script>
 <script type="text/javascript">
   const checkoutUrl = "<?php echo esc_url(wc_get_checkout_url()); ?>"; // Correctly pass the checkout URL to JavaScript
