@@ -159,9 +159,7 @@ initializeAddToCartFromSlideScript();
 
 document.addEventListener("DOMContentLoaded", () => {
     const screenWidth = window.innerWidth;
-    console.log("Current stored screen width: ", screenWidth);
     const offset = screenWidth > 960 && screenWidth < 1600 ? 3 : 4;
-    console.log("Current offset: ", offset);
     // sorting items by type
     const sortItemsByProductType = (containerId) => {
         const container = document.querySelector(`#${containerId}`);

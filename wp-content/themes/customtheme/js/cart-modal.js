@@ -187,8 +187,10 @@ jQuery(document).ready(function ($) {
             </div>
         `;
 
-        const totalText = totalAmount > 5000 ?
-            `<span>Сума замовлення: ${totalAmount} грн</span>` :
+        const totalText = totalAmount >= 5000 ?
+            `<span>Сума замовлення: ${totalAmount} грн</span>
+            <span>Сума зі знижкою: ${Math.round(totalAmount - (totalAmount * 0.37))}
+ грн</span>` :
             `<span>Сума замовлення: ${totalAmount} грн</span>
                <span>До мінімальної суми замовлення зі знижкою залишилось ${needAmount} грн</span>`;
 

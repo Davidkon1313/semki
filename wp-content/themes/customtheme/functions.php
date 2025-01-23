@@ -409,20 +409,18 @@ function send_order_details_email($order_id)
 }
 add_action('woocommerce_thankyou', 'send_order_details_email');
 
-add_action('woocommerce_cart_calculate_fees', 'auto_apply_coupon_g2zt8ks6', 10, 1);
+add_action('woocommerce_cart_updated', 'conditionally_apply_coupon_g2zt8ks6');
+add_action('woocommerce_checkout_update_order_review', 'conditionally_apply_coupon_g2zt8ks6');
 
-function auto_apply_coupon_g2zt8ks6($cart)
+function conditionally_apply_coupon_g2zt8ks6()
 {
-    if (is_admin() && !defined('DOING_AJAX')) {
-        return;
-    }
-
-    $coupon_code = 'G2ZT8KS6';
-
-    // Check if the cart object exists
+    // Ensure WooCommerce is active and cart object exists
     if (!WC()->cart) {
         return;
     }
+
+    // Define the coupon code
+    $coupon_code = 'G2ZT8KS6';
 
     // Get the cart total before discounts
     $cart_total = WC()->cart->get_subtotal();
@@ -433,13 +431,11 @@ function auto_apply_coupon_g2zt8ks6($cart)
         // Apply the coupon if not already applied
         if (!WC()->cart->has_discount($coupon_code)) {
             WC()->cart->apply_coupon($coupon_code);
-            wc_print_notices(); // Show any coupon messages
         }
     } else {
         // Remove the coupon if the total is below the threshold
         if (WC()->cart->has_discount($coupon_code)) {
             WC()->cart->remove_coupon($coupon_code);
-            wc_print_notices(); // Show any coupon messages
         }
     }
 }

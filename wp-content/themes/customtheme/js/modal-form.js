@@ -129,7 +129,7 @@ jQuery(document).ready(function ($) {
         openFormModal();
     });
     $("#btn-buy-opt").click(function () {
-        orderInput.value = "Оптова закупка"; // Set text for first button
+        orderInput.value = "оптове замовлення індивідуально через менеджера"; // Set text for first button
         openFormModal();
     });
     // orderInput.setAttribute("readonly", true); // Prevent typing in the input
