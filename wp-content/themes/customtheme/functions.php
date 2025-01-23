@@ -301,18 +301,6 @@ function enqueue_my_handle_send_feedback_script()
 }
 add_action('wp_enqueue_scripts', 'enqueue_my_handle_send_feedback_script');
 
-function custom_cart_total_alert()
-{
-    // Get the cart total amount
-    $cart_total = WC()->cart->get_total('edit');
-    $cart_total_float = floatval(WC()->cart->get_cart_contents_total());
-    if ($cart_total_float < 5000) {
-        echo '<div style="color: red; font-weight: bold;">Мінімальна сумма замовлення 5000 грн</div>';
-    }
-}
-add_action('woocommerce_before_cart', 'custom_cart_total_alert');
-add_action('woocommerce_before_checkout_form', 'custom_cart_total_alert');
-
 // Save checkout fields to session
 function save_checkout_fields_to_session($post_data)
 {

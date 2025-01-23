@@ -124,7 +124,7 @@
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
                             echo '<span class="desc">' . esc_html($product_desc) . '</span>';
-                            echo '<b class="product-price">Ціна: ' . esc_html($product_price) . ' грн</b>';
+                            echo '<b class="product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</b>';
 
                             // Check if the product is simple or variable
                             if ($product->get_type() === 'variable') {
@@ -262,14 +262,14 @@
                             echo '</select>';
                         }
 
-                        echo '<span class="mobile-product-price">Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
-                        echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -354,7 +354,7 @@
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
                             echo '<span class="desc">' . esc_html($product_desc) . '</span>';
-                            echo '<b class="product-price">Ціна: ' . esc_html($product_price) . ' грн</b>';
+                            echo '<b class="product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</b>';
 
                             // Check if the product is simple or variable
                             if ($product->get_type() === 'variable') {
@@ -490,14 +490,14 @@
                             echo '</select>';
                         }
 
-                        echo '<span class="mobile-product-price">Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
-                        echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -579,7 +579,7 @@
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
                             echo '<span class="desc">' . esc_html($product_desc) . '</span>';
-                            echo '<b class="product-price">Ціна: ' . esc_html($product_price) . ' грн</b>';
+                            echo '<b class="product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</b>';
 
                             // Check if the product is simple or variable
                             if ($product->get_type() === 'variable') {
@@ -705,14 +705,14 @@
                             echo '</select>';
                         }
 
-                        echo '<span class="mobile-product-price">Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
-                        echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -797,7 +797,7 @@
                             echo '<p>' . esc_html($product_title) . '</p>';
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
                             echo '<span class="desc">' . esc_html($product_desc) . '</span>';
-                            echo '<b class="product-price">Ціна: ' . esc_html($product_price) . ' грн</b>';
+                            echo '<b class="product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</b>';
 
                             // Check if the product is simple or variable
                             if ($product->get_type() === 'variable') {
@@ -923,14 +923,14 @@
                             echo '</select>';
                         }
 
-                        echo '<span class="mobile-product-price">Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
-                        echo '<span>Ціна: ' . esc_html($product_price) . ' грн</span>';
+                        echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
                         echo '<button class="btn btn__yellow">Купити</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
@@ -957,7 +957,7 @@
     </div>
     <div class="S6 parallax" id="section5">
         <div class="S6__title">
-            <h2>Спеціальні пропозиції</h2>
+            <h2>Найпопулярніші пропозиції</h2>
             <p>Ви просили, і ми це зробили!</p>
         </div>
         <div class="S6__wrapper desktop">
@@ -1015,7 +1015,7 @@
                                         <p><?php echo esc_html($product_title); ?></p>
                                         <span><span class="size">80г</span> SKU: <?php echo esc_html($product_sku); ?></span>
                                         <span class="desc"><?php echo esc_html($product_desc); ?></span>
-                                        <b>Ціна: <?php echo esc_html($product_price); ?> грн</b>
+                                        <b>Ціна за ящик: <?php echo esc_html($product_price); ?> грн</b>
                                         <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити зараз!</button>
                                     </div>
                                 </div>

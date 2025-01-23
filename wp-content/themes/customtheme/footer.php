@@ -219,7 +219,7 @@
 
         // Update the specific image and price within the container
         productContainer.find('.product-image').attr('src', imageUrl);
-        productContainer.find('.mobile-product-price').text('Ціна: ' + price + ' грн');
+        productContainer.find('.mobile-product-price').text('Ціна за ящик: ' + price + ' грн');
       });
 
       // Automatically select the first variation on page load
@@ -254,7 +254,7 @@
       productContainer.find('.product-image').attr('src', imageUrl);
 
       // Update Price
-      productContainer.find('.product-price').text('Ціна: ' + price + ' грн'); // Update the price dynamically
+      productContainer.find('.product-price').text('Ціна за ящик: ' + price + ' грн'); // Update the price dynamically
     });
 
     // Automatically select the first variation on page load
