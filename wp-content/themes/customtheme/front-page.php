@@ -86,6 +86,8 @@
                         'post_type' => 'product',
                         'posts_per_page' => -1,
                         'status' => 'publish',
+                        'orderby' => 'title',
+                        'order' => 'ASC',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -191,6 +193,8 @@
                     'post_type' => 'product',
                     'posts_per_page' => -1,
                     'status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -316,6 +320,8 @@
                         'post_type' => 'product',
                         'posts_per_page' => -1,
                         'status' => 'publish',
+                        'orderby' => 'title',
+                        'order' => 'ASC',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -418,6 +424,8 @@
                     'post_type' => 'product',
                     'posts_per_page' => -1,
                     'status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -537,14 +545,17 @@
             <div class="section__list" id="product-block-3">
                 <?php
                 if (class_exists('WooCommerce')) {
+                    // Arguments for the query
                     $args = array(
                         'post_type' => 'product',
                         'posts_per_page' => -1,
                         'status' => 'publish',
+                        'orderby' => 'title',
+                        'order' => 'ASC',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
-                                'field' => 'slug',           // Use the category slug
+                                'field' => 'slug',           // Use the category slugss
                                 'terms' => 'category-jaguar', // The slug of the category
                             ),
                         ),
@@ -596,6 +607,7 @@
                                         $pack_size_slug = esc_html($variation['attributes']['attribute_pa_pack-size']);
                                         $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                         $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
+
                                         $weight = get_post_meta($id, '_weight', true);
 
                                         if ($weight) {
@@ -642,6 +654,8 @@
                     'post_type' => 'product',
                     'posts_per_page' => -1,
                     'status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -759,6 +773,8 @@
                         'post_type' => 'product',
                         'posts_per_page' => -1,
                         'status' => 'publish',
+                        'orderby' => 'title',
+                        'order' => 'ASC',
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -860,6 +876,8 @@
                     'post_type' => 'product',
                     'posts_per_page' => -1,
                     'status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -972,6 +990,8 @@
                             'post_type' => 'product',
                             'posts_per_page' => -1, // Change to -1 to display all products
                             'status' => 'publish',
+                            'orderby' => 'title',
+                            'order' => 'ASC',
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -1049,6 +1069,8 @@
                             'post_type' => 'product',
                             'posts_per_page' => -1, // Change to -1 to display all products
                             'status' => 'publish',
+                            'orderby' => 'title',
+                            'order' => 'ASC',
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -1092,7 +1114,7 @@
                                         <p><?php echo esc_html($product_title); ?></p>
                                         <span><span class="size">80г</span> SKU: <?php echo esc_html($product_sku); ?></span>
                                         <span class="desc"><?php echo esc_html($product_desc); ?></span>
-                                        <b>Ціна: <?php echo esc_html($product_price); ?> грн</b>
+                                        <b>Ціна за ящик: <?php echo esc_html($product_price); ?> грн</b>
                                         <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити зараз!</button>
                                     </div>
                                 </div>
@@ -1126,6 +1148,8 @@
                     'post_type' => 'product',
                     'posts_per_page' => 2, // Initially show 2 products
                     'status' => 'publish',
+                    'orderby' => 'title',
+                    'order' => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'product_cat', // WooCommerce product category taxonomy
@@ -1170,7 +1194,7 @@
                             <p><?php echo esc_html($product_title); ?></p>
                             <span><span class="size">80г</span> SKU: <?php echo esc_html($product_sku); ?></span>
                             <span class="desc"><?php echo esc_html($product_desc); ?></span>
-                            <b>Ціна: <?php echo esc_html($product_price); ?> грн</b>
+                            <b>Ціна за ящик: <?php echo esc_html($product_price); ?> грн</b>
                             <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити зараз!</button>
                             <img class="seed seed5 responsiveseed" src="<?php echo get_template_directory_uri(); ?>/images/S6/seed5.png">
                         </div>

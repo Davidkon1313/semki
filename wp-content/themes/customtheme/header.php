@@ -3,6 +3,7 @@
    <head>
 <!-- <title><?php bloginfo('name'); ?> &raquo; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title> -->
 <title>Epic Foods &raquo; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title>
+<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/Logo.svg">
 <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
