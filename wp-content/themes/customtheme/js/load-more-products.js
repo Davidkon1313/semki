@@ -188,7 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const showInitialItems = (containerId, limit) => {
         const container = document.querySelector(`#${containerId}`);
         const items = container.querySelectorAll(".section__item");
-        limit = offset;
 
         items.forEach((item, index) => {
             item.style.display = index < limit ? "flex" : "none";
