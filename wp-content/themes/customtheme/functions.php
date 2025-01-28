@@ -427,3 +427,78 @@ function conditionally_apply_coupon_g2zt8ks6()
         }
     }
 }
+
+function write_to_json_file()
+{
+    // Get data from the AJAX request
+    $first_name = sanitize_text_field($_POST['firstName']);
+    $phone_number = sanitize_text_field($_POST['phoneNumber']);
+    $service = sanitize_text_field($_POST['service']);
+
+    // Define the JSON file path
+    $file_path = get_stylesheet_directory() . '/service-orders.json';
+
+    // Read the existing data from the JSON file
+    $existing_data = [];
+    if (file_exists($file_path)) {
+        $existing_data = json_decode(file_get_contents($file_path), true) ?: [];
+    }
+
+    // Append the new data
+    $existing_data[] = [
+        'firstName' => $first_name,
+        'phoneNumber' => $phone_number,
+        'service' => $service,
+    ];
+
+    // Write the updated data back to the JSON file
+    file_put_contents($file_path, json_encode($existing_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+    wp_send_json_success('Data saved successfully!');
+}
+add_action('wp_ajax_write_to_json_file', 'write_to_json_file');
+add_action('wp_ajax_nopriv_write_to_json_file', 'write_to_json_file');
+
+function enqueue_custom_scripts()
+{
+    wp_enqueue_script('custom-script', get_stylesheet_directory_uri() . '/js/modal-form.js', ['jquery'], null, true);
+
+    // Localize script to pass AJAX URL
+    wp_localize_script('custom-script', 'ajax_object', [
+        'ajax_url' => admin_url('admin-ajax.php'),
+    ]);
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+
+function delete_service_order()
+{
+    $index = isset($_POST['index']) ? intval($_POST['index']) : null;
+
+    if ($index === null) {
+        wp_send_json_error('Invalid index.');
+        return;
+    }
+
+    $file_path = get_stylesheet_directory() . '/service-orders.json';
+
+    if (file_exists($file_path)) {
+        $orders = json_decode(file_get_contents($file_path), true) ?: [];
+
+        if (isset($orders[$index])) {
+            // Remove the specified row
+            unset($orders[$index]);
+            $orders = array_values($orders); // Reindex the array
+
+            // Write the updated data back to the JSON file
+            file_put_contents($file_path, json_encode($orders, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
+            wp_send_json_success('Order deleted successfully.');
+        } else {
+            wp_send_json_error('Order not found.');
+        }
+    } else {
+        wp_send_json_error('File does not exist.');
+    }
+}
+add_action('wp_ajax_delete_service_order', 'delete_service_order');
+add_action('wp_ajax_nopriv_delete_service_order', 'delete_service_order');

@@ -19,50 +19,48 @@ jQuery(document).ready(function ($) {
         const phoneNumber = $('#input_name_tel_form').val();
         const service = $('#order-form-posluga-header').val();
         const submitButton = $('#order-send-close-btn');
-        let alertBox =
-            document.getElementById("customAlertBox");
-        let alert_Message_container =
-            document.getElementById("alertMessage");
-        let close_img =
-            document.querySelector(".close-alert");
+        let alertBox = document.getElementById("customAlertBox");
+        let alert_Message_container = document.getElementById("alertMessage");
+        let close_img = document.querySelector(".close-alert");
 
         close_img.addEventListener('click', function () {
             alertBox.style.display = "none";
         });
+
         if (firstName.trim() !== "" && phoneNumber.trim() !== "") {
             submitButton.text('Зачекайте...').prop('disabled', true);
 
+            // Send data to server using AJAX
             $.ajax({
-                url: my_ajax_object.ajax_url,
+                url: ajax_object.ajax_url,
                 method: 'POST',
                 data: {
-                    action: 'send_email',
-                    first_name: firstName,
-                    phone_number: phoneNumber,
-                    service: service
+                    action: 'write_to_json_file', // The action name in PHP
+                    firstName: firstName,
+                    phoneNumber: phoneNumber,
+                    service: service,
                 },
                 success: function (response) {
-                    submitButton.text('Замовити').prop('disabled', false);
-                    // alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
-                    alert_Message_container.innerHTML =
-                        "Дякую, очікуйте на дзвінок від нашого менеджера.";
+                    if (response.success) {
+                        alert_Message_container.innerHTML = "Дані збережено успішно!";
+                    } else {
+                        alert_Message_container.innerHTML = "Помилка при збереженні даних.";
+                    }
                     alertBox.style.display = "block";
-                    closeModalForm();
+                    submitButton.text('Надіслати').prop('disabled', false);
                 },
                 error: function () {
-                    // alert('Failed to send email.');
-                    alert_Message_container.innerHTML =
-                        "Помилка запиту. Будь ласка спробуйте ще раз.";
+                    alert_Message_container.innerHTML = "Виникла помилка.";
                     alertBox.style.display = "block";
-                }
+                    submitButton.text('Надіслати').prop('disabled', false);
+                },
             });
         } else {
-            // alert("Будь-ласка заповніть форму.");
-            alert_Message_container.innerHTML =
-                "Будь-ласка заповніть форму.";
+            alert_Message_container.innerHTML = "Будь-ласка заповніть форму.";
             alertBox.style.display = "block";
         }
     };
+
 
     orderCloseBtn.onclick = () => closeModalForm();
 
