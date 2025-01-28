@@ -234,12 +234,14 @@
         var selectedOption = $(this).find('option:selected');
         var imageUrl = selectedOption.data('image');
         var price = selectedOption.data('price');
+        var desc = selectedOption.data('desc');
 
         // Get the closest product container
         var productContainer = $(this).closest('.section__itemResponsive');
 
         // Update the specific image and price within the container
         productContainer.find('.product-image').attr('src', imageUrl);
+        productContainer.find('.desc').text(desc);
         productContainer.find('.mobile-product-price').text('Ціна за ящик: ' + price + ' грн');
       });
 
@@ -264,12 +266,14 @@
       var sku = selectedOption.data('sku');
       var imageUrl = selectedOption.data('image');
       var price = selectedOption.data('price'); // Get the price
+      var desc = selectedOption.data('desc');
 
       // Get the closest product container using the product's unique ID (using .closest('.section__item'))
       var productContainer = $(this).closest('.section__item');
 
       // Update SKU
       productContainer.find('.product-sku').text(sku);
+      productContainer.find('.desc').text(desc);
 
       // Update Image
       productContainer.find('.product-image').attr('src', imageUrl);

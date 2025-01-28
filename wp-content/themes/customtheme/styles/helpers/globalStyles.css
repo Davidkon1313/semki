@@ -393,7 +393,7 @@ body {
 }
 
 .section__item select {
-  width: 25rem;
+  max-width: 32rem;
   padding: 0.2rem;
   border-radius: 0.5rem;
   background: #FFF;

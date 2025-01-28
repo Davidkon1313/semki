@@ -127,31 +127,35 @@
                             echo '<span>SKU: <span class="product-sku">' . esc_html($product_sku) . '</span></span>';
                             echo '<span class="desc">' . esc_html($product_desc) . '</span>';
                             echo '<b class="product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</b>';
-
                             // Check if the product is simple or variable
                             if ($product->get_type() === 'variable') {
                                 // Show variations only for variable products
                                 $variations = $product->get_available_variations();
                                 if ($variations) {
+                                    //how to show here description of variant?
                                     echo '<select class="variation-select">';
                                     foreach ($variations as $variation) {
                                         $id = $variation['variation_id'];
                                         $sku = $variation['sku'] ?: 'N/A';
                                         $image_id = $variation['image_id'];
                                         $image_url = wp_get_attachment_image_url($image_id, 'full');
-                                        $price = $variation['display_price'];  // Get variation price
+                                        $price = $variation['display_price'];
                                         $pack_size_slug = esc_html($variation['attributes']['attribute_pa_pack-size']);
                                         $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                         $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
+
+                                        $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                        $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                        $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
                                         $weight = get_post_meta($id, '_weight', true);
+                                        $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
 
                                         if ($weight) {
                                             $weight_in_grams = $weight * 1000;
                                         } else {
                                             $weight_in_grams = 'N/A';
                                         }
-
-                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                                         // echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
                                     }
                                     echo '</select>';
@@ -238,7 +242,7 @@
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                         echo '<div class="line"></div>';
-                        echo '<p>' . esc_html($product_desc) . '</p>';
+                        echo '<p class="desc">' . esc_html($product_desc) . '</p>';
 
                         // Variations dropdown for variable products
                         if ($variations) {
@@ -252,15 +256,19 @@
                                 $pack_size_slug = esc_html($variation['attributes']['attribute_pa_pack-size']);
                                 $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                 $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
+
+                                $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
                                 $weight = get_post_meta($id, '_weight', true);
+                                $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
 
                                 if ($weight) {
                                     $weight_in_grams = $weight * 1000;
                                 } else {
                                     $weight_in_grams = 'N/A';
                                 }
-
-                                echo '<option value="' . esc_attr($id) . '" data-sku="' . esc_attr($sku) . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_attr($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+                                echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                                 // echo '<option value="' . esc_attr($id) . '" data-sku="' . esc_attr($sku) . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_attr($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
                             }
                             echo '</select>';
@@ -378,7 +386,11 @@
                                         $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                         $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
 
+                                        $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                        $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                        $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
                                         $weight = get_post_meta($id, '_weight', true);
+                                        $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
 
                                         if ($weight) {
                                             $weight_in_grams = $weight * 1000;
@@ -386,7 +398,7 @@
                                             $weight_in_grams = 'N/A';
                                         }
 
-                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                                         // echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
                                     }
                                     echo '</select>';
@@ -469,7 +481,7 @@
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                         echo '<div class="line"></div>';
-                        echo '<p>' . esc_html($product_desc) . '</p>';
+                        echo '<p class="desc">' . esc_html($product_desc) . '</p>';
 
                         // Variations dropdown for variable products
                         if ($variations) {
@@ -484,7 +496,11 @@
                                 $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                 $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
 
+                                $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
                                 $weight = get_post_meta($id, '_weight', true);
+                                $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
 
                                 if ($weight) {
                                     $weight_in_grams = $weight * 1000;
@@ -492,7 +508,7 @@
                                     $weight_in_grams = 'N/A';
                                 }
 
-                                echo '<option value="' . esc_attr($id) . '" data-sku="' . esc_attr($sku) . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_attr($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+                                echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                                 // echo '<option value="' . esc_attr($id) . '" data-sku="' . esc_attr($sku) . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_attr($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
                             }
                             echo '</select>';
@@ -608,7 +624,11 @@
                                         $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                         $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
 
+                                        $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                        $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                        $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
                                         $weight = get_post_meta($id, '_weight', true);
+                                        $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
 
                                         if ($weight) {
                                             $weight_in_grams = $weight * 1000;
@@ -616,7 +636,7 @@
                                             $weight_in_grams = 'N/A';
                                         }
 
-                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                                         // echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
                                     }
                                     echo '</select>';
@@ -699,7 +719,7 @@
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                         echo '<div class="line"></div>';
-                        echo '<p>' . esc_html($product_desc) . '</p>';
+                        echo '<p class="desc">' . esc_html($product_desc) . '</p>';
 
                         // Variations dropdown for variable products
                         if ($variations) {
@@ -714,7 +734,18 @@
                                 $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                 $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
 
-                                echo '<option value="' . esc_attr($id) . '" data-sku="' . esc_attr($sku) . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_attr($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
+                                $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
+                                $weight = get_post_meta($id, '_weight', true);
+                                $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
+
+                                if ($weight) {
+                                    $weight_in_grams = $weight * 1000;
+                                } else {
+                                    $weight_in_grams = 'N/A';
+                                }
+                                echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                             }
                             echo '</select>';
                         }
@@ -830,7 +861,12 @@
                                         $pack_size_slug = esc_html($variation['attributes']['attribute_pa_pack-size']);
                                         $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                         $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
+
+                                        $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                        $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                        $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
                                         $weight = get_post_meta($id, '_weight', true);
+                                        $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
 
                                         if ($weight) {
                                             $weight_in_grams = $weight * 1000;
@@ -838,7 +874,7 @@
                                             $weight_in_grams = 'N/A';
                                         }
 
-                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . ' | Вага: ' . esc_html($weight_in_grams) . ' г</option>';
+                                        echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                                         // echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_html($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
                                     }
                                     echo '</select>';
@@ -921,7 +957,7 @@
                         echo '<div class="line"></div>';
                         echo '<img class="product-image" src="' . esc_url($product_image) . '" alt="' . esc_attr($product_title) . '">';
                         echo '<div class="line"></div>';
-                        echo '<p>' . esc_html($product_desc) . '</p>';
+                        echo '<p class="desc">' . esc_html($product_desc) . '</p>';
 
                         // Variations dropdown for variable products
                         if ($variations) {
@@ -936,7 +972,18 @@
                                 $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
                                 $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
 
-                                echo '<option value="' . esc_attr($id) . '" data-sku="' . esc_attr($sku) . '" data-image="' . esc_url($image_url) . '" data-price="' . esc_attr($price) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '</option>';
+                                $quantity_slug = esc_html($variation['attributes']['attribute_pa_quantity-in-box']);
+                                $quantity_term = get_term_by('slug', $quantity_slug, 'pa_quantity-in-box');
+                                $quantity_name = $quantity_term ? $quantity_term->name : 'Unknown Quantity';
+                                $weight = get_post_meta($id, '_weight', true);
+                                $description = get_post_meta($id, '_variation_description', true) ?: 'No description available';
+
+                                if ($weight) {
+                                    $weight_in_grams = $weight * 1000;
+                                } else {
+                                    $weight_in_grams = 'N/A';
+                                }
+                                echo '<option value="' . $id . '" data-sku="' . $sku . '" data-image="' . esc_url($image_url) . '" data-desc="' . esc_html($description) . '" data-price="' . esc_html($price) . '" data-weight="' . esc_html($weight_in_grams) . '">Розмір упаковки: ' . esc_html($pack_size_name) . '<br />  | Вага: ' . esc_html($weight_in_grams) . 'г | ' . esc_html($quantity_name) . 'уп.</option>';
                             }
                             echo '</select>';
                         }
