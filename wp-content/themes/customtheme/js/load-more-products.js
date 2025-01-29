@@ -28,7 +28,7 @@ function initializeAddToCartScript() {
                     },
                     complete: function () {
                         // Reset button state
-                        addToCartButton.prop('disabled', false).text('Купити зараз!');
+                        addToCartButton.prop('disabled', false).text('Купити ящик');
                     },
                     success: function (res) {
                         if (res.error) {
@@ -108,7 +108,7 @@ function initializeAddToCartFromSlideScript() {
                     },
                     complete: function () {
                         // Reset button state
-                        addToCartButton.prop('disabled', false).text('Купити зараз!');
+                        addToCartButton.prop('disabled', false).text('Купити ящик');
                     },
                     success: function (res) {
                         if (res.error) {
@@ -294,7 +294,7 @@ function initializeAddToCartScriptMobile() {
                     },
                     complete: function () {
                         // Reset button state
-                        addToCartButton.prop('disabled', false).text('Купити зараз!');
+                        addToCartButton.prop('disabled', false).text('Купити ящик');
                     },
                     success: function (res) {
                         if (res.error) {

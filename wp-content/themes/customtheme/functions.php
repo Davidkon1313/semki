@@ -118,12 +118,28 @@ function get_cart_items()
 
     foreach ($cart as $cart_item_key => $cart_item) {
         $product = $cart_item['data'];
+
+        // Get variation attributes
+        $attributes = $product->get_attributes();
+
+        // Prepare product name with attributes
+        $product_name = $product->get_name();
+
+        // Check for 'pack-size' attribute
+        if (isset($cart_item['variation']['attribute_pa_pack-size'])) {
+            $pack_size_slug = esc_html($cart_item['variation']['attribute_pa_pack-size']);
+            $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
+            $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
+            $product_name .= ' - ' . $pack_size_name;
+        }
+
+        // Add cart item data
         $items[] = [
             'key' => $cart_item_key,
-            'name' => $product->get_name(),
+            'name' => $product_name, // Updated name with attribute term names
             'description' => $product->get_short_description(),
             'sku' => $product->get_sku(),
-            'image' => wp_get_attachment_image_url($product->get_image_id(), 'thumbnail'),
+            'image' => wp_get_attachment_image_url($product->get_image_id(), 'large'),
             'quantity' => $cart_item['quantity'],
             'subtotal' => $cart_item['line_subtotal'],
             'price' => $product->get_price(),
@@ -134,6 +150,8 @@ function get_cart_items()
 }
 add_action('wp_ajax_get_cart_items', 'get_cart_items');
 add_action('wp_ajax_nopriv_get_cart_items', 'get_cart_items');
+
+
 
 // Update cart quantity AJAX
 function update_cart_quantity()

@@ -165,7 +165,7 @@
                             }
 
                             // Add to Cart button (will be updated dynamically)
-                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                             echo '</div>';
                         }
                     } else {
@@ -275,7 +275,7 @@
                         }
 
                         echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
@@ -408,7 +408,7 @@
                             }
 
                             // Add to Cart button (will be updated dynamically)
-                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                             echo '</div>';
                         }
                     } else {
@@ -515,7 +515,7 @@
                         }
 
                         echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
@@ -646,7 +646,7 @@
                             }
 
                             // Add to Cart button (will be updated dynamically)
-                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                             echo '</div>';
                         }
                     } else {
@@ -751,7 +751,7 @@
                         }
 
                         echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
@@ -884,7 +884,7 @@
                             }
 
                             // Add to Cart button (will be updated dynamically)
-                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                            echo '<button class="btn btn__white" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                             echo '</div>';
                         }
                     } else {
@@ -989,7 +989,7 @@
                         }
 
                         echo '<span class="mobile-product-price">Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити зараз!</button>';
+                        echo '<button class="btn btn__yellow" id="add-to-cart-button" data-product-id="' . $product->get_id() . '">Купити ящик</button>';
                         echo '</div>';
 
                         echo '<div class="section__itemResponsiveListed">';
@@ -1083,7 +1083,7 @@
                                         <span><span class="size">80г</span> SKU: <?php echo esc_html($product_sku); ?></span>
                                         <span class="desc"><?php echo esc_html($product_desc); ?></span>
                                         <b>Ціна за ящик: <?php echo esc_html($product_price); ?> грн</b>
-                                        <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити зараз!</button>
+                                        <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити ящик</button>
                                     </div>
                                 </div>
 
@@ -1162,7 +1162,7 @@
                                         <span><span class="size">80г</span> SKU: <?php echo esc_html($product_sku); ?></span>
                                         <span class="desc"><?php echo esc_html($product_desc); ?></span>
                                         <b>Ціна за ящик: <?php echo esc_html($product_price); ?> грн</b>
-                                        <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити зараз!</button>
+                                        <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити ящик</button>
                                     </div>
                                 </div>
 
@@ -1242,7 +1242,7 @@
                             <span><span class="size">80г</span> SKU: <?php echo esc_html($product_sku); ?></span>
                             <span class="desc"><?php echo esc_html($product_desc); ?></span>
                             <b>Ціна за ящик: <?php echo esc_html($product_price); ?> грн</b>
-                            <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити зараз!</button>
+                            <button class="btn btn__white" id="add-to-cart-button" data-product-id="<?php echo $product->get_id(); ?>">Купити ящик</button>
                             <img class="seed seed5 responsiveseed" src="<?php echo get_template_directory_uri(); ?>/images/S6/seed5.png">
                         </div>
 
