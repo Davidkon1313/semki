@@ -119,19 +119,8 @@ function get_cart_items()
     foreach ($cart as $cart_item_key => $cart_item) {
         $product = $cart_item['data'];
 
-        // Get variation attributes
-        $attributes = $product->get_attributes();
-
         // Prepare product name with attributes
         $product_name = $product->get_name();
-
-        // Check for 'pack-size' attribute
-        if (isset($cart_item['variation']['attribute_pa_pack-size'])) {
-            $pack_size_slug = esc_html($cart_item['variation']['attribute_pa_pack-size']);
-            $pack_size_term = get_term_by('slug', $pack_size_slug, 'pa_pack-size');
-            $pack_size_name = $pack_size_term ? $pack_size_term->name : 'Unknown Size';
-            $product_name .= ' - ' . $pack_size_name;
-        }
 
         // Add cart item data
         $items[] = [
@@ -520,3 +509,5 @@ function delete_service_order()
 }
 add_action('wp_ajax_delete_service_order', 'delete_service_order');
 add_action('wp_ajax_nopriv_delete_service_order', 'delete_service_order');
+
+add_filter('woocommerce_product_variation_title_include_attributes', '__return_true');
