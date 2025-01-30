@@ -14,53 +14,6 @@ jQuery(document).ready(function ($) {
         }, 10); // Небольшая задержка для активации анимации
     };
 
-    // orderSendCloseBtn.onclick = () => {
-    //     const firstName = $('#input_name_form').val();
-    //     const phoneNumber = $('#input_name_tel_form').val();
-    //     const service = $('#order-form-posluga-header').val();
-    //     const submitButton = $('#order-send-close-btn');
-    //     let alertBox = document.getElementById("customAlertBox");
-    //     let alert_Message_container = document.getElementById("alertMessage");
-    //     let close_img = document.querySelector(".close-alert");
-
-    //     close_img.addEventListener('click', function () {
-    //         alertBox.style.display = "none";
-    //     });
-
-    //     if (firstName.trim() !== "" && phoneNumber.trim() !== "") {
-    //         submitButton.text('Зачекайте...').prop('disabled', true);
-
-    //         // Send data to server using AJAX
-    //         $.ajax({
-    //             url: ajax_object.ajax_url,
-    //             method: 'POST',
-    //             data: {
-    //                 action: 'write_to_json_file', // The action name in PHP
-    //                 firstName: firstName,
-    //                 phoneNumber: phoneNumber,
-    //                 service: service,
-    //             },
-    //             success: function (response) {
-    //                 if (response.success) {
-    //                     alert_Message_container.innerHTML = "Дані збережено успішно!";
-    //                 } else {
-    //                     alert_Message_container.innerHTML = "Помилка при збереженні даних.";
-    //                 }
-    //                 alertBox.style.display = "block";
-    //                 submitButton.text('Надіслати').prop('disabled', false);
-    //             },
-    //             error: function () {
-    //                 alert_Message_container.innerHTML = "Виникла помилка.";
-    //                 alertBox.style.display = "block";
-    //                 submitButton.text('Надіслати').prop('disabled', false);
-    //             },
-    //         });
-    //     } else {
-    //         alert_Message_container.innerHTML = "Будь-ласка заповніть форму.";
-    //         alertBox.style.display = "block";
-    //     }
-    // };
-
     orderSendCloseBtn.onclick = () => {
         const firstName = $('#input_name_form').val();
         const phoneNumber = $('#input_name_tel_form').val();

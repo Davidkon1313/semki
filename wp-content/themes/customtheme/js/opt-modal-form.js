@@ -32,28 +32,30 @@ jQuery(document).ready(function ($) {
         if (firstName.trim() !== "" && phoneNumber.trim() !== "") {
             submitButton.text('Зачекайте...').prop('disabled', true);
 
+            // Send AJAX request to create order
             $.ajax({
-                url: my_ajax_object.ajax_url,
-                method: 'POST',
+                url: ajax_object.ajax_url,
+                type: 'POST',
                 data: {
-                    action: 'send_email',
+                    action: 'create_woocommerce_order', // Custom action
                     first_name: firstName,
                     phone_number: phoneNumber,
-                    service: service
+                    service: service,
                 },
                 success: function (response) {
-                    submitButton.text('Замовити').prop('disabled', false);
-                    // alert("Дякую, очікуйте на дзвінок від нашого менеджера.");
-                    alert_Message_container.innerHTML =
-                        "Дякую, очікуйте на дзвінок від нашого менеджера.";
-                    alertBox.style.display = "block";
-                    closeModalForm();
+                    if (response.success) {
+                        alert_Message_container.innerHTML = "Ваше замовлення успішно створено!";
+                        alertBox.style.display = "block";
+                    } else {
+                        alert_Message_container.innerHTML = "Виникла помилка при створенні замовлення.";
+                        alertBox.style.display = "block";
+                    }
+                    submitButton.text('Надіслати').prop('disabled', false);
                 },
                 error: function () {
-                    // alert('Failed to send email.');
-                    alert_Message_container.innerHTML =
-                        "Помилка запиту. Будь ласка спробуйте ще раз.";
+                    alert_Message_container.innerHTML = "Помилка сервера.";
                     alertBox.style.display = "block";
+                    submitButton.text('Надіслати').prop('disabled', false);
                 }
             });
         } else {
