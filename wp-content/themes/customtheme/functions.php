@@ -511,3 +511,42 @@ add_action('wp_ajax_delete_service_order', 'delete_service_order');
 add_action('wp_ajax_nopriv_delete_service_order', 'delete_service_order');
 
 add_filter('woocommerce_product_variation_title_include_attributes', '__return_true');
+
+add_action('wp_ajax_create_woocommerce_order', 'create_woocommerce_order');
+add_action('wp_ajax_nopriv_create_woocommerce_order', 'create_woocommerce_order'); // For non-logged-in users
+
+function create_woocommerce_order()
+{
+    if (isset($_POST['first_name']) && isset($_POST['phone_number']) && isset($_POST['service'])) {
+        $first_name = sanitize_text_field($_POST['first_name']);
+        $phone_number = sanitize_text_field($_POST['phone_number']);
+        $service = 565;
+        $note = sanitize_text_field($_POST['service']);
+
+        // Create a new WooCommerce order
+        $order = wc_create_order();
+
+        // Add the product (you should have a product for each service)
+        $product = wc_get_product($service); // Assuming $service is a product ID
+        if ($product) {
+            $order->add_product($product, 1); // Add the service as a product (quantity = 1)
+        }
+
+        // Set billing information
+        $order->set_billing_first_name($first_name);
+        $order->set_billing_phone($phone_number);
+        $order->set_customer_note($note);
+
+        // Calculate totals and save the order
+        $order->calculate_totals();
+        $order->save();
+
+        // Respond with success
+        wp_send_json_success(['message' => 'Order created successfully']);
+    } else {
+        // Respond with error
+        wp_send_json_error(['message' => 'Invalid data']);
+    }
+
+    wp_die(); // This is required to terminate the AJAX request properly
+}
