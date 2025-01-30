@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>
    <head>
+<!-- Google Tag Manager -->
+<script>
+   (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+         'gtm.start': new Date().getTime(),
+         event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+         j = d.createElement(s),
+         dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+         'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+   })(window, document, 'script', 'dataLayer', 'GTM-MWGHBQNL');
+</script>
+<!-- End Google Tag Manager -->
 <!-- <title><?php bloginfo('name'); ?> &raquo; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title> -->
 <!-- <title>Epic Foods &raquo; <?php is_front_page() ? bloginfo('description') : wp_title(''); ?></title> -->
 <title>
    <?php
    if (is_front_page()) {
       echo 'Купити якісні снеки гуртом – насіння, горіхи, арахіс | EPIC Foods'; // Front page title
-   } elseif (is_page('poslugi')) {
-      echo "Послуги для дистриб'юторів та гуртових покупців | EPIC Foods"; // Second page title
    } else {
       wp_title('|', true, 'right');
       bloginfo('name');
    }
    ?>
 </title>
-
-<meta name="description" content="<?php
-                                    if (is_front_page()) {
-                                       echo 'EPIC Foods – постачальник смачних та якісних снеків гуртом. Насіння, горіхи, арахіс із різними смаками. Мінімальне замовлення від 5000 грн. Співпрацюйте з нами та отримуйте до 35% прибутку!.';
-                                    } elseif (is_page('poslugi')) {
-                                       echo 'EPIC Foods пропонує вигідні умови для дистриб’юторів – гуртові поставки снеків, стабільна якість, маркетингова підтримка та високий прибуток. Мінімальне замовлення від 5000 грн.';
-                                    } elseif (is_single() || is_page()) {
-                                       echo strip_tags(get_the_excerpt());
-                                    } else {
-                                       bloginfo('description');
-                                    }
-                                    ?>" />
 <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/images/Logo.svg">
 <link href="https://vjs.zencdn.net/8.16.1/video-js.css" rel="stylesheet" />
 <meta charset="<?php bloginfo('charset'); ?>">
@@ -48,6 +52,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWGHBQNL"
+         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
    <header class="header">
       <div class="container">
          <div class="header__wrapper">
