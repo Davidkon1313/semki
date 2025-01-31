@@ -75,8 +75,6 @@ function initializeAddToCartScript() {
     });
 }
 
-initializeAddToCartScript();
-
 //added items from sale block to cart
 function initializeAddToCartFromSlideScript() {
     jQuery(function ($) {
@@ -154,8 +152,6 @@ function initializeAddToCartFromSlideScript() {
         });
     });
 }
-
-initializeAddToCartFromSlideScript();
 
 document.addEventListener("DOMContentLoaded", () => {
     const screenWidth = window.innerWidth;
@@ -261,6 +257,9 @@ async function toggleCashTooltipActive() {
 
 document.addEventListener('DOMContentLoaded', function () {
     toggleCashTooltipActive();
+    initializeAddToCartScript();
+    initializeAddToCartScriptMobile();
+    initializeAddToCartFromSlideScript();
 });
 
 
@@ -340,5 +339,3 @@ function initializeAddToCartScriptMobile() {
         });
     });
 }
-
-initializeAddToCartScriptMobile();

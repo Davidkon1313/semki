@@ -282,7 +282,7 @@
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
                         echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow">Купити</button>';
+                        echo '<button class="btn btn__yellow">Купити ящик</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
@@ -522,7 +522,7 @@
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
                         echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow">Купити</button>';
+                        echo '<button class="btn btn__yellow">Купити ящик</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
@@ -758,7 +758,7 @@
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
                         echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow">Купити</button>';
+                        echo '<button class="btn btn__yellow">Купити ящик</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
@@ -996,7 +996,7 @@
                         echo '<p>' . esc_html($product_title) . '</p>';
                         echo '<div class="section__itemResponsiveListedPrice">';
                         echo '<span>Ціна за ящик: ' . esc_html($product_price) . ' грн</span>';
-                        echo '<button class="btn btn__yellow">Купити</button>';
+                        echo '<button class="btn btn__yellow">Купити ящик</button>';
                         echo '</div>';
                         echo '<img id="switcher2" src="' . esc_url(get_template_directory_uri() . '/images/ui/section-dropdown.svg') . '">';
                         echo '</div>';
@@ -1463,7 +1463,7 @@
             <h2>“Епік Фудс" – Смак та якість у кожному продукті</h2>
             <p>ОБИРАЙ свій смак!</p>
             <a href="<?php echo get_home_url(); ?>/#gold-niva">
-                <button class="btn btn__green">Купити</button>
+                <button class="btn btn__green">Купити ящик</button>
             </a>
         </div>
         <img class="S10__responsive" src="<?php echo get_template_directory_uri(); ?>/images/S10_responsive.webp" alt="">
