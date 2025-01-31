@@ -1,0 +1,21 @@
+{
+  "name": "jafran/includes",
+  "authors": [
+    {
+      "name": "Naeem Khan",
+      "email": "naeemkhan.cse@gmail.com"
+    }
+  ],
+  "require": {
+    "google/apiclient": "^2.12.1",
+    "appsero/client": "^1.2"
+  },
+  "scripts": {
+    "pre-autoload-dump": "Google\\Task\\Composer::cleanup"
+},
+  "extra": {
+    "google/apiclient-services": [
+      "Sheets"
+    ]
+  }
+}

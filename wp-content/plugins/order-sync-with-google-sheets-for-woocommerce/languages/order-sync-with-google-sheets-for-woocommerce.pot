@@ -1,0 +1,846 @@
+# Copyright (C) 2024 WC Order Sync
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: FlexOrder 1.6.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/order-sync-with-google-sheets-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-01-27T03:52:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.9.0\n"
+"X-Domain: order-sync-with-google-sheets-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "FlexOrder"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+msgid "https://wcordersync.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Sync WooCommerce orders with Google Sheets. Perform WooCommerce order sync, e-commerce order management and sales order management from Google Sheets."
+msgstr ""
+
+#. Author of the plugin
+msgid "WC Order Sync"
+msgstr ""
+
+#: includes/classes/class-ajax.php:113
+msgid "Options not set"
+msgstr ""
+
+#: includes/classes/class-ajax.php:123
+msgid "Options saved"
+msgstr ""
+
+#: includes/classes/class-ajax.php:136
+msgid "Options reset"
+msgstr ""
+
+#: includes/classes/class-ajax.php:153
+msgid "Sheet initialized"
+msgstr ""
+
+#: includes/classes/class-ajax.php:179
+msgid "Sheet updated"
+msgstr ""
+
+#: includes/classes/class-ajax.php:206
+msgid "Sheet reset"
+msgstr ""
+
+#: includes/classes/class-ajax.php:220
+msgid "WooCommerce activated"
+msgstr ""
+
+#: includes/classes/class-ajax.php:220
+#: includes/classes/class-app.php:204
+msgid "WooCommerce not activated"
+msgstr ""
+
+#: includes/classes/class-api.php:146
+msgid "No action specified"
+msgstr ""
+
+#: includes/classes/class-api.php:155
+msgid "Action not found"
+msgstr ""
+
+#: includes/classes/class-api.php:174
+msgid "Orders synced successfully"
+msgstr ""
+
+#: includes/classes/class-api.php:188
+msgid "Something went wrong"
+msgstr ""
+
+#: includes/classes/class-api.php:213
+msgid "Order synced with WooCommerce successfully"
+msgstr ""
+
+#: includes/classes/class-api.php:221
+msgid "No orders specified"
+msgstr ""
+
+#: includes/classes/class-app.php:189
+msgid "Setup not complete yet"
+msgstr ""
+
+#: includes/classes/class-app.php:193
+msgid "Credentials not set"
+msgstr ""
+
+#: includes/classes/class-app.php:197
+msgid "Spreadsheet URL not set"
+msgstr ""
+
+#: includes/classes/class-app.php:201
+msgid "Sheet tab not set"
+msgstr ""
+
+#: includes/classes/class-hooks.php:484
+#: includes/classes/class-hooks.php:496
+#: includes/classes/class-hooks.php:506
+#: includes/classes/class-install.php:120
+msgid "FlexOrder"
+msgstr ""
+
+#: includes/classes/class-hooks.php:485
+msgid "FlexOrder"
+msgstr ""
+
+#: includes/classes/class-hooks.php:497
+#: includes/classes/class-hooks.php:551
+msgid "Setup"
+msgstr ""
+
+#: includes/classes/class-hooks.php:507
+#: includes/classes/class-hooks.php:549
+#: templates/dashboard/header.php:22
+msgid "Settings"
+msgstr ""
+
+#: includes/classes/class-hooks.php:555
+msgid "<span class=\"osgsw-ultimate-button\">Get Ultimate</span>"
+msgstr ""
+
+#: includes/classes/class-hooks.php:568
+msgid "Docs"
+msgstr ""
+
+#: includes/classes/class-hooks.php:569
+msgid "Support"
+msgstr ""
+
+#: includes/classes/class-install.php:126
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: includes/classes/class-install.php:130
+msgid "Install WooCommerce"
+msgstr ""
+
+#: includes/models/class-column.php:24
+msgid "Order ID"
+msgstr ""
+
+#: includes/models/class-column.php:28
+msgid "Product Names"
+msgstr ""
+
+#: includes/models/class-column.php:32
+msgid "Order Status"
+msgstr ""
+
+#: includes/models/class-column.php:36
+msgid "Total Items"
+msgstr ""
+
+#: includes/models/class-column.php:40
+msgid "Total Price"
+msgstr ""
+
+#: includes/models/class-column.php:44
+msgid "Total Discount"
+msgstr ""
+
+#: includes/models/class-column.php:48
+msgid "Billing Details"
+msgstr ""
+
+#: includes/models/class-column.php:52
+msgid "Shipping Details"
+msgstr ""
+
+#: includes/models/class-column.php:56
+msgid "Order Date"
+msgstr ""
+
+#: includes/models/class-column.php:60
+msgid "Payment Method"
+msgstr ""
+
+#: includes/models/class-column.php:64
+msgid "Customer Note"
+msgstr ""
+
+#: includes/models/class-column.php:68
+msgid "Order Placed by"
+msgstr ""
+
+#: includes/models/class-column.php:72
+msgid "Order URL"
+msgstr ""
+
+#: templates/dashboard/activate-license.php:13
+msgid "Please activate your license."
+msgstr ""
+
+#: templates/dashboard/activate-license.php:13
+#: templates/setup/woocommerce.php:21
+#: templates/setup/woocommerce.php:32
+msgid "Activate"
+msgstr ""
+
+#: templates/dashboard/header.php:16
+msgid "Dashboard"
+msgstr ""
+
+#: templates/dashboard/header.php:27
+msgid "Video tutorial"
+msgstr ""
+
+#: templates/dashboard/header.php:31
+msgid "What's new?"
+msgstr ""
+
+#: templates/dashboard/overview.php:23
+#: templates/setup/step-5.php:35
+msgid "Congratulations"
+msgstr ""
+
+#: templates/dashboard/overview.php:23
+msgid "Setup is not complete"
+msgstr ""
+
+#: templates/dashboard/overview.php:24
+msgid "Your orders are syncing"
+msgstr ""
+
+#: templates/dashboard/overview.php:24
+msgid "Your orders are NOT syncing!"
+msgstr ""
+
+#: templates/dashboard/overview.php:25
+msgid "View orders on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/overview.php:26
+msgid "Complete setup"
+msgstr ""
+
+#: templates/dashboard/overview.php:91
+#: templates/setup/step-5.php:50
+msgid "Sync more order information (payment, shipping, and more) with a premium plan."
+msgstr ""
+
+#: templates/dashboard/overview.php:103
+msgid "Google Sheet URL"
+msgstr ""
+
+#: templates/dashboard/overview.php:104
+#: templates/setup/step-2.php:16
+msgid "Enter your google sheet URL"
+msgstr ""
+
+#: templates/dashboard/overview.php:110
+msgid "Sheet tab name "
+msgstr ""
+
+#: templates/dashboard/overview.php:111
+#: templates/setup/step-2.php:23
+msgid "Enter your google sheet Name"
+msgstr ""
+
+#: templates/dashboard/overview.php:116
+msgid "Change setup"
+msgstr ""
+
+#: templates/dashboard/overview.php:125
+msgid "Unleash the true power"
+msgstr ""
+
+#: templates/dashboard/overview.php:127
+msgid "Sync Order date with ascending sorting on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/overview.php:128
+msgid "Sync Payment method and Shipping info"
+msgstr ""
+
+#: templates/dashboard/overview.php:129
+msgid "Sync Order URL and Customer notes"
+msgstr ""
+
+#: templates/dashboard/overview.php:130
+msgid "Sync the Total discount for each order"
+msgstr ""
+
+#: templates/dashboard/overview.php:131
+msgid "More awesome features..."
+msgstr ""
+
+#: templates/dashboard/overview.php:133
+#: templates/promo.php:18
+msgid "Unlock all features"
+msgstr ""
+
+#: templates/dashboard/settings.php:17
+msgid "Google Sheet columns"
+msgstr ""
+
+#: templates/dashboard/settings.php:31
+msgid "Display Total Items"
+msgstr ""
+
+#: templates/dashboard/settings.php:42
+msgid "Enable to this to show the number of total ordered items in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:58
+msgid "Display Total Price"
+msgstr ""
+
+#: templates/dashboard/settings.php:69
+msgid "Enable this to show the total price of the order in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:85
+msgid "Display Total Discount"
+msgstr ""
+
+#: templates/dashboard/settings.php:93
+#: templates/dashboard/settings.php:128
+#: templates/dashboard/settings.php:172
+#: templates/dashboard/settings.php:216
+#: templates/dashboard/settings.php:248
+#: templates/dashboard/settings.php:283
+#: templates/dashboard/settings.php:318
+#: templates/dashboard/settings.php:355
+#: templates/dashboard/settings.php:399
+#: templates/dashboard/settings.php:435
+msgid "Ultimate"
+msgstr ""
+
+#: templates/dashboard/settings.php:103
+msgid "Enable this to show the total discount of the order in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:119
+msgid "Show individual product quantity"
+msgstr ""
+
+#: templates/dashboard/settings.php:136
+#: templates/dashboard/settings.php:180
+#: templates/dashboard/settings.php:363
+#: templates/dashboard/settings.php:443
+msgid "New"
+msgstr ""
+
+#: templates/dashboard/settings.php:147
+msgid "Enable this to show the quantity of each ordered items beside their names in the Product Names column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:163
+msgid "Display Billing Address"
+msgstr ""
+
+#: templates/dashboard/settings.php:191
+msgid "Enable this to show the billing address in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:208
+msgid "Display Shipping Address"
+msgstr ""
+
+#: templates/dashboard/settings.php:224
+msgid "Enable this to show the shipping address in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:240
+msgid "Display Order Date"
+msgstr ""
+
+#: templates/dashboard/settings.php:259
+msgid "Enable this to show the order date in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:275
+msgid "Display Payment Method"
+msgstr ""
+
+#: templates/dashboard/settings.php:294
+msgid "Enable this to show the payment method in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:310
+msgid "Display Customer Note"
+msgstr ""
+
+#: templates/dashboard/settings.php:329
+msgid "Enable this to show the customer note in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:346
+msgid "Display order placement information"
+msgstr ""
+
+#: templates/dashboard/settings.php:374
+msgid "Enable this to show the information of the user who placed the order in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:390
+msgid "Display Order URL"
+msgstr ""
+
+#: templates/dashboard/settings.php:410
+msgid "Enable this to show the order URL in a column on Google Sheet"
+msgstr ""
+
+#: templates/dashboard/settings.php:427
+msgid "Sync Order Custom Fields"
+msgstr ""
+
+#: templates/dashboard/settings.php:453
+msgid "Enter or search your product's custom field (meta data) and enable them to display on the Spreadsheet as columns."
+msgstr ""
+
+#: templates/promo.php:16
+msgid "Special Offer"
+msgstr ""
+
+#: templates/promo.php:27
+msgid "OFF"
+msgstr ""
+
+#: templates/promo.php:34
+msgid "Get Ultimate"
+msgstr ""
+
+#: templates/setup/footer.php:17
+msgid "Back"
+msgstr ""
+
+#: templates/setup/footer.php:21
+msgid "Please wait"
+msgstr ""
+
+#: templates/setup/footer.php:21
+msgid "Next"
+msgstr ""
+
+#: templates/setup/step-1.php:14
+msgid "Add Credentials"
+msgstr ""
+
+#: templates/setup/step-1.php:16
+msgid "Adding credential here will allow you to sync your store orders within seconds from Google Sheets."
+msgstr ""
+
+#: templates/setup/step-1.php:23
+msgid "Create a"
+msgstr ""
+
+#: templates/setup/step-1.php:24
+msgid "Service Account"
+msgstr ""
+
+#: templates/setup/step-1.php:25
+msgid "from your"
+msgstr ""
+
+#: templates/setup/step-1.php:26
+msgid "Google Cloud Platform"
+msgstr ""
+
+#: templates/setup/step-1.php:27
+msgid "and download the"
+msgstr ""
+
+#: templates/setup/step-1.php:28
+msgid "file"
+msgstr ""
+
+#: templates/setup/step-1.php:39
+msgid "Upload the"
+msgstr ""
+
+#: templates/setup/step-1.php:39
+msgid "file here"
+msgstr ""
+
+#: templates/setup/step-1.php:52
+msgid "How to add Credentials?"
+msgstr ""
+
+#: templates/setup/step-1.php:77
+msgid "Enable Google Sheet API"
+msgstr ""
+
+#: templates/setup/step-1.php:83
+msgid "Click here"
+msgstr ""
+
+#: templates/setup/step-1.php:83
+msgid "to enable Google Sheet API"
+msgstr ""
+
+#: templates/setup/step-1.php:84
+msgid "Visit the link and enable Google Sheets API"
+msgstr ""
+
+#: templates/setup/step-1.php:88
+msgid "by clicking the"
+msgstr ""
+
+#: templates/setup/step-1.php:89
+msgid "ENABLE"
+msgstr ""
+
+#: templates/setup/step-1.php:90
+msgid "button as shown in the image"
+msgstr ""
+
+#: templates/setup/step-1.php:169
+msgid "I’ve enabled Google Sheet API"
+msgstr ""
+
+#: templates/setup/step-2.php:13
+msgid "Add Google Sheet URL"
+msgstr ""
+
+#: templates/setup/step-2.php:14
+msgid "Copy the URL of your Google Sheet and paste it here. So that, our system can add all your WooCommerce Orders into it."
+msgstr ""
+
+#: templates/setup/step-2.php:20
+msgid "Enter sheet tab name"
+msgstr ""
+
+#: templates/setup/step-2.php:21
+msgid "Copy the sheet tab name (ex: Sheet1) from your Google Sheet and paste it here. So that, our system can add your WooCommerce orders to the spreadsheet."
+msgstr ""
+
+#: templates/setup/step-3.php:18
+msgid "Give"
+msgstr ""
+
+#: templates/setup/step-3.php:19
+#: templates/setup/step-3.php:41
+#: templates/setup/step-3.php:59
+msgid "Editor"
+msgstr ""
+
+#: templates/setup/step-3.php:20
+msgid "access to the following ID"
+msgstr ""
+
+#: templates/setup/step-3.php:30
+msgid "Copy"
+msgstr ""
+
+#: templates/setup/step-3.php:31
+msgid "Copied to Clipboard"
+msgstr ""
+
+#: templates/setup/step-3.php:31
+#: templates/setup/step-4.php:21
+msgid "Copy to clipboard"
+msgstr ""
+
+#: templates/setup/step-3.php:39
+msgid "Copy the email ID from the box"
+msgstr ""
+
+#: templates/setup/step-3.php:40
+msgid "Go to your Google Sheet & click"
+msgstr ""
+
+#: templates/setup/step-3.php:40
+#: templates/setup/step-3.php:42
+msgid "Share"
+msgstr ""
+
+#: templates/setup/step-3.php:40
+msgid "button at the top-right position"
+msgstr ""
+
+#: templates/setup/step-3.php:41
+msgid "Paste the Email ID that you copied and give"
+msgstr ""
+
+#: templates/setup/step-3.php:41
+msgid "access"
+msgstr ""
+
+#: templates/setup/step-3.php:42
+msgid "Then, click the"
+msgstr ""
+
+#: templates/setup/step-3.php:42
+msgid "Send"
+msgstr ""
+
+#: templates/setup/step-3.php:42
+msgid "or"
+msgstr ""
+
+#: templates/setup/step-3.php:42
+msgid "button to confirm"
+msgstr ""
+
+#: templates/setup/step-3.php:49
+msgid "How to set editor access?"
+msgstr ""
+
+#: templates/setup/step-3.php:49
+msgid "0:22"
+msgstr ""
+
+#: templates/setup/step-3.php:59
+msgid "I've given"
+msgstr ""
+
+#: templates/setup/step-3.php:59
+msgid "access to this email ID"
+msgstr ""
+
+#: templates/setup/step-4.php:14
+msgid "Add Script Code on Editor"
+msgstr ""
+
+#: templates/setup/step-4.php:20
+msgid "Copy code"
+msgstr ""
+
+#: templates/setup/step-4.php:21
+msgid "Copied to clipboard"
+msgstr ""
+
+#: templates/setup/step-4.php:28
+msgid "Copy the Script Code from the box"
+msgstr ""
+
+#: templates/setup/step-4.php:29
+msgid "Go to your Google Sheet and click on the"
+msgstr ""
+
+#: templates/setup/step-4.php:29
+msgid "Extension"
+msgstr ""
+
+#: templates/setup/step-4.php:29
+#: templates/setup/step-4.php:63
+msgid "menu"
+msgstr ""
+
+#: templates/setup/step-4.php:30
+#: templates/setup/step-4.php:64
+msgid "Click on"
+msgstr ""
+
+#: templates/setup/step-4.php:30
+msgid "Apps Script"
+msgstr ""
+
+#: templates/setup/step-4.php:31
+msgid "Now remove the existing code and paste the Script Code here"
+msgstr ""
+
+#: templates/setup/step-4.php:32
+msgid "Finally, don’t forget to"
+msgstr ""
+
+#: templates/setup/step-4.php:32
+msgid "the code. Then click on"
+msgstr ""
+
+#: templates/setup/step-4.php:32
+#: templates/setup/step-4.php:50
+msgid "Run"
+msgstr ""
+
+#: templates/setup/step-4.php:32
+#: templates/setup/step-4.php:50
+msgid "button"
+msgstr ""
+
+#: templates/setup/step-4.php:33
+msgid "If you are doing it for the first time, a popup will appear asking your permission. Make sure popups are not blocked in your browser."
+msgstr ""
+
+#: templates/setup/step-4.php:40
+msgid "How to add Apps Script?"
+msgstr ""
+
+#: templates/setup/step-4.php:40
+msgid "0:39"
+msgstr ""
+
+#: templates/setup/step-4.php:50
+msgid "I've placed the code and clicked on"
+msgstr ""
+
+#: templates/setup/step-4.php:56
+msgid "Add Trigger"
+msgstr ""
+
+#: templates/setup/step-4.php:63
+msgid "Go to"
+msgstr ""
+
+#: templates/setup/step-4.php:63
+msgid "Triggers"
+msgstr ""
+
+#: templates/setup/step-4.php:64
+msgid "+ Add Trigger "
+msgstr ""
+
+#: templates/setup/step-4.php:64
+msgid " button"
+msgstr ""
+
+#: templates/setup/step-4.php:65
+#: templates/setup/step-4.php:66
+msgid "Find the"
+msgstr ""
+
+#: templates/setup/step-4.php:65
+msgid "Choose which function to run"
+msgstr ""
+
+#: templates/setup/step-4.php:65
+#: templates/setup/step-4.php:66
+msgid "dropdown menu, and select"
+msgstr ""
+
+#: templates/setup/step-4.php:65
+msgid "onChange"
+msgstr ""
+
+#: templates/setup/step-4.php:65
+#: templates/setup/step-4.php:66
+msgid "option"
+msgstr ""
+
+#: templates/setup/step-4.php:66
+msgid "Select event type"
+msgstr ""
+
+#: templates/setup/step-4.php:66
+msgid "On Change"
+msgstr ""
+
+#: templates/setup/step-4.php:67
+msgid "Click"
+msgstr ""
+
+#: templates/setup/step-4.php:67
+msgid "Save button."
+msgstr ""
+
+#: templates/setup/step-4.php:74
+msgid "How to add Trigger?"
+msgstr ""
+
+#: templates/setup/step-4.php:74
+msgid "0:35"
+msgstr ""
+
+#: templates/setup/step-4.php:84
+msgid "I’ve added the trigger and gave permissions"
+msgstr ""
+
+#: templates/setup/step-5.php:18
+#: templates/setup/step-5.php:24
+msgid "Sync orders on Google Sheet"
+msgstr ""
+
+#: templates/setup/step-5.php:21
+msgid "You’re almost ready. Press this button to sync your WooCommerce orders with Google Sheet."
+msgstr ""
+
+#: templates/setup/step-5.php:24
+msgid "Syncing"
+msgstr ""
+
+#: templates/setup/step-5.php:37
+msgid "Your orders have been successfully synced to Google Sheet"
+msgstr ""
+
+#: templates/setup/step-5.php:40
+msgid "Currently you have no order to sync"
+msgstr ""
+
+#: templates/setup/step-5.php:43
+msgid "Your orders have been successfully synced to Google Sheet🎉"
+msgstr ""
+
+#: templates/setup/step-5.php:46
+msgid "Got to Dashboard"
+msgstr ""
+
+#: templates/setup/step-5.php:47
+msgid "View on Google Sheet"
+msgstr ""
+
+#: templates/setup/welcome.php:17
+msgid "Welcome to setup page"
+msgstr ""
+
+#: templates/setup/welcome.php:18
+msgid "FlexOrder makes it easy to configure your Google Sheet. Press the button and follow the steps to sync your orders with Google Sheet"
+msgstr ""
+
+#: templates/setup/welcome.php:19
+msgid "Start setup"
+msgstr ""
+
+#: templates/setup/welcome.php:22
+msgid "Watch video tutorial"
+msgstr ""
+
+#: templates/setup/woocommerce.php:21
+msgid "Install and activate"
+msgstr ""
+
+#: templates/setup/woocommerce.php:21
+msgid "Install and activate WooCommerce"
+msgstr ""
+
+#: templates/setup/woocommerce.php:24
+msgid "The plugin only works when WooCommerce is"
+msgstr ""
+
+#: templates/setup/woocommerce.php:24
+msgid "installed and"
+msgstr ""
+
+#: templates/setup/woocommerce.php:25
+msgid "activated"
+msgstr ""
+
+#: templates/setup/woocommerce.php:30
+msgid "Activating WooCommerce... This may take a couple of seconds."
+msgstr ""
+
+#: templates/setup/woocommerce.php:32
+msgid "Install & activate"
+msgstr ""

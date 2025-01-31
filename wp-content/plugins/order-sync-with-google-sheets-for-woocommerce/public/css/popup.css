@@ -1,0 +1,281 @@
+
+.osgs_custom-select option {
+    font-size: 16px; /* Increase the font size */
+}
+.osgs_show_the_popup_start{
+
+}
+
+.osgs_custom-select option:checked {
+    font-size: 16px;
+}
+.osgs_custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f7f7f7;
+    border: 2px solid #5b9dd9;
+    padding: 10px;
+    width: 375px;
+    
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: -7px;
+}
+select.osgs_custom-select{
+    height: 41px;
+    font-size: 16px;
+}
+
+.osgs_select-wrapper {
+    margin-top: 50px;
+    padding-left: 21%;
+}
+
+.osgs_show_the_popup_start {
+    /* margin-left: 97px; */
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+    margin-left: -8px;
+}
+.osgs_show_the_popup_start {
+    align-self: flex-start;
+}
+
+.osgs_custom-select {
+    margin-top: auto;
+}
+.osgs_select-wrapper::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #555;
+    pointer-events: none;
+}
+.osgs_custom-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #63BE09;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .osgs_custom-select {
+        width: 100%; /* Set full width for select box when viewport is less than 740px */
+    }
+    .osgs_select-wrapper {
+        margin-top: 50px;
+        padding-left: 0%;
+    }
+}
+@media (max-width: 968px) {
+    .osgs_select-wrapper {
+        margin-top: 50px;
+        padding-left: 5%;
+    }
+}
+@media (max-width: 1200px) {
+    .osgs_select-wrapper {
+        margin-top: 50px;
+        padding-left: 13%;
+    }
+}
+.osgs_popup_wrap1.osgs_popup_wrap13 {
+    margin-top: 40px;
+}
+.osgs_custom-button:hover {
+    background-color: #4A8D07 !important;
+    color: #fff !important;
+}
+
+.osgs_button-wrapper {
+    margin-top: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.osgs_popup_wrap1{
+    text-align:center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+.osgs_popup_wrap1 p {
+    font-size: 16px !important;
+    color: darkslategrey;
+    font-weight: 500;
+}
+.osgs_just_margin-up{
+    margin-top: -24px;
+}
+.osgs_popup_wrap{
+    text-align:center;
+    margin-top: 47px;
+    margin-bottom: 30px;
+}
+.osgs_popup_wrap h1{
+    font-weight: 700;
+  
+}
+.osgs_popup_wrap123{
+    font-size: 32px;
+}
+.osgs_popup_wrap1 h2{
+    font-weight: 700;
+    
+}
+.osgs_next_heading{
+    margin-top: -10px;
+}
+.osgs_popup-container {
+    /* visibility: hidden; */
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 17, 17, 0.61);
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+}
+.osgs_popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 40%;
+}
+@media (max-width: 1056px) {
+    .osgs_popup-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 15px;
+        border: 1px solid #888;
+        width: 50%;
+    }
+}
+.osgs_popup-content p{
+    font-size: 17px;
+    padding: 5px;
+    line-height: 20px;
+}
+.osgs_popup-content a.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-decoration:none;
+}
+
+.osgs_popup-content a.close:hover{
+    color:#333;
+}
+
+.osgs_popup-content span:hover,
+.osgs_popup-content span:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.osgs_popup-container h3{
+margin:10px;
+}
+
+
+.osgs_popup-container {
+    /* visibility: hidden; */
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.3);
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 17, 17, 0.61);
+    display: flex;
+    align-items: center;
+    transform: scale(1);
+  }
+  .osgs_popup-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 1056px) {
+    .osgs_popup-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 15px;
+        border: 1px solid #888;
+        width: 50%;
+    }
+  }
+  .osgs_popup-content a.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    background: none;
+    padding: 0;
+    margin: 0;
+    text-decoration:none;
+  }
+  
+  .osgs_popup-content a.close:hover{
+    color:#333;
+  }
+  /* .osgsw-wrapper .ssgs-check .check2 {
+    opacity: 0.5 !important ;
+  } */
+
+
+  .osgs_popup-content span:hover,
+  .osgs_popup-content span:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .profile-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust the gap between the image and details */
+   
+  }
+  .osgsw-wrapper .ssgs-dashboard__block .form-group label {
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:#1E1E1E;
+  }
+  .ossgs_video_icons {
+    margin-right: 6px;
+    width: 18px;
+    height: 18px;
+
+    position: relative;
+    top: 3px;
+  }
+  
