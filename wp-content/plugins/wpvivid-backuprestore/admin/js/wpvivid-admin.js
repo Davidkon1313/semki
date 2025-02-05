@@ -64,6 +64,11 @@ var wpvivid_resotre_is_migrate=0;
             wpvivid_add_review_info(name);
         });
 
+        $(document).on('click', '.notice-rate .notice-dismiss', function(){
+            var name = 'dismiss';
+            wpvivid_add_review_info(name);
+        });
+
         $(document).on('click', '.notice-wp-cron .notice-dismiss', function(){
             var ajax_data = {
                 'action': 'wpvivid_hide_wp_cron_notice'

@@ -2366,6 +2366,92 @@ class WPvivid_Backup_Item
             return false;
         }
     }
+
+    public function check_wp_version()
+    {
+        if(isset($this->config['backup']['files']))
+        {
+            $tmp_data = $this->config['backup']['files'];
+
+            if(!class_exists('WPvivid_ZipClass'))
+                include_once WPVIVID_PLUGIN_DIR . '/includes/class-wpvivid-zipclass.php';
+            $zip=new WPvivid_ZipClass();
+            foreach ($tmp_data as $file)
+            {
+                $path=$this->get_backup_path($file['file_name']);
+                if(file_exists($path))
+                {
+                    $ret=$zip->get_json_data($path);
+                    if($ret['result'] === WPVIVID_SUCCESS)
+                    {
+                        $json=$ret['json_data'];
+                        $json = json_decode($json, 1);
+                        if (!is_null($json))
+                        {
+                            if (isset($json['has_child']))
+                            {
+                                if (isset($json['child_file']))
+                                {
+                                    foreach ($json['child_file'] as $child_file_name => $child_file_info)
+                                    {
+                                        if(isset($child_file_info['wp_version']))
+                                        {
+                                            $backup_wp_version=$child_file_info['wp_version'];
+                                            $wp_version = get_bloginfo( 'version' );
+                                            if (version_compare($wp_version,$backup_wp_version,'>'))
+                                            {
+                                                return false;
+                                            }
+                                            else
+                                            {
+                                                return true;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            return true;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if(isset($json['wp_version']))
+                                {
+                                    $backup_wp_version=$json['wp_version'];
+                                    $wp_version = get_bloginfo( 'version' );
+                                    if (version_compare($wp_version,$backup_wp_version,'>'))
+                                    {
+                                        return false;
+                                    }
+                                    else
+                                    {
+                                        return true;
+                                    }
+                                }
+                                else
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                        else {
+                            return true;
+                        }
+                    }
+                    elseif($ret['result'] === WPVIVID_FAILED)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return true;
+        }
+        else
+        {
+            return true;
+        }
+    }
 }
 
 class WPvivid_Backup

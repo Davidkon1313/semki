@@ -128,7 +128,7 @@ function get_cart_items()
             'name' => $product_name, // Updated name with attribute term names
             'description' => $product->get_short_description(),
             'sku' => $product->get_sku(),
-            'image' => wp_get_attachment_image_url($product->get_image_id(), 'large'),
+            'image' => wp_get_attachment_image_url($product->get_image_id(), 'thumbnail'),
             'quantity' => $cart_item['quantity'],
             'subtotal' => $cart_item['line_subtotal'],
             'price' => $product->get_price(),
@@ -536,6 +536,7 @@ function create_woocommerce_order()
         $order->set_billing_first_name($first_name);
         $order->set_billing_phone($phone_number);
         $order->set_customer_note($note);
+        $order->set_status('processing');
 
         // Calculate totals and save the order
         $order->calculate_totals();

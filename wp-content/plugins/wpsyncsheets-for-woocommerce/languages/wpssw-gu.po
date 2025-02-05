@@ -1,0 +1,1067 @@
+# Copyright (C) 2021 Creative Werk Designs.
+# This file is distributed under the same license as the WPSyncSheets For WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPSyncSheets For WooCommerce 6.6\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsyncsheets-for-"
+"woocommerce\n"
+"Last-Translator: \n"
+"Language-Team: ગુજરાતી\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-12-30T13:32:30+01:00\n"
+"PO-Revision-Date: 2021-12-31 05:09+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: wpssw\n"
+"Language: gu\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Loco-Version: 2.5.5; wp-5.8.2"
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin version 3. closing anchor tag, do not translate.
+#: includes/class-wpssw-plugin-update.php:290
+msgid " %1$sView version %2$s details%3$s or %4$supdate now%5$s."
+msgstr ""
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin version 3. closing anchor tag, do not translate.
+#: includes/class-wpssw-plugin-update.php:282
+msgid " %1$sView version %2$s details%3$s."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2484
+msgid " Ascending Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2485
+msgid " Descending Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2331
+msgid " Even Rows"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2330
+msgid " Odd Rows"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:163 includes/class-wpssw-setting.php:1804
+msgid "1 website"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1783 includes/class-wpssw-setting.php:1794
+msgid "Activate License"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1787
+msgid "Active"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2141
+msgid "Add"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:197
+#: includes/coupon/import/class-wpssw-coupon-import.php:300
+msgid "addcouponcode"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:297
+msgid "addcouponcodecolumn"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:209
+#: includes/coupon/import/class-wpssw-coupon-import.php:238
+msgid "addcouponId"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:213
+#: includes/customer/import/class-wpssw-customer-import.php:343
+msgid "addcustomeremail"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:340
+msgid "addcustomeremailcolumn"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:223
+#: includes/customer/import/class-wpssw-customer-import.php:252
+msgid "addcustomerId"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:346
+msgid "addcustomername"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:337
+msgid "addcustomernamecolumn"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:216
+msgid "addcustomernickname"
+msgstr ""
+
+#: includes/order/import/class-wpssw-order-import.php:219
+#: includes/order/import/class-wpssw-order-import.php:251
+msgid "addorderId"
+msgstr ""
+
+#: includes/product/import/class-wpssw-product-import.php:199
+#: includes/product/import/class-wpssw-product-import.php:224
+msgid "addproductId"
+msgstr ""
+
+#: includes/product/import/class-wpssw-product-import.php:311
+msgid "addproductname"
+msgstr ""
+
+#: includes/product/import/class-wpssw-product-import.php:308
+msgid "addproductnamecolumn"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1719
+msgid "After registration process click on View Licenses."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1485
+msgid "All Coupons (Coupon Sheet)"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1231
+msgid "All Customers (Customer Sheet)"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:634
+msgid ""
+"All events are configure within the same spreadsheet as we have assign into "
+"the general settings spreadsheets. Sheet name(s) will be created as per the "
+"event categories selection as below."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:628
+msgid "All Events Orders Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "All Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:973
+msgid "All Products (Sheet)"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:701
+msgid ""
+"All the disabled sheet headers will be deleted from the current spreadsheet "
+"automatically."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1724
+msgid ""
+"All the disabled sheet headers will be deleted from the current spreadsheet "
+"automatically. You can enable again, clear spreadsheet and click with below "
+"\"Click to Sync\" button to make up to date data in spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1017 includes/class-wpssw-setting.php:1275
+#: includes/class-wpssw-setting.php:1529
+msgid ""
+"All the disabled sheet headers will be deleted from the current spreadsheet "
+"automatically. You can enable it again, clear the spreadsheet and click the "
+"\"Click to Sync\" button to make up to date data in the spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:658
+msgid ""
+"All the event sheet headers will be append within general setting's active "
+"sheets. If you want to categorize your events orders then create new "
+"category, it will automatically create sheet within your existing "
+"spreadsheet."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2159
+msgid "Allow to copy same columns"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1718
+msgid "and register with item purchase code."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1911
+msgid "Append After"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:559
+msgid "Authorised redirect URIs : "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:555
+msgid "Authorized Domain : "
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1834
+msgid ""
+"Below all the product names will automatically create columns in spreadsheet "
+"with value as product quantity and Append after dropdown will add inbetween "
+"all the product names as per your dropdown selection in spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1715
+msgid "button in WPSyncSheets For WooCommerce row."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1001 includes/class-wpssw-setting.php:1259
+#: includes/class-wpssw-setting.php:1513
+msgid ""
+"By default select the current spreadsheet from General Settings tab, but "
+"users can create a new spreadsheet by selecting the option."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1162 includes/class-wpssw-setting.php:1419
+#: includes/class-wpssw-setting.php:1674
+#: includes/modules/class-wpssw-order.php:2445
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Cancelled Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1161 includes/class-wpssw-setting.php:1418
+#: includes/class-wpssw-setting.php:1673
+#: includes/modules/class-wpssw-order.php:2444
+msgid "Checking..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:773
+msgid "Clear Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:598 includes/class-wpssw-setting.php:797
+#: includes/class-wpssw-setting.php:804 includes/class-wpssw-setting.php:922
+#: includes/class-wpssw-setting.php:1193 includes/class-wpssw-setting.php:1448
+#: includes/class-wpssw-setting.php:1703
+msgid "Click"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:502
+msgid "Click here to generate an Authentication Token"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2165
+#: includes/modules/class-wpssw-order.php:2346
+msgid "click here."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1720
+msgid "Click on key icon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1715
+msgid "Click the"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:777
+msgid "Click to Clear Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1777
+msgid "Click to generate license key"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:768 includes/class-wpssw-setting.php:1092
+#: includes/class-wpssw-setting.php:1349 includes/class-wpssw-setting.php:1604
+#: includes/modules/class-wpssw-order.php:77
+#: includes/modules/class-wpssw-order.php:2047
+#: includes/modules/class-wpssw-order.php:3971
+msgid "Click to Sync"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1604
+msgid "Click to Sync button will append all the coupon data to the sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1349
+msgid "Click to Sync button will append all the customer data to the sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:768
+msgid "Click to Sync button will append all the event orders to the sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1092
+msgid "Click to Sync button will append all the product data to the sheet."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2050
+msgid ""
+"Click to Sync button will be append all the existing orders to the selected "
+"sheets as above."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:468
+msgid "Client Id"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:480
+msgid "Client Secret"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:496
+msgid "Client Token"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Completed Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1717
+msgid "Copy"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:420
+msgid "Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1475
+msgid "Coupon Settings"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:294
+msgid "couponIdexist"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:204
+#: includes/coupon/import/class-wpssw-coupon-import.php:234
+msgid "couponnotexists"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:454
+msgid ""
+"Create new google APIs with Client ID and Client Secret keys to get an "
+"access for the google drive and google sheets. Please follow the "
+"documentation, login to your Gmail Account and start with"
+msgstr ""
+
+#: includes/class-wpssw-google-api-functions.php:233
+#: includes/class-wpssw-google-api-functions.php:238
+msgid "Create New Spreadsheet"
+msgstr ""
+
+#. Author of the plugin
+msgid "Creative Werk Designs."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1930
+msgid "Custom Order Status"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2125
+msgid "Custom Static Headers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:414
+msgid "Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1221
+msgid "Customer Settings"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:210
+#: includes/customer/import/class-wpssw-customer-import.php:291
+msgid "customeremailexist"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:334
+msgid "customerIdexist"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:288
+msgid "customernameexist"
+msgstr ""
+
+#: includes/customer/import/class-wpssw-customer-import.php:191
+#: includes/customer/import/class-wpssw-customer-import.php:246
+msgid "customernotexists"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1724
+msgid "Data collection"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1789
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1859
+msgid "Default Order Status"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1654
+msgid "Delete Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1399
+msgid "Delete Customer"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2425
+msgid "Delete Order"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1142
+msgid "Delete Product"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2346
+msgid "Determines how input data should be interpreted. For More Details"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2026
+msgid "Disabled"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:385
+msgid "Documentation"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1715
+msgid "Download"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:905
+msgid "Download Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:895 includes/class-wpssw-setting.php:908
+msgid "Download Spreadsheet (.xlsx)"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:634
+#: includes/modules/class-wpssw-order.php:2026
+msgid "Enabled"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2177
+msgid "Enter New Spreadsheet name"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:831 includes/class-wpssw-setting.php:833
+#: includes/class-wpssw-setting.php:1006 includes/class-wpssw-setting.php:1264
+#: includes/class-wpssw-setting.php:1518
+msgid "Enter Spreadsheet Name"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1768 includes/class-wpssw-setting.php:1772
+msgid "Enter your license key"
+msgstr ""
+
+#: includes/class-wpssw-plugin-update.php:517
+msgid "Error"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:427
+msgid "Event"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:618
+msgid "Event Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:653
+msgid "Events Categories"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1330
+msgid "Every Fifteen Days"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:847
+msgid "Export All Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:434 includes/class-wpssw-setting.php:810
+msgid "Export Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Failed Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2165
+msgid "For More Details"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2376
+msgid "Formatted Values with Symbol"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1896
+msgid "Freeze Header"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:839
+#: includes/modules/class-wpssw-order.php:2033
+msgid "From :"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:402
+msgid "General"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:567 includes/class-wpssw-setting.php:796
+msgid "General Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:396
+msgid "Google API"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:597 includes/class-wpssw-setting.php:803
+#: includes/class-wpssw-setting.php:921 includes/class-wpssw-setting.php:1192
+#: includes/class-wpssw-setting.php:1447 includes/class-wpssw-setting.php:1702
+msgid "Google API Setting"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:453
+msgid "Google API Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1911
+msgid "Graph Sheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:454
+msgid "here"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1683
+msgid "How to Import Coupons?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1428
+msgid "How to Import Customers?"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2454
+msgid "How to Import Orders?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1171
+msgid "How to Import Products?"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.creativewerkdesigns.com/"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.wpsyncsheets.com/wpsyncsheets-for-woocommerce/"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1673
+msgid "Import Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1609
+msgid "Import Coupons"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1418
+msgid "Import Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1354
+msgid "Import Customers"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2444
+msgid "Import Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2395
+msgid "Import Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1161
+msgid "Import Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1097
+msgid "Import Products"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:163 includes/class-wpssw-setting.php:1804
+msgid "Important!"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1732
+msgid ""
+"In order to serve and check for updates, from time to time, your WordPress "
+"installation establishes an anonymous connection to our servers."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1624
+msgid "Insert Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1369
+msgid "Insert Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1112
+msgid "Insert Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:163 includes/class-wpssw-setting.php:1804
+msgid "is valid only for"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2026
+msgid "It has custom date range option."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2165
+msgid ""
+"It will allow to copy same columns into the rows i.e. Billing First Name, "
+"Billing Last Name etc."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2026
+msgid "It will sync all the orders."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1717
+msgid "Item Purchase Code"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:450 includes/class-wpssw-setting.php:1707
+msgid "License"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1716
+msgid "License Certificate &amp; Purchase code."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1758
+msgid "License Key"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1954
+msgid "Manage Row Data"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:701 includes/class-wpssw-setting.php:1017
+#: includes/class-wpssw-setting.php:1162 includes/class-wpssw-setting.php:1275
+#: includes/class-wpssw-setting.php:1419 includes/class-wpssw-setting.php:1529
+#: includes/class-wpssw-setting.php:1674
+#: includes/modules/class-wpssw-order.php:1724
+#: includes/modules/class-wpssw-order.php:2050
+#: includes/modules/class-wpssw-order.php:2165
+#: includes/modules/class-wpssw-order.php:2332
+#: includes/modules/class-wpssw-order.php:2346
+#: includes/modules/class-wpssw-order.php:2445
+msgid "Note"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:634 includes/class-wpssw-setting.php:768
+#: includes/class-wpssw-setting.php:1092 includes/class-wpssw-setting.php:1349
+#: includes/class-wpssw-setting.php:1604
+#: includes/modules/class-wpssw-order.php:2026
+msgid "Note:"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2332
+msgid "Odd & Even Rows are calculated as per the order id."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "On Hold Orders"
+msgstr "હોલ્ડ પર ઓર્ડર"
+
+#: includes/class-wpssw-setting.php:163 includes/class-wpssw-setting.php:1804
+msgid "One"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2375
+msgid "Only Values"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:837
+msgid "Order Date Range"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1957
+msgid "Order Wise"
+msgstr ""
+
+#: includes/order/import/class-wpssw-order-import.php:209
+#: includes/order/import/class-wpssw-order-import.php:240
+msgid "orderintrash"
+msgstr ""
+
+#: includes/order/import/class-wpssw-order-import.php:215
+#: includes/order/import/class-wpssw-order-import.php:247
+msgid "ordernotexists"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Pending Orders"
+msgstr "બાકી ઓર્ડર"
+
+#: includes/class-wpssw-setting.php:162
+msgid "Please"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:595 includes/class-wpssw-setting.php:801
+#: includes/class-wpssw-setting.php:919 includes/class-wpssw-setting.php:1190
+#: includes/class-wpssw-setting.php:1445 includes/class-wpssw-setting.php:1700
+msgid "Please genearate authentication code from"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1714 includes/class-wpssw-setting.php:1718
+msgid "Please go to"
+msgstr ""
+
+#: includes/modules/class-wpssw-customer.php:383
+#: includes/modules/class-wpssw-customer.php:743
+msgid "Please save settings."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:794
+msgid "Please select Spreadsheet from "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1162 includes/class-wpssw-setting.php:1419
+#: includes/class-wpssw-setting.php:1674
+#: includes/modules/class-wpssw-order.php:2445
+msgid ""
+"Please take the backup of the database before you are going to click on the "
+"import button."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:895
+msgid "Please wait..."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2370
+msgid "Price Format"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1162 includes/class-wpssw-setting.php:1419
+#: includes/class-wpssw-setting.php:1674
+#: includes/modules/class-wpssw-order.php:2445
+msgid "Proceed"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Processing Orders"
+msgstr "પ્રક્રિયા ઓર્ડર"
+
+#: includes/class-wpssw-setting.php:408
+msgid "Product"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1883
+msgid "Product Name as sheets headers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:963
+msgid "Product Settings"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1958
+msgid "Product Wise"
+msgstr ""
+
+#: includes/product/import/class-wpssw-product-import.php:305
+msgid "productIdexist"
+msgstr ""
+
+#: includes/product/import/class-wpssw-product-import.php:263
+msgid "productnameexist"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2630
+msgid "Products Sold"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Refunded Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2600
+#: includes/modules/class-wpssw-order.php:2624
+#: includes/modules/class-wpssw-order.php:2648
+#: includes/modules/class-wpssw-order.php:2672
+#: includes/modules/class-wpssw-order.php:2696
+msgid "Regenerate"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:162
+msgid "register"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2313
+msgid "Row Background Color"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2337
+msgid "Row Input Format Option"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:163 includes/class-wpssw-setting.php:1804
+msgid "Running multiple websites on a single license is a copyright violation."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2582
+msgid "Sales Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2055
+msgid "Schedule Auto Sync"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1716
+msgid "Select"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:750 includes/class-wpssw-setting.php:888
+#: includes/class-wpssw-setting.php:1078 includes/class-wpssw-setting.php:1337
+#: includes/class-wpssw-setting.php:1592
+#: includes/modules/class-wpssw-order.php:1793
+#: includes/modules/class-wpssw-order.php:1861
+#: includes/modules/class-wpssw-order.php:2245
+msgid "Select all"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:857
+#: includes/modules/class-wpssw-order.php:2199
+msgid "Select Category"
+msgstr ""
+
+#: includes/class-wpssw-google-api-functions.php:231
+msgid "Select Google Spreeadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:751 includes/class-wpssw-setting.php:889
+#: includes/class-wpssw-setting.php:1079 includes/class-wpssw-setting.php:1338
+#: includes/class-wpssw-setting.php:1593
+#: includes/modules/class-wpssw-order.php:1794
+#: includes/modules/class-wpssw-order.php:1862
+#: includes/modules/class-wpssw-order.php:2254
+msgid "Select none"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:870
+#: includes/modules/class-wpssw-order.php:2224
+msgid ""
+"Select orders of below product categories as you want export within the "
+"spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:396 includes/class-wpssw-setting.php:402
+#: includes/class-wpssw-setting.php:408 includes/class-wpssw-setting.php:414
+#: includes/class-wpssw-setting.php:420 includes/class-wpssw-setting.php:427
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:699 includes/class-wpssw-setting.php:1015
+#: includes/class-wpssw-setting.php:1273 includes/class-wpssw-setting.php:1527
+#: includes/modules/class-wpssw-order.php:1722
+msgid "Sheet Headers"
+msgstr ""
+
+#: includes/modules/class-wpssw-coupon.php:29
+#: includes/modules/class-wpssw-coupon.php:296
+#: includes/modules/class-wpssw-coupon.php:348
+#: includes/modules/class-wpssw-customer.php:31
+#: includes/modules/class-wpssw-customer.php:415
+#: includes/modules/class-wpssw-customer.php:467
+#: includes/modules/class-wpssw-event.php:28
+#: includes/modules/class-wpssw-event.php:518
+#: includes/modules/class-wpssw-order.php:1035
+#: includes/modules/class-wpssw-order.php:1233
+#: includes/modules/class-wpssw-order.php:2708
+#: includes/modules/class-wpssw-order.php:2811
+#: includes/modules/class-wpssw-order.php:2871
+#: includes/modules/class-wpssw-order.php:3255
+#: includes/modules/class-wpssw-order.php:3399
+#: includes/modules/class-wpssw-product.php:46
+#: includes/modules/class-wpssw-product.php:492
+#: includes/modules/class-wpssw-product.php:542
+msgid "Sorry, your nonce did not verify."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2879
+msgid "Spreadsheet id not found."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2481
+msgid "Spreadsheet Row Order"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:163
+msgid "standard license"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:382
+msgid "Submit A Ticket"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:305
+#: includes/customer/import/class-wpssw-customer-import.php:351
+#: includes/order/import/class-wpssw-order-import.php:256
+#: includes/product/import/class-wpssw-product-import.php:316
+msgid "successful"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1600
+msgid "Sync Coupons"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1345
+msgid "Sync Customers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:764
+msgid "Sync Events"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2042
+msgid "Sync Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1088
+msgid "Sync Products"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2020
+msgid "Sync Range ( All / Custom )"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Sync with your WooCommerce Orders, Products, Customers, Coupons, and Events "
+"to a single Google Spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:767 includes/class-wpssw-setting.php:1091
+#: includes/class-wpssw-setting.php:1348 includes/class-wpssw-setting.php:1603
+#: includes/modules/class-wpssw-order.php:2045
+msgid "Synchronizing..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1729
+msgid "The domain name that plugin uses."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1728
+msgid "The purchase code that was used for product registration."
+msgstr ""
+
+#. translators: the plugin name.
+#: includes/class-wpssw-plugin-update.php:275
+msgid "There is a new version of %1$s available."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:162
+msgid "this version of plugin to get an access for auto updates."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:843
+#: includes/modules/class-wpssw-order.php:2036
+msgid "To :"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1720
+msgid "to copy license key &amp; paste below license key field."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2654
+msgid "Total Customers"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2606
+msgid "Total Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2678
+msgid "Total Used Coupons Graph"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:152
+msgid "Trash Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1639
+msgid "Update Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1384
+msgid "Update Customer"
+msgstr ""
+
+#: includes/class-wpssw-plugin-update.php:301
+msgid "Update now."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2410
+msgid "Update Order"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1127
+msgid "Update Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:270
+msgid "View Documentation"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:895
+msgid "View Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:161
+msgid "Welcome to WPSyncSheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1805
+msgid ""
+"When moving a site from one domain to another please deregister the license "
+"key of the plugin first."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1712
+msgid "Where can I find my purchase code?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:128
+#: includes/modules/class-wpssw-order.php:62
+msgid "WPSyncSheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1725
+msgid ""
+"WPSyncSheets does not collect any personal data. However, we gather some "
+"basic information about your website to validate your license and product "
+"registration. These are:"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1718
+msgid "WPSyncSheets Envato User Registration"
+msgstr ""
+
+#. Plugin Name of the plugin
+msgid "WPSyncSheets For WooCommerce"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:824
+msgid ""
+"You can export all orders or select custom order date range with below "
+"settings. It will create new spreadsheet in your Google Drive."
+msgstr ""
+
+#: includes/class-wpssw-plugin-update.php:517
+msgid "You do not have permission to install plugin updates"
+msgstr ""

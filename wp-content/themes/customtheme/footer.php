@@ -20,7 +20,7 @@
         <input
           id="input_name_tel_form"
           type="text"
-          placeholder="+38(___) ___ __ __"
+          placeholder="Номер телефону"
           maxlength="19" />
         <button class="btn btn__yellow" id="order-send-close-btn">Замовити</button>
         <span>Всі данні захищено</span>
@@ -41,7 +41,7 @@
         <input
           id="opt_input_name_tel_form"
           type="text"
-          placeholder="+38(___) ___ __ __"
+          placeholder="Номер телефону"
           maxlength="19" />
         <button class="btn btn__yellow" id="opt-send-close-btn">Замовити</button>
         <span>Всі данні захищено</span>
@@ -140,7 +140,6 @@
 <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/slider-reviews.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/slider-production.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/modal-form.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/opt-modal-form.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/feedback-form.js"></script>
 <script type="text/javascript">

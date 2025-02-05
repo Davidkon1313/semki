@@ -88,10 +88,12 @@ jQuery(document).ready(function ($) {
         // Get the values from the form inputs
         const firstName = $('#input_name_form').val(); // Get the first name value
         const phoneNumber = $('#input_name_tel_form').val(); // Get the phone number value
+        console.log("First name: ", firstName);
+        console.log("Phone Number: ", phoneNumber);
 
         // Set these values into the corresponding input fields in the modal
         $('#orderModal input[placeholder="Ваше імʼя"]').val(firstName); // Set the first name in modal input
-        $('#orderModal input[placeholder="Номер телефону"]').val(phoneNumber); // Set the phone number in modal input
+        $('#orderModal input[placeholder="Номер телефону"]').val(phoneNumber);
     });
 
 
@@ -131,45 +133,44 @@ jQuery(document).ready(function ($) {
     });
     // orderInput.setAttribute("readonly", true); // Prevent typing in the input
 
-    const inputField = document.getElementById("input_name_tel_form");
+    document.querySelectorAll("#input_name_tel_form").forEach((inputField) => {
+        inputField.addEventListener("input", (e) => {
+            let input = e.target.value.replace(/\D/g, ""); // Keep only digits
+            const startValue = "+38";
 
-    inputField.addEventListener("input", (e) => {
-        let input = e.target.value.replace(/\D/g, ""); // Keep only digits
-        const startValue = "+38";
+            // Prevent accidental deletion of the prefix
+            if (!input.startsWith("38")) {
+                input = "38" + input;
+            }
 
-        // Prevent accidental deletion of the prefix
-        if (!input.startsWith("38")) {
-            input = "38" + input;
-        }
+            // Format the input
+            let formatted = "+38";
+            if (input.length > 2) formatted += `(${input.substring(2, 5)}`;
+            if (input.length > 5) formatted += `) ${input.substring(5, 8)}`;
+            if (input.length > 8) formatted += ` ${input.substring(8, 10)}`;
+            if (input.length > 10) formatted += ` ${input.substring(10, 12)}`;
 
-        // Format the input
-        let formatted = "+38";
-        if (input.length > 2) formatted += `(${input.substring(2, 5)}`;
-        if (input.length > 5) formatted += `) ${input.substring(5, 8)}`;
-        if (input.length > 8) formatted += ` ${input.substring(8, 10)}`;
-        if (input.length > 10) formatted += ` ${input.substring(10, 12)}`;
+            // Set the formatted value
+            e.target.value = formatted;
 
-        // Set the formatted value
-        e.target.value = formatted;
+            // Handle cursor positioning
+            const cursorPosition = e.target.selectionStart;
+            setTimeout(() => e.target.setSelectionRange(cursorPosition, cursorPosition), 0);
+        });
 
-        // Handle cursor positioning
-        const cursorPosition = e.target.selectionStart;
-        setTimeout(() => e.target.setSelectionRange(cursorPosition, cursorPosition), 0);
+        // Optional: Prevent invalid keys (non-numeric except for deletion)
+        inputField.addEventListener("keydown", (e) => {
+            if (
+                !(
+                    e.key === "Backspace" ||
+                    e.key === "Delete" ||
+                    e.key === "ArrowLeft" ||
+                    e.key === "ArrowRight" ||
+                    /^[0-9]$/.test(e.key)
+                )
+            ) {
+                e.preventDefault();
+            }
+        });
     });
-
-    // Optional: Prevent invalid keys (non-numeric except for deletion)
-    inputField.addEventListener("keydown", (e) => {
-        if (
-            !(
-                e.key === "Backspace" ||
-                e.key === "Delete" ||
-                e.key === "ArrowLeft" ||
-                e.key === "ArrowRight" ||
-                /^[0-9]$/.test(e.key)
-            )
-        ) {
-            e.preventDefault();
-        }
-    });
-
 });

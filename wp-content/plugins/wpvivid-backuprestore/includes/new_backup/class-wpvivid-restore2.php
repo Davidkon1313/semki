@@ -1325,6 +1325,19 @@ class WPvivid_Restore_2
                 }
 
             }
+            //Migration notice
+            $need_review=WPvivid_Setting::get_option('wpvivid_need_review');
+            if($need_review=='not')
+            {
+                $review_time=WPvivid_Setting::get_option('wpvivid_review_time', false);
+                if($review_time === false || time() >= $review_time)
+                {
+                    WPvivid_Setting::update_option('wpvivid_need_review','show');
+                    $msg = 'Migration complete! We\'d love it if you could leave WPvivid Backup Plugin a 5-star rating. It really motivates us to keep improving!';
+                    WPvivid_Setting::update_option('wpvivid_review_msg',$msg);
+                    WPvivid_Setting::update_option('wpvivid_review_type', 'migration');
+                }
+            }
         }
 
         if($ret['has_db'])

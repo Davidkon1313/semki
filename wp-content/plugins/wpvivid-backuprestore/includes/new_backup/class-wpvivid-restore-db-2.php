@@ -2117,10 +2117,13 @@ class WPvivid_Restore_DB_2
                             {
                                 continue;
                             }
-                            if(preg_match('/WP_HTML_Token/', $old_data, $matches))
+                            if (!is_null($old_data))
                             {
-                                $this->log->WriteLog('Skip WP_HTML_Token.', 'notice');
-                                continue;
+                                if(preg_match('/WP_HTML_Token/', $old_data, $matches))
+                                {
+                                    $this->log->WriteLog('Skip WP_HTML_Token.', 'notice');
+                                    continue;
+                                }
                             }
                             $new_data=$this->replace_row_data($old_data);
                             if($new_data==$old_data)

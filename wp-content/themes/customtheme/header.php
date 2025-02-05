@@ -123,7 +123,7 @@
                <div class="header__responsiveList">
                   <a href="<?php echo get_home_url(); ?>/#about-us">Про нас</a>
                   <a href="<?php echo get_home_url(); ?>/poslugi">Послуги</a>
-                  <a href="<?php echo get_home_url(); ?>/#cooperative">Співпраця</a>
+                  <a id="burgerCloseCoop" href="<?php echo get_home_url(); ?>/#cooperative">Співпраця</a>
                   <div class="menu">
                      <span id="responsiveDrop">Продукція <img class="arrow" src="<?php echo get_template_directory_uri(); ?>/images/ui/herederResp.webp"></span>
                      <div class="menu__content" id="responsiveDropMenu">

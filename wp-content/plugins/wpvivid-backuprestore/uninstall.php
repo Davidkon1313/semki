@@ -75,6 +75,8 @@ delete_option('wpvivid_list_cache');
 delete_option('wpvivid_exporter_task_list');
 delete_option('wpvivid_need_review');
 delete_option('wpvivid_review_msg');
+delete_option('wpvivid_review_time');
+delete_option('wpvivid_review_type');
 delete_option('wpvivid_migrate_status');
 delete_option('clean_task');
 delete_option('cron_backup_count');

@@ -78,23 +78,6 @@ jQuery(document).ready(function ($) {
         }, 300);
     };
 
-    // Обработка кликов по кнопкам
-    $("#btn-want-to-coop").click(function () {
-        // Set the "Співпрацювання" text into the order input
-        orderInput.value = "Співпрацювання"; // Set text for first button
-
-        // Open the modal form
-        openFormModal();
-
-        // Get the values from the form inputs
-        const firstName = $('#opt_input_name_form').val(); // Get the first name value
-        const phoneNumber = $('#opt_input_name_tel_form').val(); // Get the phone number value
-
-        // Set these values into the corresponding input fields in the modal
-        $('#optModal input[placeholder="Ваше імʼя"]').val(firstName); // Set the first name in modal input
-        $('#optModal input[placeholder="Номер телефону"]').val(phoneNumber); // Set the phone number in modal input
-    });
-
     $("#btn-buy-opt").click(function () {
         orderInput.value = "оптове замовлення індивідуально через менеджера"; // Set text for first button
         openFormModal();

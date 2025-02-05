@@ -1477,7 +1477,22 @@ class WPvivid
 
     public function wpvivid_analysis_backup($task)
     {
-        if($task['type'] == 'Cron')
+        if($task['type'] == 'Manual')
+        {
+            $need_review=WPvivid_Setting::get_option('wpvivid_need_review');
+            if($need_review=='not')
+            {
+                $review_time=WPvivid_Setting::get_option('wpvivid_review_time', false);
+                if($review_time === false || time() >= $review_time)
+                {
+                    WPvivid_Setting::update_option('wpvivid_need_review','show');
+                    $msg = 'Backup successful! If you\'re happy with WPvivid Backup Plugin, a 5-star rating would mean the world to us and help us make it even better.';
+                    WPvivid_Setting::update_option('wpvivid_review_msg',$msg);
+                    WPvivid_Setting::update_option('wpvivid_review_type', 'manual');
+                }
+            }
+        }
+        else if($task['type'] == 'Cron')
         {
             $cron_backup_count = WPvivid_Setting::get_option('cron_backup_count');
             if(empty($cron_backup_count)){
@@ -1492,8 +1507,9 @@ class WPvivid
                 if($need_review=='not')
                 {
                     WPvivid_Setting::update_option('wpvivid_need_review','show');
-                    $msg = 'Cheers! The schedule feature of WPvivid Backup plugin seems to be running well. If you found WPvivid Backup plugin helpful, a 5-star rating will motivate us to keep improving the plugin quality.';
+                    $msg = 'Cheers, scheduled backups are running smoothly. If you find WPvivid Backup plugin helpful, a 5-star rating would help us continue improving.';
                     WPvivid_Setting::update_option('wpvivid_review_msg',$msg);
+                    WPvivid_Setting::update_option('wpvivid_review_type', 'cron');
                 }
             }
         }
@@ -3679,6 +3695,16 @@ class WPvivid
                 }
             }
 
+            $wp_version_check=$backup_item->check_wp_version();
+            if($wp_version_check)
+            {
+                $ret['wp_version_check']=true;
+            }
+            else
+            {
+                $ret['wp_version_check']=false;
+            }
+
             echo wp_json_encode($ret);
         }
         catch (Exception $error)
@@ -3989,6 +4015,16 @@ class WPvivid
                 {
                     $ret['has_zero_date']=1;
                 }
+            }
+
+            $wp_version_check=$backup_item->check_wp_version();
+            if($wp_version_check)
+            {
+                $ret['wp_version_check']=true;
+            }
+            else
+            {
+                $ret['wp_version_check']=false;
             }
 
             $ret['result']=WPVIVID_SUCCESS;
@@ -7212,7 +7248,21 @@ class WPvivid
                     echo '';
                 } elseif ($review == 'ask-later') {
                     $review_option = 'not';
+                    $review_type = WPvivid_Setting::get_option('wpvivid_review_type', false);
+                    if($review_type === 'manual' || $review_type === 'migration')
+                    {
+                        WPvivid_Setting::update_option('wpvivid_review_time', time()+ 7*24*60*60);
+                    }
                     WPvivid_Setting::update_option('cron_backup_count', 0);
+                    echo '';
+                } elseif ($review == 'dismiss') {
+                    $review_option = 'not';
+                    $review_type = WPvivid_Setting::get_option('wpvivid_review_type', false);
+                    if($review_type === 'manual' || $review_type === 'migration')
+                    {
+                        WPvivid_Setting::update_option('wpvivid_review_time', time()+ 14*24*60*60);
+                        WPvivid_Setting::update_option('cron_backup_count', 0);
+                    }
                     echo '';
                 } else {
                     $review_option = 'not';

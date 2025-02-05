@@ -544,6 +544,8 @@ class WPvivid_Setting
             $json['data']['wpvivid_need_review']=self::get_option('wpvivid_need_review');
             $json['data']['cron_backup_count']=self::get_option('cron_backup_count');
             $json['data']['wpvivid_review_msg']=self::get_option('wpvivid_review_msg');
+            $json['data']['wpvivid_review_time']=self::get_option('wpvivid_review_time', false);
+            $json['data']['wpvivid_review_type']=self::get_option('wpvivid_review_type', false);
             $json = apply_filters('wpvivid_review_addon', $json);
         }
         return $json;

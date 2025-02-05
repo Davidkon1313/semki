@@ -1,0 +1,1248 @@
+# Copyright (C) 2024 Creative Werk Designs
+# This file is distributed under the same license as the WPSyncSheets For WooCommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPSyncSheets For WooCommerce 9.1.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsyncsheets-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-07-17T18:30:22+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: wpssw\n"
+
+#. Plugin Name of the plugin
+#: wpsyncsheets-for-woocommerce.php:59
+msgid "WPSyncSheets For WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.wpsyncsheets.com/wpsyncsheets-for-woocommerce/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Synchronize your WooCommerce orders, products, customers, coupons, and events to a single Google Spreadsheet."
+msgstr ""
+
+#. Author of the plugin
+msgid "Creative Werk Designs"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.creativewerkdesigns.com/"
+msgstr ""
+
+#: includes/class-wpssw-dependencies.php:78
+msgid "You're not using WPSyncSheets For WooCommerce Pro yet!"
+msgstr ""
+
+#: includes/class-wpssw-dependencies.php:79
+msgid "Activate the WPSyncSheets Lite For WooCommerce plugin to start using all of WPSyncSheets For WooCommerce Pro plugin's features."
+msgstr ""
+
+#: includes/class-wpssw-dependencies.php:82
+msgid "Activate Now"
+msgstr ""
+
+#: includes/class-wpssw-dependencies.php:90
+msgid "WPSyncSheets For WooCommerce Pro plugin requires WPSyncSheets Lite For WooCommerce to be installed and activated"
+msgstr ""
+
+#: includes/class-wpssw-dependencies.php:91
+msgid "Install and activate the WPSyncSheets Lite For WooCommerce plugin to access all the Pro features."
+msgstr ""
+
+#: includes/class-wpssw-dependencies.php:94
+msgid "Install Now"
+msgstr ""
+
+#: includes/class-wpssw-google-api-functions.php:238
+msgid "Select Google Spreeadsheet"
+msgstr ""
+
+#. translators: the plugin name.
+#: includes/class-wpssw-plugin-update.php:275
+msgid "There is a new version of %1$s available."
+msgstr ""
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin version 3. closing anchor tag, do not translate.
+#: includes/class-wpssw-plugin-update.php:282
+msgid " %1$sView version %2$s details%3$s."
+msgstr ""
+
+#. translators: 1. opening anchor tag, do not translate 2. the new plugin version 3. closing anchor tag, do not translate.
+#: includes/class-wpssw-plugin-update.php:290
+msgid " %1$sView version %2$s details%3$s or %4$supdate now%5$s."
+msgstr ""
+
+#: includes/class-wpssw-plugin-update.php:301
+msgid "Update now."
+msgstr ""
+
+#: includes/class-wpssw-plugin-update.php:517
+msgid "You do not have permission to install plugin updates"
+msgstr ""
+
+#: includes/class-wpssw-plugin-update.php:517
+msgid "Error"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:128
+#: includes/modules/class-wpssw-order.php:67
+#: includes/modules/class-wpssw-product.php:1806
+msgid "WPSyncSheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:155
+msgid "Welcome to WPSyncSheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:156
+msgid "Please"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:156
+msgid "activate"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:156
+msgid "this version of plugin to get an access for auto updates."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:157
+msgid "Important!"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:157
+msgid "One"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:157
+msgid "starter license"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:157
+msgid "is valid only for"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:157
+msgid "1 website"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:157
+msgid "Running multiple websites on a single license is a copyright violation."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:280
+msgid "View Documentation"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:600
+msgid "Google API Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:601
+msgid "Google APIs allow you to embed Google Services in your online site. To connect Google Drive and Google Sheets with your WordPress website, you need to generate dedicated API keys. To begin the process, kindly log in to your Gmail Account and follow the link to initiate the setup "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:601
+#: includes/modules/class-wpssw-order.php:2932
+msgid "click here"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:612
+msgid "Client ID"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:624
+msgid "Client Secret Key"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:640
+msgid "Client Token"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:647
+msgid "Click here to generate an Authentication Token"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:697
+msgid "Authorized Domain : "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:708
+msgid "Authorised redirect URIs : "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:745
+msgid "Order"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:745
+#: includes/class-wpssw-setting.php:761
+#: includes/class-wpssw-setting.php:777
+#: includes/class-wpssw-setting.php:793
+#: includes/class-wpssw-setting.php:812
+#: includes/class-wpssw-setting.php:873
+msgid "Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:761
+msgid "Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:777
+msgid "Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:793
+msgid "Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:812
+msgid "Event"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:830
+#: includes/class-wpssw-setting.php:1258
+msgid "Export Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:873
+msgid "General"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:903
+#: includes/class-wpssw-setting.php:1223
+#: includes/class-wpssw-setting.php:1389
+#: includes/class-wpssw-setting.php:2115
+#: includes/class-wpssw-setting.php:2574
+#: includes/class-wpssw-setting.php:2983
+msgid "Please genearate authentication code from"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:904
+#: includes/class-wpssw-setting.php:1224
+msgid "Google API Setting"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:905
+#: includes/class-wpssw-setting.php:1215
+#: includes/class-wpssw-setting.php:1225
+#: includes/class-wpssw-setting.php:1376
+#: includes/class-wpssw-setting.php:1391
+#: includes/class-wpssw-setting.php:2117
+#: includes/class-wpssw-setting.php:2576
+#: includes/class-wpssw-setting.php:2985
+msgid "Click"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:935
+msgid "Event Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:936
+msgid "Enable this setting to configure event categories sheets within the same spreadsheet as we have assign into the order settings."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:961
+msgid "Events Categories"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:962
+msgid "Here's a list of the event categories. These selected sheets will be created in assigned Google Spreadsheets of order settings and will neatly organize orders according to their items event category whenever order updated or synced."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:966
+msgid "All the event sheet headers will be append within order setting's active sheets. If you want to categorize your events orders then create new category save event settings, it will automatically create sheet within your existing order's spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1010
+#: includes/class-wpssw-setting.php:1512
+#: includes/class-wpssw-setting.php:2225
+#: includes/class-wpssw-setting.php:2662
+#: includes/modules/class-wpssw-order.php:2195
+msgid "Sheet Headers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1011
+msgid "Any disabled sheet headers will be automatically removed from the order settings sheets and event categories sheets. You can re-enable the desired headers, save the settings and to update the spreadsheet with the most recent data, clear the existing spreadsheet, and then proceed to click the \"Click to Sync\" button."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1015
+#: includes/class-wpssw-setting.php:1293
+#: includes/class-wpssw-setting.php:1517
+#: includes/class-wpssw-setting.php:2230
+#: includes/class-wpssw-setting.php:2667
+#: includes/modules/class-wpssw-order.php:2200
+#: includes/modules/class-wpssw-order.php:2375
+#: includes/modules/class-wpssw-order.php:2531
+#: includes/modules/class-wpssw-order.php:2991
+#: includes/modules/class-wpssw-product.php:2852
+msgid "Select All"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1016
+#: includes/class-wpssw-setting.php:1294
+#: includes/class-wpssw-setting.php:1518
+#: includes/class-wpssw-setting.php:2231
+#: includes/class-wpssw-setting.php:2668
+#: includes/modules/class-wpssw-order.php:2201
+#: includes/modules/class-wpssw-order.php:2376
+#: includes/modules/class-wpssw-order.php:2532
+#: includes/modules/class-wpssw-order.php:3000
+#: includes/modules/class-wpssw-product.php:2859
+msgid "Select None"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1143
+msgid "Sync Events"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1147
+msgid "The \"Click to Sync\" button will append all/custom date range event orders that are not present in the sheet, without updating the existing orders."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1152
+msgid "All Events"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1156
+#: includes/class-wpssw-setting.php:1334
+#: includes/class-wpssw-setting.php:1815
+#: includes/class-wpssw-setting.php:2405
+#: includes/class-wpssw-setting.php:2811
+#: includes/modules/class-wpssw-order.php:2783
+msgid "Date Range"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1161
+#: includes/class-wpssw-setting.php:1339
+#: includes/class-wpssw-setting.php:1824
+#: includes/class-wpssw-setting.php:2410
+#: includes/class-wpssw-setting.php:2816
+#: includes/modules/class-wpssw-order.php:2788
+msgid "From :"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1164
+#: includes/class-wpssw-setting.php:1342
+#: includes/class-wpssw-setting.php:1827
+#: includes/class-wpssw-setting.php:2413
+#: includes/class-wpssw-setting.php:2819
+#: includes/modules/class-wpssw-order.php:2791
+msgid "To :"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1170
+#: includes/class-wpssw-setting.php:1841
+#: includes/class-wpssw-setting.php:1991
+#: includes/class-wpssw-setting.php:2419
+#: includes/class-wpssw-setting.php:2825
+#: includes/modules/class-wpssw-order.php:2796
+msgid "Synchronizing..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1171
+#: includes/class-wpssw-setting.php:1843
+#: includes/class-wpssw-setting.php:1993
+#: includes/class-wpssw-setting.php:2421
+#: includes/class-wpssw-setting.php:2827
+#: includes/modules/class-wpssw-order.php:85
+#: includes/modules/class-wpssw-order.php:2799
+#: includes/modules/class-wpssw-order.php:4876
+#: includes/modules/class-wpssw-product.php:1821
+#: includes/modules/class-wpssw-product.php:2112
+msgid "Click to Sync"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1186
+msgid "Clear Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1187
+msgid "This setting will clear the event categories sheets."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1191
+msgid "Click to Clear Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1213
+msgid "Please select spreadsheet from "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1214
+#: includes/modules/class-wpssw-order.php:3047
+msgid "Order Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1259
+msgid "Effortlessly export your orders by choosing between two convenient settings. You can export all orders or select a custom order date range based on your preferences. The exported data will be organized into a new spreadsheet on your Google Drive."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1264
+#: includes/class-wpssw-setting.php:1266
+#: includes/class-wpssw-setting.php:1503
+#: includes/class-wpssw-setting.php:2216
+#: includes/class-wpssw-setting.php:2653
+#: includes/modules/class-wpssw-order.php:3087
+msgid "Enter Spreadsheet Name"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1265
+msgid "Specify the desired name for the exported spreadsheet through this setting. The value you enter here will serve as the name of the newly created spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1273
+#: includes/modules/class-wpssw-order.php:2959
+msgid "Select Category"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1274
+msgid "To streamline your export process, you can select orders from specific product categories you wish to include in the spreadsheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1324
+msgid "Order Date Range"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1325
+msgid "Customize the export further by selecting all orders or specifying a custom date range to be included in the exported data."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1330
+#: includes/modules/class-wpssw-order.php:2779
+msgid "All Orders"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1350
+msgid "Please wait..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1350
+msgid "View Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1350
+#: includes/class-wpssw-setting.php:1362
+msgid "Download Spreadsheet (.xlsx)"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1358
+msgid "Download Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1359
+msgid "If you need to access the existing order spreadsheet, you can easily download it with a single click."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1370
+msgid "Please save your order settings first and try again later."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1374
+msgid "Please select Spreadsheet from "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1375
+msgid "Order Settings "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1390
+#: includes/class-wpssw-setting.php:2116
+#: includes/class-wpssw-setting.php:2575
+#: includes/class-wpssw-setting.php:2984
+msgid "Google API Setting "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1463
+msgid "Product Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1464
+msgid "Enable this option to automatically generate customized spreadsheets, including the essential \"All Products\" sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1477
+#: includes/class-wpssw-setting.php:2187
+#: includes/class-wpssw-setting.php:2627
+#: includes/modules/class-wpssw-order.php:3059
+msgid "Google Spreadsheet Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1478
+msgid "Upon assigning a Google Spreadsheet, it will automatically generate the \"All Products\" sheet, populated with specified sheet headers. Additionally, whenever new products are created, WPSyncSheets add new rows dynamically to keep everything up to date."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1482
+#: includes/class-wpssw-setting.php:2192
+#: includes/class-wpssw-setting.php:2632
+#: includes/modules/class-wpssw-order.php:3064
+msgid "Create New Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1486
+#: includes/class-wpssw-setting.php:2196
+#: includes/class-wpssw-setting.php:2636
+#: includes/modules/class-wpssw-order.php:3068
+msgid "Select Existing Spreadsheet"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1513
+msgid "Any disabled sheet headers will be automatically removed from the current spreadsheet. Re-enable the desired headers, save the settings, and your spreadsheet will be updated with the latest data with a single click of the \"Click to Sync\" button."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1657
+#: includes/class-wpssw-setting.php:2369
+#: includes/modules/class-wpssw-order.php:2895
+msgid "Custom Static Headers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1658
+msgid "You can enable this option to include your preferred custom headers for further customization. With the \"Add\" button, you can effortlessly add static header-value pairs to the list."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1664
+#: includes/class-wpssw-setting.php:2376
+#: includes/modules/class-wpssw-order.php:2907
+msgid "Add"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1677
+msgid "Product Categories as Sheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1678
+msgid "This setting lets you create product categories as sheet within your existing spreadsheet, where you can manage all your store product data."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1700
+msgid "Include Child Categories"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1701
+msgid "This setting will include child categories product data to the parent category sheet on sync."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1724
+msgid "Sync Products"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1728
+msgid "Add new products to your spreadsheet without modifying existing ones by clicking the \"Click to Sync\" button. This will automatically append all products in the selected date range not already in the sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1751
+msgid "Languages"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1752
+msgid " - Select option to sync all or specific languages products to the sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1761
+msgid "All Languages"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1770
+msgid "Custom"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1811
+msgid "All Products"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1819
+msgid "Product Sale Date Range"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1832
+msgid "Product Sale From Date:"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1835
+msgid "Product Sale To Date:"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1864
+msgid "Import Products"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1870
+msgid "Easily import products from your spreadsheet to this site. Remember to take a database backup before clicking the import button as a precautionary measure. Also, use the \"m/d/Y\" date format while importing. Preview:-"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1877
+msgid "How to Import Products?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1894
+msgid "Insert Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1909
+msgid "Update Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1924
+msgid "Delete Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1942
+#: includes/class-wpssw-setting.php:2510
+#: includes/class-wpssw-setting.php:2917
+#: includes/modules/class-wpssw-order.php:3328
+msgid "Checking..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1943
+msgid "Import Product"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1945
+#: includes/class-wpssw-setting.php:2008
+#: includes/class-wpssw-setting.php:2513
+#: includes/class-wpssw-setting.php:2920
+#: includes/modules/class-wpssw-order.php:3331
+msgid "Proceed"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1946
+#: includes/class-wpssw-setting.php:2009
+#: includes/class-wpssw-setting.php:2514
+#: includes/class-wpssw-setting.php:2921
+#: includes/modules/class-wpssw-order.php:3332
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1969
+msgid "Import Product Attributes"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1970
+msgid "This feature will create a dedicated \"Product Attributes\" sheet within your current spreadsheet, where you can conveniently store product attribute data."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1986
+msgid "Sync Attributes"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1987
+msgid "The \"Click to Sync\" button will append all product attributess that are not present in the sheet, without updating the existing attributes."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:1999
+#: includes/class-wpssw-setting.php:2006
+msgid "Import Attributes"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2000
+msgid "The \"Import Attribute\" button will import your attributes from sheet to this site."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2000
+msgid "How to Import Attributes?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2004
+msgid "Importing..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2076
+#: includes/class-wpssw-setting.php:2537
+#: includes/class-wpssw-setting.php:2944
+#: includes/modules/class-wpssw-order.php:3163
+msgid "Inherit Styles"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2077
+#: includes/class-wpssw-setting.php:2538
+#: includes/class-wpssw-setting.php:2945
+#: includes/modules/class-wpssw-order.php:3164
+msgid "This dropdown allows you to choose whether the new row should inherit the style from the row above it. The available options are \"Yes\" to inherit the style, \"No\" to not inherit the style, or \"None\" to leave the style inheritance unaffected."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2077
+#: includes/class-wpssw-setting.php:2538
+#: includes/class-wpssw-setting.php:2945
+#: includes/modules/class-wpssw-order.php:3164
+msgid "How to use inherit style option?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2173
+msgid "Customer Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2174
+msgid "Enable this option to streamline your customer management process with personalized spreadsheets and an \"All Customers\" sheet."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2188
+msgid "Once you've assigned a Google Spreadsheet, it will automatically create an 'All Customers' sheet and populate it with headers based on your settings. The spreadsheet will update with new rows whenever new customers are added."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2226
+msgid "Any disabled sheet headers will be automatically removed from the current spreadsheet. To include specific headers, enable them, save the settings, and click the \"Click to Sync\" button to update the spreadsheet with the latest data."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2370
+msgid "Want to add your custom headers? Enable this button, and with a click of the \"Add\" button, you can create static header-value pairs to customize your header list further."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2392
+msgid "Sync Customers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2396
+msgid "Click the 'Click to Sync' button to append new customers (within a specified date range, if desired) not already present in the sheet. Rest assured; existing customer data won't be affected."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2401
+msgid "All Customers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2441
+msgid "Import Customers"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2445
+msgid "Need to import customers from another sheet? No worries! Use the 'Import' button, but don't forget to back up your database before doing so."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2446
+msgid "How to Import Customers?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2462
+msgid "Insert Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2477
+msgid "Update Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2492
+msgid "Delete Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2511
+msgid "Import Customer"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2613
+msgid "Coupon Settings"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2614
+msgid "Enhance your coupon management process by enabling this option, automatically creating personalized spreadsheets and an \"All Coupons\" sheet, ensuring seamless functionality."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2628
+msgid "Once you've assigned a Google Spreadsheet, it will automatically generate an 'All Coupons' sheet with headers based on your settings. Additionally, new rows will be created whenever new coupons are created."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2663
+msgid "Effortlessly tailor your spreadsheet by turning specific sheet headers on or off. Disabled headers will be automatically removed from the current spreadsheet. To update the sheet with the latest data, save your desired header settings and click the \"Click to Sync\" button."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2798
+msgid "Sync Coupons"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2802
+msgid "The \"Click to Sync\" button makes it easy to append all or selected date range coupons not already present in the sheet. You can rest assured that existing coupons will not be affected during synchronization."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2807
+msgid "All Coupons"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2848
+msgid "Import Coupons"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2852
+msgid "Need to import coupons from another sheet? No problem! Use the \"Import\" button, but remember to back up your database before doing so to avoid any data loss."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2853
+msgid "How to Import Coupons?"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2869
+msgid "Insert Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2884
+msgid "Update Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2899
+msgid "Delete Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2918
+msgid "Import Coupon"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2995
+msgid "Freeze Header"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:2996
+msgid "By enabling this feature, the first row containing the header (or title) information will remain fixed at the top of the sheet even while scrolling down, providing easy access to essential details."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3028
+#: includes/modules/class-wpssw-order.php:3116
+msgid "Row Background Color"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3029
+msgid "The background color of rows is automatically determined based on their respective ID. Alternating colors are assigned to create a visually pleasing and organized appearance."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3031
+#: includes/modules/class-wpssw-order.php:3133
+msgid " Odd Rows"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3032
+#: includes/modules/class-wpssw-order.php:3134
+msgid " Even Rows"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3048
+#: includes/modules/class-wpssw-order.php:3140
+msgid "Row Input Format Option"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3049
+msgid "This option allows you to specify how the input data should be interpreted. For further information, refer to the provided Link for more details,"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3049
+#: includes/modules/class-wpssw-order.php:3149
+msgid "click here."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3073
+#: includes/modules/class-wpssw-order.php:3228
+msgid "Price Format"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3074
+msgid "Customize the format for displaying price values. If you choose the \"Values with Symbol\" option, a symbol will be appended to the price values, while the \"Values\" option will retain the entered values as they are."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3078
+#: includes/modules/class-wpssw-order.php:3233
+msgid "Only Values"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3079
+msgid "Values with Symbol"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3086
+msgid "Graph Sheets"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3087
+msgid "With the settings provided, Google Spreadsheet will automatically generate graph sheets according to your preferences. Clicking the \"Regenerate\" button will create a new graph with the latest data, keeping your visuals up-to-date."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3113
+msgid "License"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3114
+msgid "WPSyncSheets does not collect any personal data. However, we gather some basic information about your website to validate your license key."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3120
+msgid "To unlock updates, please enter your license key below. If you don't have a licence key, please see "
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3120
+msgid "details & pricing."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3140
+msgid "License Key"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3149
+msgid "Enter your license key"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3155
+msgid "Active"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3157
+msgid "Deactivate License"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:3163
+msgid "Activate License"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4450
+msgid "Schedule Auto Import"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4451
+msgid "Import"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4452
+msgid "Enable this feature and allow automatic import at your preferred intervals."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4473
+#: includes/modules/class-wpssw-order.php:2810
+msgid "Schedule Auto Sync"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4474
+msgid "Export"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4475
+msgid "Stay updated with automatic synchronization by setting specific intervals to sync the data effortlessly."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4563
+#: includes/modules/class-wpssw-order.php:2818
+msgid "Automatic Scheduling"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4567
+#: includes/modules/class-wpssw-order.php:2822
+msgid "Do Not Schedule"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4574
+#: includes/modules/class-wpssw-order.php:2830
+msgid "Schedule Recurrence"
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4591
+#: includes/modules/class-wpssw-order.php:2847
+msgid "Every week on..."
+msgstr ""
+
+#: includes/class-wpssw-setting.php:4609
+#: includes/modules/class-wpssw-order.php:2865
+msgid "One time run at"
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:44
+#: includes/coupon/import/class-wpssw-coupon-import.php:103
+#: includes/customer/import/class-wpssw-customer-import.php:48
+#: includes/customer/import/class-wpssw-customer-import.php:107
+#: includes/modules/class-wpssw-coupon.php:30
+#: includes/modules/class-wpssw-coupon.php:352
+#: includes/modules/class-wpssw-coupon.php:428
+#: includes/modules/class-wpssw-coupon.php:718
+#: includes/modules/class-wpssw-customer.php:31
+#: includes/modules/class-wpssw-customer.php:527
+#: includes/modules/class-wpssw-customer.php:911
+#: includes/modules/class-wpssw-event.php:29
+#: includes/modules/class-wpssw-event.php:410
+#: includes/modules/class-wpssw-event.php:585
+#: includes/modules/class-wpssw-event.php:784
+#: includes/modules/class-wpssw-general.php:29
+#: includes/modules/class-wpssw-general.php:666
+#: includes/modules/class-wpssw-order.php:1333
+#: includes/modules/class-wpssw-order.php:1531
+#: includes/modules/class-wpssw-order.php:3857
+#: includes/modules/class-wpssw-order.php:3934
+#: includes/modules/class-wpssw-order.php:4464
+#: includes/modules/class-wpssw-product.php:53
+#: includes/modules/class-wpssw-product.php:548
+#: includes/modules/class-wpssw-product.php:885
+#: includes/modules/class-wpssw-product.php:1169
+#: includes/modules/class-wpssw-product.php:1225
+#: includes/modules/class-wpssw-product.php:1483
+#: includes/product/import/class-wpssw-attribute-import.php:47
+#: includes/product/import/class-wpssw-attribute-import.php:116
+#: includes/product/import/class-wpssw-product-import.php:48
+#: includes/product/import/class-wpssw-product-import.php:116
+msgid "Sorry, your nonce did not verify."
+msgstr ""
+
+#: includes/coupon/import/class-wpssw-coupon-import.php:413
+#: includes/customer/import/class-wpssw-customer-import.php:482
+#: includes/order/import/class-wpssw-order-import.php:485
+#: includes/product/import/class-wpssw-attribute-import.php:379
+#: includes/product/import/class-wpssw-product-import.php:708
+msgid "successful"
+msgstr ""
+
+#: includes/modules/class-wpssw-coupon.php:319
+#: includes/modules/class-wpssw-coupon.php:389
+#: includes/modules/class-wpssw-customer.php:880
+msgid "Please save settings."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1656
+msgid "Every Ten Minutes"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1660
+msgid "Every Thirty Minutes"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:1664
+msgid "Every Fifteen Days"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2012
+msgid "Default Order Status as Sheets"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2013
+msgid "Here's a list of sheets based on the default order status provided by WooCommerce, including 'Trash' and 'All Orders'. These selected sheets will be created in your assigned Google Spreadsheets and will neatly organize orders according to their status. These sheets will be automatically updated to keep everything well-managed whenever there are updates or syncs for orders."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2079
+msgid "Custom Order Status as Sheets"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2080
+msgid "This option displays the list of custom order statuses created by the WooCommerce third-party plugin. Selected sheets will be created in your Google Spreadsheets, organizing orders based on their status."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2196
+msgid "If you disable any sheet headers, they will be automatically removed from the current spreadsheet. You can always re-enable the headers you need, save the settings, and update the spreadsheet with the latest data. Clear the existing spreadsheet and click the \"Click to Sync\" button to initiate the sync process."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2484
+msgid "Product Name as Sheets Headers"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2485
+msgid "By enabling this option, our plugin will automatically create columns in the spreadsheet for all the selected product names. These columns will display their respective quantities and be added after the header option you've chosen in the 'Append after' dropdown."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2635
+msgid "Append After"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2636
+msgid "The header for the above-selected product names will be inserted into the sheet immediately after the chosen option you have specified."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2680
+msgid "Manage Row Data"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2681
+msgid "This setting lets you choose how your data will be organized in the sheet. If you pick \"Order-wise,\" all the order data will be written in a single line. On the other hand, if you go for \"Product-wise,\" each product will have its own separate line. "
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2681
+msgid "Remember, this option is only available when creating a new spreadsheet."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2683
+msgid "Order Wise"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2684
+msgid "Product Wise"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2770
+msgid "Sync Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2774
+msgid "By clicking the 'Click to Sync' button, all orders or orders within the custom date range that are not already present in the sheet will be appended. The existing orders in the sheet will not be updated, providing a seamless synchronization process."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2814
+msgid "Enabling this setting allows you to schedule automatic synchronization at specified intervals."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2896
+msgid "Enable this option to add a custom header. The selected option will determine the header value. To include a static header-value pair in your list of headers, click on the \"Add\" button. This allows for personalized and easy customization of your headers."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2931
+msgid "Allow to Copy Same Columns"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2932
+msgid "Enable this setting option to copy identical columns into rows. You can copy details like Billing First Name, Billing Last Name, and more, making data representation and analysis even more convenient. To learn more,"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:2960
+msgid "Enable this setting to include orders based on selected product categories in the sheet. Only orders that belong to the chosen product categories will be included in the spreadsheet. "
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3048
+msgid "Enable this option to automatically create customized spreadsheets and sheets based on order status for efficient order management & seamless functionality."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3060
+msgid "Your chosen Google Spreadsheet automatically generates a sheet with customized headers based on the below-mentioned settings. Whenever a new order is placed, WPSyncSheets creates a new row to accommodate it with the spreadsheet."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3135
+#: includes/modules/class-wpssw-order.php:3149
+msgid "Note"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3135
+msgid "Odd & Even Rows are calculated as per the order id."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3149
+msgid "Determines how input data should be interpreted. For More Details"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3198
+msgid "Exclude Order Status from Order Notes"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3199
+msgid "Enable this setting option to exculde order status change note from order notes."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3234
+msgid "Formatted Values with Symbol"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3259
+msgid "Import Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3263
+msgid "Enable this option to import orders from Google Sheets to your site. Before clicking the import button it's essential to take a database backup."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3264
+msgid "How to Import Orders?"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3280
+msgid "Insert Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3295
+msgid "Update Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3310
+msgid "Delete Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3329
+msgid "Import Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3365
+msgid "Spreadsheet Row Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3366
+msgid "This option allows you to set the sequence in which the rows are organized, based on the order ID. This feature is only available when you create a new spreadsheet."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3368
+msgid " Ascending Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3369
+msgid " Descending Order"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3489
+msgid "Sales Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3518
+#: includes/modules/class-wpssw-order.php:3554
+#: includes/modules/class-wpssw-order.php:3591
+#: includes/modules/class-wpssw-order.php:3628
+#: includes/modules/class-wpssw-order.php:3664
+msgid "Regenerate"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3525
+msgid "Total Orders"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3561
+msgid "Products Sold"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3598
+msgid "Total Customers"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3635
+msgid "Total Used Coupons"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3686
+msgid "Product Names as Sheets"
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3687
+msgid "This setting will create all product names sheet and will hold orders that include that particular product."
+msgstr ""
+
+#: includes/modules/class-wpssw-order.php:3942
+msgid "Spreadsheet id not found."
+msgstr ""
+
+#: includes/order/compatibility/class-wpssw-coderockz-woo-delivery-pickup-date-time-pro.php:170
+msgid "As Soon As Possible"
+msgstr ""
+
+#: includes/order/compatibility/class-wpssw-coderockz-woo-delivery-pickup-date-time-pro.php:187
+msgid "Not Delivered"
+msgstr ""
+
+#: includes/order/compatibility/class-wpssw-coderockz-woo-delivery-pickup-date-time-pro.php:188
+msgid "Delivery Completed"
+msgstr ""
+
+#: includes/order/compatibility/class-wpssw-coderockz-woo-delivery-pickup-date-time-pro.php:189
+msgid "Not Picked"
+msgstr ""
+
+#: includes/order/compatibility/class-wpssw-coderockz-woo-delivery-pickup-date-time-pro.php:190
+msgid "Pickup Completed"
+msgstr ""
+
+#: includes/product/import/class-wpssw-attribute-import.php:231
+#: includes/product/import/class-wpssw-attribute-import.php:293
+msgid "addattributename"
+msgstr ""
+
+#: includes/product/import/class-wpssw-attribute-import.php:234
+#: includes/product/import/class-wpssw-attribute-import.php:368
+msgid "addattributeId"
+msgstr ""
+
+#: includes/product/import/class-wpssw-attribute-import.php:266
+#: includes/product/import/class-wpssw-attribute-import.php:373
+msgid "attributenamenotexist"
+msgstr ""
+
+#: includes/product/import/class-wpssw-attribute-import.php:296
+msgid "attributenameexist"
+msgstr ""
+
+#: includes/product/import/class-wpssw-attribute-import.php:299
+msgid "attributeIdexist"
+msgstr ""

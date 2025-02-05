@@ -906,11 +906,26 @@ function wpvivid_backuppage_add_page_backup(){
                     var init_status = false;
                     if(typeof jsonarray.has_zero_date !== 'undefined')
                     {
-                        jQuery('#wpvivid_restore_warning_info').show();
+                        jQuery('#wpvivid_restore_zero_date_warning_info').show();
                     }
                     else
                     {
-                        jQuery('#wpvivid_restore_warning_info').hide();
+                        jQuery('#wpvivid_restore_zero_date_warning_info').hide();
+                    }
+                    if(typeof jsonarray.wp_version_check !== 'undefined')
+                    {
+                        if(!jsonarray.wp_version_check)
+                        {
+                            jQuery('#wpvivid_restore_wp_version_warning_info').show();
+                        }
+                        else
+                        {
+                            jQuery('#wpvivid_restore_wp_version_warning_info').hide();
+                        }
+                    }
+                    else
+                    {
+                        jQuery('#wpvivid_restore_wp_version_warning_info').hide();
                     }
                     if(jsonarray.result === 'success')
                     {
@@ -1176,8 +1191,11 @@ function wpvivid_backuppage_add_page_restore()
     }
     ?>
     <div class="backup-tab-content wpvivid_tab_restore" id="page-restore" style="display:none;">
-        <div id="wpvivid_restore_warning_info" class="wpvivid-one-coloum" style="border:2px solid orange; margin-bottom:1em; border-radius:0.3em; display: none;">
-            <span style="color:orange;">Warning: We have detected that the backup contains zero dates '0000-00-00', while NO_ZERO_DATE which forbids zero dates is enabled on the current server, which may cause a restore failure. It is recommended to temporarily disable NO_ZERO_DATE on the server.</span></span>
+        <div id="wpvivid_restore_zero_date_warning_info" class="wpvivid-one-coloum" style="border:2px solid orange; margin-bottom:1em; border-radius:0.3em; display: none;">
+            <span style="color:orange;">Warning: We have detected that the backup contains zero dates '0000-00-00', while NO_ZERO_DATE which forbids zero dates is enabled on the current server, which may cause a restore failure. It is recommended to temporarily disable NO_ZERO_DATE on the server.</span>
+        </div>
+        <div id="wpvivid_restore_wp_version_warning_info" class="wpvivid-one-coloum" style="border:2px solid orange; margin-bottom:1em; border-radius:0.3em; display: none;">
+            <span style="color:orange;">We have detected that the WordPress version in the backup is too old and may not be compatible with the current site environment. It is <strong>recommended</strong> to exclude WordPress core from the restoration to avoid any compatibility issues. Some PHP functions called by old WordPress may have been deprecated in new versions. So the restoration may be successful, but the site may not run properly after that.</span>
         </div>
         <div id="wpvivid_restore_box">
             <h3><?php esc_html_e('Restore backup from:', 'wpvivid-backuprestore'); ?><span id="wpvivid_restore_backup_time"></span></h3>
@@ -1262,11 +1280,27 @@ function wpvivid_backuppage_add_page_restore()
                         {
                             if(typeof jsonarray.has_zero_date !== 'undefined')
                             {
-                                jQuery('#wpvivid_restore_warning_info').show();
+                                jQuery('#wpvivid_restore_zero_date_warning_info').show();
                             }
                             else
                             {
-                                jQuery('#wpvivid_restore_warning_info').hide();
+                                jQuery('#wpvivid_restore_zero_date_warning_info').hide();
+                            }
+
+                            if(typeof jsonarray.wp_version_check !== 'undefined')
+                            {
+                                if(!jsonarray.wp_version_check)
+                                {
+                                    jQuery('#wpvivid_restore_wp_version_warning_info').show();
+                                }
+                                else
+                                {
+                                    jQuery('#wpvivid_restore_wp_version_warning_info').hide();
+                                }
+                            }
+                            else
+                            {
+                                jQuery('#wpvivid_restore_wp_version_warning_info').hide();
                             }
                             wpvivid_download_display_restore_msg(restore_type, restore_method);
                         }
@@ -2567,7 +2601,7 @@ function wpvivid_backup_module_add_exec(){
                 m_need_update_2 = true;
                 wpvivid_manage_task_2();
             }, 3000);
-        });
+        }, 0);
     }
 
     function wpvivid_list_task_2_data(data)

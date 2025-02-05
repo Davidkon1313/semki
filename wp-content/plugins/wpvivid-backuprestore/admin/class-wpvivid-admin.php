@@ -688,13 +688,13 @@ class WPvivid_Admin
             {
                 if(!empty($review_msg))
                 {
-                    echo '<div class="notice notice-info is-dismissible" id="wpvivid_notice_rate">
+                    echo '<div class="notice notice-info notice-rate is-dismissible" id="wpvivid_notice_rate">
                     <p>' . esc_html($review_msg) . '</p>
                     <div style="padding-bottom: 10px;">
                     <span><input type="button" class="button-primary" option="review" name="rate-now" value="'.esc_attr__('Rate Us', 'wpvivid-backuprestore').'" /></span>
                     <span><input type="button" class="button-secondary" option="review" name="ask-later" value="'.esc_attr__('Maybe Later', 'wpvivid-backuprestore').'" /></span>
-                    <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr__('Never', 'wpvivid-backuprestore').'" /></span>
                     <span><input type="button" class="button-secondary" option="review" name="already-done" value="'.esc_attr__('Already Done', 'wpvivid-backuprestore').'" /></span>
+                    <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr__('Never', 'wpvivid-backuprestore').'" /></span>
                     </div>
                     </div>';
                 }
@@ -706,13 +706,13 @@ class WPvivid_Admin
                 {
                     if(!empty($review_msg))
                     {
-                        echo '<div class="notice notice-info is-dismissible" id="wpvivid_notice_rate">
+                        echo '<div class="notice notice-info notice-rate is-dismissible" id="wpvivid_notice_rate">
                         <p>' . esc_html($review_msg) . '</p>
                         <div style="padding-bottom: 10px;">
                         <span><input type="button" class="button-primary" option="review" name="rate-now" value="'.esc_attr__('Rate Us', 'wpvivid-backuprestore').'" /></span>    
                         <span><input type="button" class="button-secondary" option="review" name="ask-later" value="'.esc_attr__('Maybe Later', 'wpvivid-backuprestore').'" /></span>
-                        <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr__('Never', 'wpvivid-backuprestore').'" /></span>
                         <span><input type="button" class="button-secondary" option="review" name="already-done" value="'.esc_attr__('Already Done', 'wpvivid-backuprestore').'" /></span>
+                        <span><input type="button" class="button-secondary" option="review" name="never-ask" value="'.esc_attr__('Never', 'wpvivid-backuprestore').'" /></span>
                         </div>
                         </div>';
                     }

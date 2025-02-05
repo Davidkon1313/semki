@@ -66,6 +66,7 @@ document.querySelector('.anchor').addEventListener('click', function (event) {
 
 const button = document.getElementById('burger');
 const buttonClose = document.getElementById('burgerClose');
+const buttonCloseCoop = document.getElementById('burgerCloseCoop');
 const responsive = document.getElementsByClassName('header__responsive')[0];
 
 button.addEventListener('click', function () {
@@ -74,6 +75,11 @@ button.addEventListener('click', function () {
   responsive.style.transform.translateY = '0%';
 });
 buttonClose.addEventListener('click', function () {
+  document.body.style.overflow = 'auto';
+  responsive.style.display = 'none';
+  responsive.style.transform.translateY = '-100%';
+});
+buttonCloseCoop.addEventListener('click', function () {
   document.body.style.overflow = 'auto';
   responsive.style.display = 'none';
   responsive.style.transform.translateY = '-100%';
